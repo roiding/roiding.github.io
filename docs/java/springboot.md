@@ -447,7 +447,7 @@ public class RedisConfig {
 
 ## Validation使用
 ### 原生支持
-![](./java/1590374918637.png)
+![](/java/1590374918637.png)
 
 ### 全局校验处理 demo
 
