@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker 常规应用 | 小丁的博客</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicons/favicon.png" type="image/png" sizes="16x16">
+    <meta name="description" content="小丁的博客">
+    <link rel="preload" href="/assets/css/0.styles.7950d16d.css" as="style"><link rel="preload" href="/assets/js/app.b5e23f74.js" as="script"><link rel="preload" href="/assets/js/2.d9d06ceb.js" as="script"><link rel="preload" href="/assets/js/5.899047f6.js" as="script"><link rel="prefetch" href="/assets/js/10.7c25fd62.js"><link rel="prefetch" href="/assets/js/11.af60966d.js"><link rel="prefetch" href="/assets/js/12.4490ace8.js"><link rel="prefetch" href="/assets/js/13.30bec20c.js"><link rel="prefetch" href="/assets/js/3.b53b0167.js"><link rel="prefetch" href="/assets/js/4.91f2ff50.js"><link rel="prefetch" href="/assets/js/6.42010163.js"><link rel="prefetch" href="/assets/js/7.5efbdc75.js"><link rel="prefetch" href="/assets/js/8.a7f7ee4e.js"><link rel="prefetch" href="/assets/js/9.4f551cd4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7950d16d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicons/favicon.png" alt="小丁的博客" class="logo"> <span class="site-name can-hide">小丁的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/maodou38" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/maodou38" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/docker/docker-install.html" class="sidebar-link">安装Docker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker-install.html#docker安装-centos" class="sidebar-link">Docker安装（centos）</a></li><li class="sidebar-sub-header"><a href="/docker/docker-install.html#docker安装-debian" class="sidebar-link">docker安装(debian)</a></li><li class="sidebar-sub-header"><a href="/docker/docker-install.html#docker-用户组设置" class="sidebar-link">Docker 用户组设置</a></li><li class="sidebar-sub-header"><a href="/docker/docker-install.html#docker-compose安装" class="sidebar-link">Docker-compose安装</a></li></ul></li><li><a href="/docker/docker-buildx.html" class="sidebar-link">docker多架构构建镜像</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker-buildx.html#开启docker-buildx" class="sidebar-link">开启docker buildx</a></li><li class="sidebar-sub-header"><a href="/docker/docker-buildx.html#启用-binfmt-misc" class="sidebar-link">启用 binfmt_misc</a></li><li class="sidebar-sub-header"><a href="/docker/docker-buildx.html#从默认的构建器切换到多平台构建器" class="sidebar-link">从默认的构建器切换到多平台构建器</a></li><li class="sidebar-sub-header"><a href="/docker/docker-buildx.html#构建多平台镜像" class="sidebar-link">构建多平台镜像</a></li><li class="sidebar-sub-header"><a href="/docker/docker-buildx.html#测试多平台镜像" class="sidebar-link">测试多平台镜像</a></li></ul></li><li><a href="/docker/docker-remote.html" class="sidebar-link">docker 远程连接配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker-remote.html#配置" class="sidebar-link">配置</a></li><li class="sidebar-sub-header"><a href="/docker/docker-remote.html#防火墙开启对应端口" class="sidebar-link">防火墙开启对应端口</a></li></ul></li><li><a href="/docker/docker-command.html" class="sidebar-link">docker常用命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docker/dockerfile-command.html" class="sidebar-link">dockerfile指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#from" class="sidebar-link">FROM</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#run" class="sidebar-link">RUN</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#cmd" class="sidebar-link">CMD</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#label" class="sidebar-link">LABEL</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#maintainer" class="sidebar-link">MAINTAINER</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#expose" class="sidebar-link">EXPOSE</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#env" class="sidebar-link">ENV</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#add" class="sidebar-link">ADD</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#copy" class="sidebar-link">COPY</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#entrypoint" class="sidebar-link">ENTRYPOINT</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#volume" class="sidebar-link">VOLUME</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#user" class="sidebar-link">USER</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#workdir" class="sidebar-link">WORKDIR</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#arg" class="sidebar-link">ARG</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#onbuild" class="sidebar-link">ONBUILD</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#stopsignal" class="sidebar-link">STOPSIGNAL</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#healthcheck" class="sidebar-link">HEALTHCHECK</a></li></ul></li><li><a href="/docker/docker-compose-command.html" class="sidebar-link">docker-compose指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#build" class="sidebar-link">build</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#cap-add-cap-drop" class="sidebar-link">capadd, capdrop</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#command" class="sidebar-link">command</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#configs" class="sidebar-link">configs</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#cgroup-parent" class="sidebar-link">cgroup_parent</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#container-name" class="sidebar-link">container_name</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#deploy" class="sidebar-link">deploy</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#devices" class="sidebar-link">devices</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#depends-on" class="sidebar-link">depends_on</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#dns" class="sidebar-link">dns</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#dns-search" class="sidebar-link">dns_search</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#tmpfs" class="sidebar-link">tmpfs</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#env-file" class="sidebar-link">env_file</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#environment" class="sidebar-link">environment</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#expose" class="sidebar-link">expose</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#external-links" class="sidebar-link">external_links</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#extra-hosts" class="sidebar-link">extra_hosts</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#healthcheck" class="sidebar-link">healthcheck</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#image" class="sidebar-link">image</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#labels" class="sidebar-link">labels</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#links" class="sidebar-link">links</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#logging" class="sidebar-link">logging</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#network-mode" class="sidebar-link">network_mode</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#networks" class="sidebar-link">networks</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#pid" class="sidebar-link">pid</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#ports" class="sidebar-link">ports</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#secrets" class="sidebar-link">secrets</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#security-opt" class="sidebar-link">security_opt</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#stop-signal" class="sidebar-link">stop_signal</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#sysctls" class="sidebar-link">sysctls</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#ulimits" class="sidebar-link">ulimits</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#volumes" class="sidebar-link">volumes</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#其它指令" class="sidebar-link">其它指令</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#读取变量" class="sidebar-link">读取变量</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#常用软件docker-compose文件" class="sidebar-link">常用软件docker-compose文件</a></li></ul></li><li><a href="/docker/docker-app.html" aria-current="page" class="active sidebar-link">Docker 常规应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker-app.html#基于-docker-安装-gitlab-runner" class="sidebar-link">基于 Docker 安装 GitLab Runner</a></li><li class="sidebar-sub-header"><a href="/docker/docker-app.html#基于-docker-安装-jenkins" class="sidebar-link">基于 Docker 安装 Jenkins</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="基于-docker-安装-gitlab-runner"><a href="#基于-docker-安装-gitlab-runner" class="header-anchor">#</a> 基于 Docker 安装 GitLab Runner</h2> <h3 id="环境准备"><a href="#环境准备" class="header-anchor">#</a> 环境准备</h3> <ul><li>创建工作目录 /usr/local/docker/runner</li> <li>创建构建目录 /usr/local/docker/runner/environment</li> <li>下载 jdk-8u152-linux-x64.tar.gz 并复制到 /usr/local/docker/runner/environment</li> <li>下载 apache-maven-3.5.3-bin.tar.gz 并复制到 /usr/local/docker/runner/environment</li></ul> <h3 id="daemon-json"><a href="#daemon-json" class="header-anchor">#</a> daemon.json</h3> <p>在 /usr/local/docker/runner/environment 目录下创建 daemon.json，用于配置加速器和仓库地址</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;registry-mirrors&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;https://registry.docker-cn.com&quot;</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;insecure-registries&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;192.168.10.133:5000&quot;</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="dockerfile"><a href="#dockerfile" class="header-anchor">#</a> Dockerfile</h3> <p>在 /usr/local/docker/runner/environment 目录下创建 Dockerfile</p> <div class="language-dockerfile extra-class"><pre class="language-dockerfile"><code><span class="token keyword">FROM</span> gitlab/gitlab<span class="token punctuation">-</span>runner
+<span class="token keyword">MAINTAINER</span> maodou38 &lt;maodoulove19950815@vip.qq.com<span class="token punctuation">&gt;</span>
+<span class="token comment"># 修改软件源</span>
+<span class="token keyword">RUN</span> echo <span class="token string">'deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse'</span> <span class="token punctuation">&gt;</span> /etc/apt/sources.list &amp;&amp; \
+    echo <span class="token string">'deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse'</span> <span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span> /etc/apt/sources.list &amp;&amp; \
+    echo <span class="token string">'deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse'</span> <span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span> /etc/apt/sources.list &amp;&amp; \
+    echo <span class="token string">'deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse'</span> <span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span> /etc/apt/sources.list &amp;&amp; \
+    apt<span class="token punctuation">-</span>get update <span class="token punctuation">-</span>y &amp;&amp; \
+    apt<span class="token punctuation">-</span>get clean
+
+<span class="token comment"># 安装 Docker</span>
+<span class="token keyword">RUN</span> apt<span class="token punctuation">-</span>get <span class="token punctuation">-</span>y install apt<span class="token punctuation">-</span>transport<span class="token punctuation">-</span>https ca<span class="token punctuation">-</span>certificates curl software<span class="token punctuation">-</span>properties<span class="token punctuation">-</span>common &amp;&amp; \
+    curl <span class="token punctuation">-</span>fsSL http<span class="token punctuation">:</span>//mirrors.aliyun.com/docker<span class="token punctuation">-</span>ce/linux/ubuntu/gpg <span class="token punctuation">|</span> apt<span class="token punctuation">-</span>key add <span class="token punctuation">-</span> &amp;&amp; \
+    add<span class="token punctuation">-</span>apt<span class="token punctuation">-</span>repository <span class="token string">&quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable&quot;</span> &amp;&amp; \
+    apt<span class="token punctuation">-</span>get update <span class="token punctuation">-</span>y &amp;&amp; \
+    apt<span class="token punctuation">-</span>get install <span class="token punctuation">-</span>y docker<span class="token punctuation">-</span>ce
+<span class="token keyword">COPY</span> daemon.json /etc/docker/daemon.json
+
+<span class="token comment"># 安装 Docker Compose</span>
+<span class="token keyword">WORKDIR</span> /usr/local/bin
+<span class="token keyword">RUN</span> wget https<span class="token punctuation">:</span>//raw.githubusercontent.com/topsale/resources/master/docker/docker<span class="token punctuation">-</span>compose
+<span class="token keyword">RUN</span> chmod +x docker<span class="token punctuation">-</span>compose
+
+<span class="token comment"># 安装 Java</span>
+<span class="token keyword">RUN</span> mkdir <span class="token punctuation">-</span>p /usr/local/java
+<span class="token keyword">WORKDIR</span> /usr/local/java
+<span class="token keyword">COPY</span> jdk<span class="token punctuation">-</span>8u152<span class="token punctuation">-</span>linux<span class="token punctuation">-</span>x64.tar.gz /usr/local/java
+<span class="token keyword">RUN</span> tar <span class="token punctuation">-</span>zxvf jdk<span class="token punctuation">-</span>8u152<span class="token punctuation">-</span>linux<span class="token punctuation">-</span>x64.tar.gz &amp;&amp; \
+    rm <span class="token punctuation">-</span>fr jdk<span class="token punctuation">-</span>8u152<span class="token punctuation">-</span>linux<span class="token punctuation">-</span>x64.tar.gz
+
+<span class="token comment"># 安装 Maven</span>
+<span class="token keyword">RUN</span> mkdir <span class="token punctuation">-</span>p /usr/local/maven
+<span class="token keyword">WORKDIR</span> /usr/local/maven
+<span class="token comment"># RUN wget https://raw.githubusercontent.com/topsale/resources/master/maven/apache-maven-3.5.3-bin.tar.gz</span>
+<span class="token keyword">COPY</span> apache<span class="token punctuation">-</span>maven<span class="token punctuation">-</span>3.5.3<span class="token punctuation">-</span>bin.tar.gz /usr/local/maven
+<span class="token keyword">RUN</span> tar <span class="token punctuation">-</span>zxvf apache<span class="token punctuation">-</span>maven<span class="token punctuation">-</span>3.5.3<span class="token punctuation">-</span>bin.tar.gz &amp;&amp; \
+    rm <span class="token punctuation">-</span>fr apache<span class="token punctuation">-</span>maven<span class="token punctuation">-</span>3.5.3<span class="token punctuation">-</span>bin.tar.gz
+<span class="token comment"># COPY settings.xml /usr/local/maven/apache-maven-3.5.3/conf/settings.xml</span>
+
+<span class="token comment"># 配置环境变量</span>
+<span class="token keyword">ENV</span> JAVA_HOME /usr/local/java/jdk1.8.0_152
+<span class="token keyword">ENV</span> MAVEN_HOME /usr/local/maven/apache<span class="token punctuation">-</span>maven<span class="token punctuation">-</span>3.5.3
+<span class="token keyword">ENV</span> PATH $PATH<span class="token punctuation">:</span>$JAVA_HOME/bin<span class="token punctuation">:</span>$MAVEN_HOME/bin
+
+<span class="token keyword">WORKDIR</span> /
+</code></pre></div><h3 id="docker-compose-yml"><a href="#docker-compose-yml" class="header-anchor">#</a> docker-compose.yml</h3> <p>在 /usr/local/docker/runner 目录下创建 docker-compose.yml</p> <div class="language-docker-compse extra-class"><pre class="language-text"><code>version: '3.1'
+services:
+  gitlab-runner:
+    build: environment
+    restart: always
+    container_name: gitlab-runner
+    privileged: true
+    volumes:
+      - ./config:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock
+</code></pre></div><h3 id="注册-runner"><a href="#注册-runner" class="header-anchor">#</a> 注册 Runner</h3> <div class="language-docker extra-class"><pre class="language-docker"><code>docker exec <span class="token punctuation">-</span>it gitlab<span class="token punctuation">-</span>runner gitlab<span class="token punctuation">-</span>runner register
+
+<span class="token comment"># 输入 GitLab 地址</span>
+Please enter the gitlab<span class="token punctuation">-</span>ci coordinator URL (e.g. https<span class="token punctuation">:</span>//gitlab.com/)<span class="token punctuation">:</span>
+http<span class="token punctuation">:</span>//192.168.10.132/
+
+<span class="token comment"># 输入 GitLab Token</span>
+Please enter the gitlab<span class="token punctuation">-</span>ci token for this runner<span class="token punctuation">:</span>
+1Lxq_f1NRfCfeNbE5WRh
+
+<span class="token comment"># 输入 Runner 的说明</span>
+Please enter the gitlab<span class="token punctuation">-</span>ci description for this runner<span class="token punctuation">:</span>
+可以为空
+
+<span class="token comment"># 设置 Tag，可以用于指定在构建规定的 tag 时触发 ci</span>
+Please enter the gitlab<span class="token punctuation">-</span>ci tags for this runner (comma separated)<span class="token punctuation">:</span>
+deploy
+
+<span class="token comment"># 这里选择 true ，可以用于代码上传后直接执行</span>
+Whether to run untagged builds <span class="token punctuation">[</span>true/false<span class="token punctuation">]</span><span class="token punctuation">:</span>
+true
+
+<span class="token comment"># 这里选择 false，可以直接回车，默认为 false</span>
+Whether to lock Runner to current project <span class="token punctuation">[</span>true/false<span class="token punctuation">]</span><span class="token punctuation">:</span>
+false
+
+<span class="token comment"># 选择 runner 执行器，这里我们选择的是 shell</span>
+Please enter the executor<span class="token punctuation">:</span> virtualbox<span class="token punctuation">,</span> docker+machine<span class="token punctuation">,</span> parallels<span class="token punctuation">,</span> shell<span class="token punctuation">,</span> ssh<span class="token punctuation">,</span> docker<span class="token punctuation">-</span>ssh+machine<span class="token punctuation">,</span> kubernetes<span class="token punctuation">,</span> docker<span class="token punctuation">,</span> docker<span class="token punctuation">-</span>ssh<span class="token punctuation">:</span>
+<span class="token keyword">shell</span>
+</code></pre></div><h3 id="使用-runner"><a href="#使用-runner" class="header-anchor">#</a> 使用 Runner</h3> <ul><li><p>GitLab CI 地址与令牌参数
+项目 –&gt; 设置 –&gt; CI/CD –&gt; Runner 设置
+<img src="/docker/docker-app/gitlab-runner.png" alt=""></p></li> <li><p>.gitlab-ci.yml<br>
+在项目工程下编写 .gitlab-ci.yml 配置文件：</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>stages:
+  - install_deps
+  - test
+  - build
+  - deploy_test
+  - deploy_production
+
+cache:
+  key: ${CI_BUILD_REF_NAME}
+  paths:
+    - node_modules/
+    - dist/
+
+# 安装依赖
+install_deps:
+  stage: install_deps
+  only:
+    - develop
+    - master
+  script:
+    - npm install
+
+# 运行测试用例
+test:
+  stage: test
+  only:
+    - develop
+    - master
+  script:
+    - npm run test
+
+# 编译
+build:
+  stage: build
+  only:
+    - develop
+    - master
+  script:
+    - npm run clean
+    - npm run build:client
+    - npm run build:server
+
+# 部署测试服务器
+deploy_test:
+  stage: deploy_test
+  only:
+    - develop
+  script:
+    - pm2 delete app || true
+    - pm2 start app.js --name app
+
+# 部署生产服务器
+deploy_production:
+  stage: deploy_production
+  only:
+    - master
+  script:
+    - bash scripts/deploy/deploy.sh
+</code></pre></div><p>上面的配置把一次 Pipeline 分成五个阶段：</p> <ul><li>安装依赖(install_deps)</li> <li>运行测试(test)</li> <li>编译(build)</li> <li>部署测试服务器(deploy_test)</li> <li>部署生产服务器(deploy_production)</li></ul> <p>注意： 设置 Job.only 后，只有当 develop 分支和 master 分支有提交的时候才会触发相关的 Jobs。
+节点说明：</p> <ul><li>stages：定义构建阶段，这里只有一个阶段 deploy</li> <li>deploy：构建阶段 deploy 的详细配置也就是任务配置</li> <li>script：需要执行的 shell 脚本</li> <li>only：这里的 master 指在提交到 master 时执行</li> <li>tags：与注册 runner 时的 tag 匹配</li></ul> <h3 id="其它命令"><a href="#其它命令" class="header-anchor">#</a> 其它命令</h3> <ul><li>删除注册信息
+<code>gitlab-ci-multi-runner unregister --name &quot;名称&quot;</code></li> <li>查看注册列表
+<code>gitlab-ci-multi-runner list</code></li></ul> <h3 id="dockerfile示例"><a href="#dockerfile示例" class="header-anchor">#</a> Dockerfile示例</h3> <div class="language- extra-class"><pre class="language-text"><code>    FROM openjdk:8-jre
+
+MAINTAINER maodou38 &lt;maodoulove19950815@vip.qq.com&gt;
+
+ENV APP_VERSION 1.0.0-SNAPSHOT
+ENV DOCKERIZE_VERSION v0.6.1
+RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    &amp;&amp; tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    &amp;&amp; rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+
+RUN mkdir /app
+
+COPY myshop-service-user-provider-$APP_VERSION.jar /app/app.jar
+ENTRYPOINT [&quot;dockerize&quot;, &quot;-timeout&quot;, &quot;5m&quot;, &quot;-wait&quot;, &quot;tcp://192.168.10.131:3306&quot;, &quot;java&quot;, &quot;-Djava.security.egd=file:/dev/./urandom&quot;, &quot;-jar&quot;, &quot;/app/app.jar&quot;]
+
+EXPOSE 8501
+</code></pre></div><p><font color="red"> DOCKERIZE是一个监听插件，监听依赖服务是否启动</font></p> <h2 id="基于-docker-安装-jenkins"><a href="#基于-docker-安装-jenkins" class="header-anchor">#</a> 基于 Docker 安装 Jenkins</h2> <h3 id="docker-compose"><a href="#docker-compose" class="header-anchor">#</a> docker-compose</h3> <p>Jenkins 是一个简单易用的持续集成软件平台，我们依然采用 Docker 的方式部署，docker-compose.yml 配置文件如下：</p> <div class="language- extra-class"><pre class="language-text"><code>version: '3.1'
+services:
+  jenkins:
+    restart: always
+    image: jenkinsci/jenkins
+    container_name: jenkins
+    ports:
+      # 发布端口
+      - 8080:8080
+      # 基于 JNLP 的 Jenkins 代理通过 TCP 端口 50000 与 Jenkins master 进行通信
+      - 50000:50000
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - ./data:/var/jenkins_home
+</code></pre></div><p>安装过程中会出现 Docker 数据卷 权限问题，用以下命令解决：</p> <div class="language- extra-class"><pre class="language-text"><code>chown -R 1000 /usr/local/docker/jenkins/data
+</code></pre></div><h3 id="解锁-jenkins"><a href="#解锁-jenkins" class="header-anchor">#</a> 解锁 Jenkins</h3> <p>Jenkins 第一次启动时需要输入一个初始密码用以解锁安装流程，使用 docker logs jenkins 即可方便的查看到初始密码
+<img src="/docker/docker-app/jenkins-unlock.png" alt=""> <img src="/docker/docker-app/jenkins-pass.png" alt="">
+注意： 安装时可能会因为网速等原因导致安装时间比较长，请大家耐心等待。如果长时间停留在安装页没反应，请尝试使用 F5 刷新一下。</p> <h3 id="使用自定义插件的方式安装"><a href="#使用自定义插件的方式安装" class="header-anchor">#</a> 使用自定义插件的方式安装</h3> <p>插件是 Jenkins 的核心，其丰富的插件（截止到 2018.10.29 共有 77350 个插件）可以满足不同人群的不同需求</p> <p>插件地址：https://plugins.jenkins.io/</p> <p>注意： 除了默认勾选的插件外，一定要勾选 Publish over SSH 插件，这是我们实现持续交付的重点插件。</p> <p><strong>开始安装了，根据网络情况，安装时间可能会比较长，请耐心等待</strong></p> <p><strong>很多插件装不上怎么办？不要慌，记住这些插件的名字，咱们稍后可以手动安装</strong></p> <h3 id="安装成功效果图"><a href="#安装成功效果图" class="header-anchor">#</a> 安装成功效果图</h3> <p>创建管理员
+<img src="/docker/docker-app/jenkins-install-success.png" alt=""></p> <p>安装完成，进入首页</p> <h3 id="附-jenkins-手动安装插件"><a href="#附-jenkins-手动安装插件" class="header-anchor">#</a> 附：Jenkins 手动安装插件</h3> <ul><li>使用插件管理器安装
+Manage Jenkins -&gt; Manage Plugins -&gt; Avaliable</li></ul> <p>过滤出想要安装的插件，然后点击 Download now and install after restart</p> <ul><li>手动上传 .hpi 文件
+点击进入插件中心</li></ul> <p>点击 Archives</p> <p>下载需要的版本</p> <p>在插件管理器中选择 Advanced</p> <p>选择上传即可
+<img src="/docker/docker-app/jenkins-upload.png" alt=""></p> <h3 id="重启-jenkins"><a href="#重启-jenkins" class="header-anchor">#</a> 重启 Jenkins</h3> <div class="language- extra-class"><pre class="language-text"><code>docker-compose down
+docker-compose up -d
+</code></pre></div><p>注意： 请留意需要下载插件的警告信息，如果不满足安装条件，Jenkins 是会拒绝安装的。如下图：
+<img src="/docker/docker-app/jenkins-refuse.png" alt=""></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated::</span> <span class="time">9/9/2020, 12:14:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docker/docker-compose-command.html" class="prev">
+        docker-compose指令
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b5e23f74.js" defer></script><script src="/assets/js/2.d9d06ceb.js" defer></script><script src="/assets/js/5.899047f6.js" defer></script>
+  </body>
+</html>

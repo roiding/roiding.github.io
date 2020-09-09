@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>docker多架构构建镜像 | 小丁的博客</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicons/favicon.png" type="image/png" sizes="16x16">
+    <meta name="description" content="小丁的博客">
+    <link rel="preload" href="/assets/css/0.styles.7950d16d.css" as="style"><link rel="preload" href="/assets/js/app.b5e23f74.js" as="script"><link rel="preload" href="/assets/js/2.d9d06ceb.js" as="script"><link rel="preload" href="/assets/js/6.42010163.js" as="script"><link rel="prefetch" href="/assets/js/10.7c25fd62.js"><link rel="prefetch" href="/assets/js/11.af60966d.js"><link rel="prefetch" href="/assets/js/12.4490ace8.js"><link rel="prefetch" href="/assets/js/13.30bec20c.js"><link rel="prefetch" href="/assets/js/3.b53b0167.js"><link rel="prefetch" href="/assets/js/4.91f2ff50.js"><link rel="prefetch" href="/assets/js/5.899047f6.js"><link rel="prefetch" href="/assets/js/7.5efbdc75.js"><link rel="prefetch" href="/assets/js/8.a7f7ee4e.js"><link rel="prefetch" href="/assets/js/9.4f551cd4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7950d16d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicons/favicon.png" alt="小丁的博客" class="logo"> <span class="site-name can-hide">小丁的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/maodou38" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/maodou38" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/docker/docker-install.html" class="sidebar-link">安装Docker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker-install.html#docker安装-centos" class="sidebar-link">Docker安装（centos）</a></li><li class="sidebar-sub-header"><a href="/docker/docker-install.html#docker安装-debian" class="sidebar-link">docker安装(debian)</a></li><li class="sidebar-sub-header"><a href="/docker/docker-install.html#docker-用户组设置" class="sidebar-link">Docker 用户组设置</a></li><li class="sidebar-sub-header"><a href="/docker/docker-install.html#docker-compose安装" class="sidebar-link">Docker-compose安装</a></li></ul></li><li><a href="/docker/docker-buildx.html" aria-current="page" class="active sidebar-link">docker多架构构建镜像</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker-buildx.html#开启docker-buildx" class="sidebar-link">开启docker buildx</a></li><li class="sidebar-sub-header"><a href="/docker/docker-buildx.html#启用-binfmt-misc" class="sidebar-link">启用 binfmt_misc</a></li><li class="sidebar-sub-header"><a href="/docker/docker-buildx.html#从默认的构建器切换到多平台构建器" class="sidebar-link">从默认的构建器切换到多平台构建器</a></li><li class="sidebar-sub-header"><a href="/docker/docker-buildx.html#构建多平台镜像" class="sidebar-link">构建多平台镜像</a></li><li class="sidebar-sub-header"><a href="/docker/docker-buildx.html#测试多平台镜像" class="sidebar-link">测试多平台镜像</a></li></ul></li><li><a href="/docker/docker-remote.html" class="sidebar-link">docker 远程连接配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker-remote.html#配置" class="sidebar-link">配置</a></li><li class="sidebar-sub-header"><a href="/docker/docker-remote.html#防火墙开启对应端口" class="sidebar-link">防火墙开启对应端口</a></li></ul></li><li><a href="/docker/docker-command.html" class="sidebar-link">docker常用命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docker/dockerfile-command.html" class="sidebar-link">dockerfile指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#from" class="sidebar-link">FROM</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#run" class="sidebar-link">RUN</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#cmd" class="sidebar-link">CMD</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#label" class="sidebar-link">LABEL</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#maintainer" class="sidebar-link">MAINTAINER</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#expose" class="sidebar-link">EXPOSE</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#env" class="sidebar-link">ENV</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#add" class="sidebar-link">ADD</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#copy" class="sidebar-link">COPY</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#entrypoint" class="sidebar-link">ENTRYPOINT</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#volume" class="sidebar-link">VOLUME</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#user" class="sidebar-link">USER</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#workdir" class="sidebar-link">WORKDIR</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#arg" class="sidebar-link">ARG</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#onbuild" class="sidebar-link">ONBUILD</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#stopsignal" class="sidebar-link">STOPSIGNAL</a></li><li class="sidebar-sub-header"><a href="/docker/dockerfile-command.html#healthcheck" class="sidebar-link">HEALTHCHECK</a></li></ul></li><li><a href="/docker/docker-compose-command.html" class="sidebar-link">docker-compose指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#build" class="sidebar-link">build</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#cap-add-cap-drop" class="sidebar-link">capadd, capdrop</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#command" class="sidebar-link">command</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#configs" class="sidebar-link">configs</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#cgroup-parent" class="sidebar-link">cgroup_parent</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#container-name" class="sidebar-link">container_name</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#deploy" class="sidebar-link">deploy</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#devices" class="sidebar-link">devices</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#depends-on" class="sidebar-link">depends_on</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#dns" class="sidebar-link">dns</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#dns-search" class="sidebar-link">dns_search</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#tmpfs" class="sidebar-link">tmpfs</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#env-file" class="sidebar-link">env_file</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#environment" class="sidebar-link">environment</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#expose" class="sidebar-link">expose</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#external-links" class="sidebar-link">external_links</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#extra-hosts" class="sidebar-link">extra_hosts</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#healthcheck" class="sidebar-link">healthcheck</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#image" class="sidebar-link">image</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#labels" class="sidebar-link">labels</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#links" class="sidebar-link">links</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#logging" class="sidebar-link">logging</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#network-mode" class="sidebar-link">network_mode</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#networks" class="sidebar-link">networks</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#pid" class="sidebar-link">pid</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#ports" class="sidebar-link">ports</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#secrets" class="sidebar-link">secrets</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#security-opt" class="sidebar-link">security_opt</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#stop-signal" class="sidebar-link">stop_signal</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#sysctls" class="sidebar-link">sysctls</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#ulimits" class="sidebar-link">ulimits</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#volumes" class="sidebar-link">volumes</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#其它指令" class="sidebar-link">其它指令</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#读取变量" class="sidebar-link">读取变量</a></li><li class="sidebar-sub-header"><a href="/docker/docker-compose-command.html#常用软件docker-compose文件" class="sidebar-link">常用软件docker-compose文件</a></li></ul></li><li><a href="/docker/docker-app.html" class="sidebar-link">Docker 常规应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker-app.html#基于-docker-安装-gitlab-runner" class="sidebar-link">基于 Docker 安装 GitLab Runner</a></li><li class="sidebar-sub-header"><a href="/docker/docker-app.html#基于-docker-安装-jenkins" class="sidebar-link">基于 Docker 安装 Jenkins</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="开启docker-buildx"><a href="#开启docker-buildx" class="header-anchor">#</a> 开启docker buildx</h2> <p>在/root/.docker目录下有一个config.json文件，加上</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;experimental&quot; : &quot;enabled&quot;
+</code></pre></div><p>重启docker</p> <h3 id="验证是否开启"><a href="#验证是否开启" class="header-anchor">#</a> 验证是否开启</h3> <div class="language- extra-class"><pre class="language-text"><code>🐳 → docker buildx version
+github.com/docker/buildx v0.3.1-tp-docker 6db68d029599c6710a32aa7adcba8e5a344795a7
+</code></pre></div><p>如果在某些系统上设置环境变量 DOCKER_CLI_EXPERIMENTAL 不生效（比如 Arch Linux）,你可以选择从源代码编译：</p> <div class="language- extra-class"><pre class="language-text"><code>🐳 → export DOCKER_BUILDKIT=1
+🐳 → docker build --platform=local -o . git://github.com/docker/buildx
+🐳 → mkdir -p ~/.docker/cli-plugins &amp;&amp; mv buildx ~/.docker/cli-plugins/docker-buildx
+</code></pre></div><h2 id="启用-binfmt-misc"><a href="#启用-binfmt-misc" class="header-anchor">#</a> 启用 binfmt_misc</h2> <blockquote><p>如果你使用的是 Docker 桌面版（MacOS 和 Windows），默认已经启用了 binfmt_misc，可以跳过这一步。
+如果你使用的是 Linux，需要手动启用 binfmt_misc。大多数 Linux 发行版都很容易启用，不过还有一个更容易的办法，直接运行一个特权容器，容器里面写好了设置脚本：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>🐳 → docker run --rm --privileged docker/binfmt:66f9012c56a8316f9244ffd7622d7c21c1f6f28d    
+</code></pre></div><blockquote><p>建议将 Linux 内核版本升级到 4.x 以上，特别是 CentOS 用户，你可能会遇到错误。
+验证是 binfmt_misc 否开启：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>🐳 → ls -al /proc/sys/fs/binfmt_misc/
+总用量 0
+总用量 0
+-rw-r--r-- 1 root root 0 11月 18 00:12 qemu-aarch64
+-rw-r--r-- 1 root root 0 11月 18 00:12 qemu-arm
+-rw-r--r-- 1 root root 0 11月 18 00:12 qemu-ppc64le
+-rw-r--r-- 1 root root 0 11月 18 00:12 qemu-s390x
+--w------- 1 root root 0 11月 18 00:09 register
+-rw-r--r-- 1 root root 0 11月 18 00:12 status
+</code></pre></div><p>验证是否启用了相应的处理器：</p> <div class="language- extra-class"><pre class="language-text"><code>🐳 → cat /proc/sys/fs/binfmt_misc/qemu-aarch64
+enabled
+interpreter /usr/bin/qemu-aarch64
+flags: OCF
+offset 0
+magic 7f454c460201010000000000000000000200b7
+mask ffffffffffffff00fffffffffffffffffeffff
+</code></pre></div><h2 id="从默认的构建器切换到多平台构建器"><a href="#从默认的构建器切换到多平台构建器" class="header-anchor">#</a> 从默认的构建器切换到多平台构建器</h2> <p>创建一个新的构建器：</p> <div class="language- extra-class"><pre class="language-text"><code>🐳 → docker buildx create --use --name mybuilder
+</code></pre></div><p>启动构建器：</p> <div class="language- extra-class"><pre class="language-text"><code>🐳 → docker buildx inspect mybuilder --bootstrap
+
+[+] Building 5.0s (1/1) FINISHED
+ =&gt; [internal] booting buildkit                                                                                                                          5.0s
+ =&gt; =&gt; pulling image moby/buildkit:buildx-stable-1                                                                                                       4.4s
+ =&gt; =&gt; creating container buildx_buildkit_mybuilder0                                                                                                     0.6s
+Name:   mybuilder
+Driver: docker-container
+
+Nodes:
+Name:      mybuilder0
+Endpoint:  unix:///var/run/docker.sock
+Status:    running
+Platforms: linux/amd64, linux/arm64, linux/ppc64le, linux/s390x, linux/386, linux/arm/v7, linux/arm/v6
+</code></pre></div><p>查看当前使用的构建器及构建器支持的 CPU 架构，可以看到支持很多 CPU 架构：</p> <div class="language- extra-class"><pre class="language-text"><code>🐳 → docker buildx ls
+
+NAME/NODE    DRIVER/ENDPOINT             STATUS  PLATFORMS
+mybuilder *  docker-container
+  mybuilder0 unix:///var/run/docker.sock running linux/amd64, linux/arm64, linux/ppc64le, linux/s390x, linux/386, linux/arm/v7, linux/arm/v6
+default      docker
+  default    default                     running linux/amd64, linux/386
+</code></pre></div><h2 id="构建多平台镜像"><a href="#构建多平台镜像" class="header-anchor">#</a> 构建多平台镜像</h2> <div class="language- extra-class"><pre class="language-text"><code>🐳 → docker buildx build -t maodou38/downloader --platform=linux/arm,linux/arm64,linux/amd64 . --push
+</code></pre></div><blockquote><p>需要提前通过 docker login 命令登录认证 Docker Hub。
+如果想将构建好的镜像保存在本地，可以将 type 指定为 docker，但必须分别为不同的 CPU 架构构建不同的镜像，不能合并成一个镜像，即：</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>🐳 → docker buildx build -t maodou38/downloader --platform=linux/arm -o type=docker .
+🐳 → docker buildx build -t maodou38/downloader --platform=linux/arm64 -o type=docker .
+🐳 → docker buildx build -t maodou38/downloader --platform=linux/amd64 -o type=docker .
+</code></pre></div><h2 id="测试多平台镜像"><a href="#测试多平台镜像" class="header-anchor">#</a> 测试多平台镜像</h2> <p>首先列出每个镜像的 digests：</p> <div class="language- extra-class"><pre class="language-text"><code>🐳 → docker buildx imagetools inspect maodou38/downloader
+
+Name:      docker.io/maodou38/downloader:latest
+MediaType: application/vnd.docker.distribution.manifest.list.v2+json
+Digest:    sha256:ec55f5ece9a12db0c6c367acda8fd1214f50ee502902f97b72f7bff268ebc35a
+
+Manifests:
+  Name:      docker.io/maodou38/downloader:latest@sha256:38e083870044cfde7f23a2eec91e307ec645282e76fd0356a29b32122b11c639
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/arm/v7
+
+  Name:      docker.io/maodou38/downloader:latest@sha256:de273a2a3ce92a5dc1e6f2d796bb85a81fe1a61f82c4caaf08efed9cf05af66d
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/arm64
+
+  Name:      docker.io/maodou38/downloader:latest@sha256:8b735708d7d30e9cd6eb993449b1047b7229e53fbcebe940217cb36194e9e3a2
+  MediaType: application/vnd.docker.distribution.manifest.v2+json
+  Platform:  linux/amd64
+</code></pre></div><p>运行每一个镜像并观察输出结果：</p> <div class="language- extra-class"><pre class="language-text"><code>🐳 → docker run --rm docker.io/maodou38/downloader:latest@sha256:38e083870044cfde7f23a2eec91e307ec645282e76fd0356a29b32122b11c639
+Hello, arm!
+
+🐳 → docker run --rm docker.io/maodou38/downloader:latest@sha256:de273a2a3ce92a5dc1e6f2d796bb85a81fe1a61f82c4caaf08efed9cf05af66d
+Hello, arm64!
+
+🐳 → docker run --rm docker.io/maodou38/downloader:latest@sha256:8b735708d7d30e9cd6eb993449b1047b7229e53fbcebe940217cb36194e9e3a2
+Hello, amd64!
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated::</span> <span class="time">9/9/2020, 12:14:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docker/docker-install.html" class="prev">
+        安装Docker
+      </a></span> <span class="next"><a href="/docker/docker-remote.html">
+        docker 远程连接配置
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b5e23f74.js" defer></script><script src="/assets/js/2.d9d06ceb.js" defer></script><script src="/assets/js/6.42010163.js" defer></script>
+  </body>
+</html>
