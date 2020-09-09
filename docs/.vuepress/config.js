@@ -59,6 +59,9 @@ module.exports = {
             'springboot',
             'intellij',
           ],
+          '/tools/':[
+            'git',
+          ],
           '/':[
             'resource',
           ],
