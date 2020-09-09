@@ -17,7 +17,7 @@ git rm --cached `<file name>`：移除暂存区的修改
 
 git commit `<file name>`：将暂存区的内容提交到本地库
 
-&emsp;&emsp;*tip：需要再编辑提交日志，比较麻烦，建议用下面带参数的提交方法*
+* tip：需要再编辑提交日志，比较麻烦，建议用下面带参数的提交方法
 
 git commit -m "提交日志" `<file name>`：文件从暂存区到本地库
 
@@ -27,7 +27,7 @@ git commit -m "提交日志" `<file name>`：文件从暂存区到本地库
 
 git log：查看历史提交
 
-&emsp;&emsp;*tip：空格向下翻页，b向上翻页，q退出*
+* tip：空格向下翻页，b向上翻页，q退出
 
 git log --pretty=oneline：以漂亮的一行显示，包含全部哈希索引值
 
@@ -45,11 +45,11 @@ git reset --hard HEAD：强制工作区、暂存区、本地库为当前HEAD指�
 
 git reset --hard HEAD^：后退一个版本　　
 
-&emsp;&emsp;*tip：一个^表示回退一个版本*
+* tip：一个^表示回退一个版本
 
 git reset --hard HEAD~1：后退一个版本
 
-&emsp;&emsp;*tip：波浪线~后面的数字表示后退几个版本*
+* tip：波浪线~后面的数字表示后退几个版本
 
  
 
@@ -111,4 +111,4 @@ git merge <远程库别名/远程库分支名>：将抓取下来的远程的分�
 
 git fork：复制远程库
 
-&emsp;&emsp;*tip：一般是外面团队的开发人员fork本团队项目，然后进行开发，之后外面团队发起pull request，然后本团队进行审核，如无问题本团队进行merge（合并）到团队自己的远程库，整个流程就是本团队跟外面团队的协同开发流程，Linux的团队开发成员即为这种工作方式。*
+* tip：一般是外面团队的开发人员fork本团队项目，然后进行开发，之后外面团队发起pull request，然后本团队进行审核，如无问题本团队进行merge（合并）到团队自己的远程库，整个流程就是本团队跟外面团队的协同开发流程，Linux的团队开发成员即为这种工作方式。*

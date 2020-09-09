@@ -444,3 +444,165 @@ public class RedisConfig {
     }
 }
 ``` 
+
+## Validation使用
+### 原生支持
+![](./java/1590374918637.png)
+
+### 全局校验处理 demo
+
+```java
+@Data
+public class TableBO {
+    @NotBlank
+    private String id;
+    @NotBlank
+    private String data;
+}
+```
+添加@Validated注解
+
+```java
+@PutMapping(value = "/updateById", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+public ResultVO updateTableDataById(@Validated @RequestBody TableBO tableBO) {
+	return standBookService.modifyCellData(tableBO);
+}
+```
+
+编写一个全局异常类，并拦截MethodArgumentNotValidException异常
+
+```java
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResultVO handleMethodArgumentNotValidException(MethodArgumentNotValidException e){
+        BindingResult bindingResult = e.getBindingResult();
+
+        StringBuilder sb = new StringBuilder("校验失败:");
+
+        for (FieldError fieldError : bindingResult.getFieldErrors()) {
+            sb.append(fieldError.getField() + "：" + fieldError.getDefaultMessage() + ", ");
+        }
+
+        return ResultVOUtils.error(ResultEnum.PARAM_ERROR.getCode(), sb.toString());
+    }
+}
+```
+
+### 分组校验demo
+
+```java
+Class Foo{
+    @Min(value = 18,groups = {Adult.class})
+    private Integer age;
+
+    public interface Adult{}
+}
+```
+
+只有Adult分组下会校验
+
+```java
+@RequestMapping("/drink")
+public String drink(@Validated({Foo.Adult.class}) Foo foo, BindingResult bindingResult) {
+    if(bindingResult.hasErrors()){
+        for (FieldError fieldError : bindingResult.getFieldErrors()) {
+            //...
+        }
+        return "fail";
+    }
+    return "success";
+}
+
+@RequestMapping("/live")
+public String live(@Validated Foo foo, BindingResult bindingResult) {
+    if(bindingResult.hasErrors()){
+        for (FieldError fieldError : bindingResult.getFieldErrors()) {
+            //...
+        }
+        return "fail";
+    }
+    return "success";
+}
+```
+### 自定义校验注解demo
+```java
+@Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER})
+@Retention(RUNTIME)
+@Documented
+@Constraint(validatedBy = {CannotHaveBlankValidator.class})<1>
+public @interface CannotHaveBlank {
+
+    //默认错误消息
+    String message() default "不能包含空格";
+
+    //分组
+    Class<?>[] groups() default {};
+
+    //负载
+    Class<? extends Payload>[] payload() default {};
+
+    //指定多个时使用
+    @Target({FIELD, METHOD, PARAMETER, ANNOTATION_TYPE})
+    @Retention(RUNTIME)
+    @Documented
+    @interface List {
+        CannotHaveBlank[] value();
+    }
+
+}
+```
+
+校验类
+```java
+public class CannotHaveBlankValidator implements ConstraintValidator<CannotHaveBlank, String> {
+
+    @Override
+    public void initialize(CannotHaveBlank constraintAnnotation) {
+    }
+
+
+    @Override
+    public boolean isValid(String value, ConstraintValidatorContext context ) {
+        //null时不进行校验
+        if (value != null && value.contains(" ")) {
+            //获取默认提示信息
+            String defaultConstraintMessageTemplate = context.getDefaultConstraintMessageTemplate();
+            System.out.println("default message :" + defaultConstraintMessageTemplate);
+            //禁用默认提示信息
+            context.disableDefaultConstraintViolation();
+            //设置提示语
+            context.buildConstraintViolationWithTemplate("can not contains blank").addConstraintViolation();
+            return false;
+        }
+        return true;
+    }
+}
+```
+### 基于方法校验
+```java
+@RestController
+@Validated <1>
+public class BarController {
+
+    @RequestMapping("/bar")
+    public  <2.1> @NotBlank String (@Min(18) Integer age <2.2>) {
+        System.out.println("age : " + age);
+        return "";
+    }
+
+    @ExceptionHandler(ConstraintViolationException.class)
+    public Map handleConstraintViolationException(ConstraintViolationException cve){
+        Set<ConstraintViolation<?>> cves = cve.getConstraintViolations();<3>
+        for (ConstraintViolation<?> constraintViolation : cves) {
+            System.out.println(constraintViolation.getMessage());
+        }
+        Map map = new HashMap();
+        map.put("errorCode",500);
+        return map;
+    }
+
+}
+```
+
+
