@@ -14,7 +14,14 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 ## JAVA
 [SpringBoot](/java/springboot.html)
 
+[intellij](/java/intellij.html)
+
+[JAVA连接常用软件](/java/java-connect.html)
+
 ## 开发使用到的工具
 [git](/tools/git.html)
 
 [nginx](/tools/nginx.html)
+## ATTENTION!
+
+[开发常见注意点](/attention.html)

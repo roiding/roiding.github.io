@@ -58,6 +58,7 @@ module.exports = {
           '/java/':[
             'springboot',
             'intellij',
+            'java-connect',
           ],
           '/tools/':[
             'git',
@@ -65,6 +66,7 @@ module.exports = {
           ],
           '/':[
             'resource',
+            'attention',
           ],
         },
         searchMaxSuggestions: 10, //调整默认查找个数 10
