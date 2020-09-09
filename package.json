@@ -1,7 +1,9 @@
 {
   "devDependencies": {
+    "moment": "^2.27.0",
     "@vuepress/theme-default": "^1.5.4",
-    "vuepress": "^1.5.4"
+    "vuepress": "^1.5.4",
+    "@vuepress/plugin-last-updated": "^1.5.4"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
