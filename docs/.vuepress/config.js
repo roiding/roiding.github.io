@@ -40,6 +40,7 @@ module.exports = {
           ],
           '/java/':[
             'springboot',
+            'intellij',
           ],
           '/':[
             'resource',
@@ -50,6 +51,6 @@ module.exports = {
         nextLinks: true, // 上/先一篇链接
         prevLinks: true,
         navbar: true, // 禁用导航栏
-        displayAllHeaders: true, // 显示所有页面的标题链接 默认值：false 
+        displayAllHeaders: false, // 显示所有页面的标题链接 默认值：false 
     }
 }

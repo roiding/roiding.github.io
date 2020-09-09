@@ -21,7 +21,7 @@ private static final long serialVersionUID = 8289770415244673535L;
 _IDEA 提示生成序列号
 默认情况下 Intellij IDEA 不会提示继承了 Serializable 接口的类生成 serialVersionUID 的警告。如果需要生成 serialVersionUID，需要手动配置。
 File -> Settings -> Inspections -> Serialization issues -> Serialization class without 'serialVersionUID'_
-![](/java/intelij-serialVersionUID.png)
+![](/intellij/intellij-serialVersionUID.png)
 
 
 ### 创建相关工具类
@@ -256,3 +256,191 @@ import tk.mybatis.mapper.MyMapper;
 public interface TbSysUserMapper extends MyMapper<TbSysUser> {
 }
 ```
+
+## 使用swagger接口文档引擎
+### Maven
+增加 Swagger2 所需依赖，pom.xml 配置如下：
+```xml
+<!-- Swagger2 Begin -->
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.8.0</version>
+</dependency>
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>2.8.0</version>
+</dependency>
+<!-- Swagger2 End -->
+```  
+
+### 配置 Swagger2
+注意：RequestHandlerSelectors.basePackage("ran.ding.service.admin.controller") 为 Controller 包路径，不然生成的文档扫描不到接口
+
+创建一个名为 Swagger2Config 的 Java 配置类，代码如下：
+```java
+package ran.ding.service.admin.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+
+@Configuration
+public class Swagger2Config {
+    @Bean
+    public Docket createRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.funtl.itoken.service.admin.controller"))
+                .paths(PathSelectors.any())
+                .build();
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+                .title("iToken API 文档")
+                .description("iToken API 网关接口，http://www.funtl.com")
+                .termsOfServiceUrl("http://www.funtl.com")
+                .version("1.0.0")
+                .build();
+    }
+}
+```  
+
+### 启用 Swagger2
+Application 中加上注解 @EnableSwagger2 表示开启 Swagger
+```java
+package ran.ding.service.admin;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import tk.mybatis.spring.annotation.MapperScan;
+
+@SpringBootApplication(scanBasePackages = "com.funtl.itoken")
+@EnableEurekaClient
+@EnableSwagger2
+@MapperScan(basePackages = {"com.funtl.itoken.common.mapper", "com.funtl.itoken.service.admin.mapper"})
+public class ServiceAdminApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ServiceAdminApplication.class, args);
+    }
+}
+```  
+
+### 使用 Swagger2
+在 Controller 中增加 Swagger2 相关注解，代码如下：
+```java
+/**
+ * 分页查询
+ *
+ * @param pageNum
+ * @param pageSize
+ * @param tbSysUserJson
+ * @return
+ */
+@ApiOperation(value = "管理员分页查询")
+@ApiImplicitParams({
+        @ApiImplicitParam(name = "pageNum", value = "页码", required = true, dataType = "int", paramType = "path"),
+        @ApiImplicitParam(name = "pageSize", value = "笔数", required = true, dataType = "int", paramType = "path"),
+        @ApiImplicitParam(name = "tbSysUserJson", value = "管理员对象 JSON 字符串", required = false, dataTypeClass = String.class, paramType = "json")
+})
+@RequestMapping(value = "page/{pageNum}/{pageSize}", method = RequestMethod.GET)
+public BaseResult page(
+        @PathVariable(required = true) int pageNum,
+        @PathVariable(required = true) int pageSize,
+        @RequestParam(required = false) String tbSysUserJson
+) throws Exception {
+
+    TbSysUser tbSysUser = null;
+    if (tbSysUserJson != null) {
+        tbSysUser = MapperUtils.json2pojo(tbSysUserJson, TbSysUser.class);
+    }
+    PageInfo pageInfo = adminService.page(pageNum, pageSize, tbSysUser);
+
+    // 分页后的结果集
+    List<TbSysUser> list = pageInfo.getList();
+
+    // 封装 Cursor 对象
+    BaseResult.Cursor cursor = new BaseResult.Cursor();
+    cursor.setTotal(new Long(pageInfo.getTotal()).intValue());
+    cursor.setOffset(pageInfo.getPageNum());
+    cursor.setLimit(pageInfo.getPageSize());
+
+    return BaseResult.ok(list, cursor);
+}
+```  
+
+### Swagger 注解说明
+Swagger 通过注解表明该接口会生成文档，包括接口名、请求方法、参数、返回信息的等等。
+* @Api：修饰整个类，描述 Controller 的作用
+* @ApiOperation：描述一个类的一个方法，或者说一个接口
+* @ApiParam：单个参数描述
+* @ApiModel：用对象来接收参数
+* @ApiProperty：用对象接收参数时，描述对象的一个字段
+* @ApiResponse：HTTP 响应其中 1 个描述
+* @ApiResponses：HTTP 响应整体描述
+* @ApiIgnore：使用该注解忽略这个API
+* @ApiError：发生错误返回的信息
+* @ApiImplicitParam：一个请求参数
+* @ApiImplicitParams：多个请求参数  
+
+### 访问 Swagger2
+访问地址：http://ip:port/swagger-ui.html
+![](/java/swagger.png)
+
+## 整合redis
+### 依赖
+```xml
+<!-- spring boot redis 缓存引入 -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-redis</artifactId>
+</dependency>
+<!-- lettuce pool 缓存连接池 -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-pool2</artifactId>
+</dependency>
+```  
+### application.properties配置文件
+```
+# Redis数据库索引（默认为0）
+spring.redis.database=0  
+# Redis服务器地址
+spring.redis.host=localhost
+# Redis服务器连接端口
+spring.redis.port=6379  
+# Redis服务器连接密码（默认为空）
+spring.redis.password=
+# 连接池最大连接数（使用负值表示没有限制） 默认 8
+spring.redis.lettuce.pool.max-active=8
+# 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+spring.redis.lettuce.pool.max-wait=-1
+# 连接池中的最大空闲连接 默认 8
+spring.redis.lettuce.pool.max-idle=8
+```  
+### 新建config包，创建RedisConfig类
+默认情况下RedisTemplate模板只能支持字符串，我们自定义一个RedisTemplate，设置序列化器，这样我们可以很方便的操作实例对象。
+```java
+@Configuration
+public class RedisConfig {
+    @Bean
+    public RedisTemplate<String, Serializable> 
+            redisTemplate(LettuceConnectionFactory connectionFactory) {
+        RedisTemplate<String, Serializable> redisTemplate = new RedisTemplate<>();
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        redisTemplate.setConnectionFactory(connectionFactory);
+        return redisTemplate;
+    }
+}
+``` 
