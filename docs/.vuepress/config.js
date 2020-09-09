@@ -61,6 +61,7 @@ module.exports = {
           ],
           '/tools/':[
             'git',
+            'nginx',
           ],
           '/':[
             'resource',
