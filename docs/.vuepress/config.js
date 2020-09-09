@@ -35,6 +35,9 @@ module.exports = {
           '/linux/':[
             'centos',
           ],
+          '/guide/':[
+            '',
+          ],
         },
         searchMaxSuggestions: 10, //调整默认查找个数 10
         lastUpdated: 'Last Updated:',
