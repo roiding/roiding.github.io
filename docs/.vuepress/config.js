@@ -57,11 +57,11 @@ module.exports = {
           ],
           '/java/':[
             'springboot',
-            'intellij',
             'java-connect',
           ],
           '/tools/':[
             'git',
+            'intellij',
             'nginx',
           ],
           '/':[
