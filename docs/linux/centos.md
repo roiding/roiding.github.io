@@ -1,6 +1,57 @@
 ---
 title: Centos 常规操作
 ---
+## 修改SSH默认端口
+### 1 修改端口
+```
+ vi /etc/ssh/sshd_config
+ #找到Port XX 修改为自己想要的端口
+```
+
+ <br/>  
+
+ ### 2 防火墙放行
+ ```
+ #修改XXX为上面修改后端口
+ firewall-cmd --zone=public --add-port=XXX/tcp --permanent
+ # 刷新防火墙规则
+ firewall-cmd --reload
+ #查看是否生效
+ firewall-cmd --zone=public --query-port=XXX/tcp
+ ```
+ <br/>  
+ 
+ ### 3 SELinux放行
+```
+#检查semanage是否安装
+rpm -qa |grep policycoreutils-python
+   #安装
+   yum install policycoreutils-python
+#查看当前SSH允许端口
+semanage port -l |grep ssh
+#添加新端口
+semanage port -a -t ssh_port_t -p tcp XXX
+#检查是否添加成功
+semanage port -l |grep ssh
+```
+<br/>  
+
+### 4 重启SSH服务
+```
+systemctl restart sshd.service
+```
+<br/>
+<br/>
+<br/>
+<br/> 
+
+## BBR
+### 开启BBR  
+```
+#centos
+curl -O https://raw.githubusercontent.com/teddysun/across/master/bbr.sh && sh bbr.sh
+```
+
 ## 修改IP
 - 方式一
 nmtui 调出修改窗口
@@ -62,3 +113,18 @@ mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
  ```
  yum -y update
  ```
+## dockerDNS
+> docker 无法访问DNS服务
+### 宿主机防火墙开启伪装IP功能
+```
+firewall-cmd --zone=public --add-masquerade --permanent
+firewall-cmd --reload
+systemctl restart firewalld
+systemctl restart docker
+```
+### trusted zone
+```
+firewall-cmd --permanent --zone=trusted --add-interface=docker0
+firewall-cmd --reload
+```
+

@@ -38,9 +38,15 @@ module.exports = {
           '/guide/':[
             '',
           ],
+          '/java/':[
+            'springboot',
+          ],
+          '/':[
+            'resource',
+          ],
         },
         searchMaxSuggestions: 10, //调整默认查找个数 10
-        lastUpdated: 'Last Updated:',
+        lastUpdated: '上次编辑:',
         nextLinks: true, // 上/先一篇链接
         prevLinks: true,
         navbar: true, // 禁用导航栏
