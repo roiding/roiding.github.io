@@ -12,9 +12,9 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 [debian](/linux/debian.html)
 
 ## JAVA
-[SpringBoot](/java/springboot.html)
+[Spring](/java/spring.html)
 
-[intellij](/java/intellij.html)
+[SpringBoot](/java/springboot.html)
 
 [JAVA连接常用软件](/java/java-connect.html)
 
@@ -22,6 +22,8 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 [git](/tools/git.html)
 
 [nginx](/tools/nginx.html)
+
+[intellij](/tools/intellij.html)
 ## ATTENTION!
 
 [开发常见注意点](/attention.html)
