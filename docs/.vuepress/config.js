@@ -77,5 +77,6 @@ module.exports = {
         prevLinks: true,
         navbar: true, // 禁用导航栏
         displayAllHeaders: false, // 显示所有页面的标题链接 默认值：false 
+        smoothScroll: true //页面滚动效果
     }
 }
