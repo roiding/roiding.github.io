@@ -2,7 +2,7 @@
 title: Spring
 sidebarDepth: 2
 ---
-## Spring 注解详解
+## Spring 注解详解 (遇到更新)
 ### ControllerAdvice
 > 全局异常处理
 ```java
