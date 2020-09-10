@@ -6,7 +6,7 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 <br/>
 [开始学习](/docker/docker-install.html)
 
-## Linux各版本系统常规操作
+## Linux
 [centos](/linux/centos.html)
 
 [debian](/linux/debian.html)
