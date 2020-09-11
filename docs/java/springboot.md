@@ -1,6 +1,71 @@
 ---
 title: SpringBoot
 ---
+## SpringBoot 不使用Tomcat
+> SpringBoot 默认支持3种web容器：Tomcat->Jetty->Undertow 默认已经装入Tomcat内置jar 
+1. 修改打包形式
+```xml
+<packaging>war</packaging>
+```
+2. 移除嵌入式tomcat插件
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    <!-- 移除嵌入式tomcat插件 -->
+    <exclusions>
+        <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+```
+3.  添加servlet-api的依赖
+```xml
+<!-- servlet -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+</dependency>
+```
+4. 修改启动类
+```java
+@SpringBootApplication
+public class Application extends SpringBootServletInitializer {
+    @Override
+ 
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(Application.class);
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+
+}
+```
+## 支持http2
+```
+server.http2.enabled= true
+```
+### Undertow
+
+`Undertow 1.4.0+`,`JDK8`
+
+### Jetty
+
+需要`org.eclipse.jetty:jetty-alpn-conscrypt-server`和`org.eclipse.jetty.http2:http2-server`依赖
+
+### Tomcat
+需要`TOMCAT9+`
+
+#### JDK8
+需要 `libtcnative` 依赖库及它的依赖 然后通过启动参数`-Djava.library.path=/usr/local/opt/tomcat-native/lib`添加依赖
+#### JDK9
+原生支持
+
+
 ## Mybatis配置Redis二级缓存
 ### 一级缓存
 MyBatis 会在表示会话的 SqlSession 对象中建立一个简单的缓存，将每次查询到的结果结果缓存起来，当下次查询的时候，如果判断先前有个完全一样的查询，会直接从缓存中直接将结果取出，返回给用户，不需要再进行一次数据库查询了。
