@@ -58,6 +58,7 @@ module.exports = {
           '/java/':[
             'jvm',
             'spring',
+            'spring-security',
             'springboot',
             'java-connect',
           ],
