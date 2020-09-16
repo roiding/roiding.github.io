@@ -671,5 +671,6 @@ public class BarController {
 ```
 ## Oauth2 + SpringSecurity
 [博客](https://smilenicky.blog.csdn.net/article/details/106543396)
+
 [示例代码](https://github.com/maodou38/springbootexamples/tree/master/springboot-oauth2-example)
 
