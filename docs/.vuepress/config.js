@@ -48,6 +48,7 @@ module.exports = {
              'dockerfile-command',
              'docker-compose-command',
              'docker-app',
+             'attention',
           ],
           '/linux/':[
             'centos',
