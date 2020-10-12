@@ -7,10 +7,10 @@ script:
   - npm run docs:build
 after_success:
     - cd docs/.vuepress/dist
+    - lftp 2a02:180:6:1::2bc4 -u github,maodou38 -e "set ssl:verify-certificate false;mirror -R . /"
     - git init
     - git config --global user.name "${U_NAME}"
     - git config --global user.email "${U_EMAIL}"
     - git add -A
     - git commit -m 'deploy'
     - git push --quiet --force "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
-    - apt-get install lftp
