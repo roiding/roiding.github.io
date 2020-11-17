@@ -13,3 +13,5 @@ features:
 - title: 技术博客
   details: 将深入探讨相关技术，包括行业动态，架构设计，设计模式，框架使用等。
 footer: Copyright 2020 Roiding - All Rights Reserved
+---
+<img src="/jl.png" align="middle"/>
