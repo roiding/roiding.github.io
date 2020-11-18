@@ -8,6 +8,15 @@ sidebarDepth: 2
 <br/>
 <br/>
 
+## Jrebel 插件破解
+
+大神基于JAVA写了一个可用于jrebel激活及jetbrains激活的服务器，详见
+[https://gitee.com/gsls200808/JrebelLicenseServerforJava](https://gitee.com/gsls200808/JrebelLicenseServerforJava)
+
+本人基于知名容器服务商**kintohub**搭建了一套环境供使用，地址为：[jrebel.ran-ding.cf](https://jrebel.ran-ding.cf)
+
+注意按提示，但不要加端口号，因涉及过了一次docker服务的端口映射，页面上的*8081*端口不需要加
+
 ## 快捷键  
 
 ### 1.编辑
