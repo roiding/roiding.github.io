@@ -98,13 +98,13 @@ apt-cache madison docker-ce
 
 
 
-## <font color="red" >一键脚本安装</font>
+## 一键脚本安装(通用)
 
 ```bash
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 ```
 
-或者使用Daocloud的
+或者使用`Daocloud`的
 
 ```bash
 curl -sSL https://get.daocloud.io/docker | sh
