@@ -16,14 +16,14 @@ sidebarDepth: 1
                       docker-selinux \
                       docker-engine-selinux \
                       docker-engine
-```
+ ```
 
 ### 2.配置阿里云Docker Yum源
 
 ```bash
  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
  sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-```  
+```
 
 ### 3.安装指定版本
 
@@ -37,7 +37,7 @@ sidebarDepth: 1
      yum install -y --setopt=obsoletes=0 \
     docker-ce-17.03.2.ce-1.el7.centos.x86_64 \
     docker-ce-selinux-17.03.2.ce-1.el7.centos.noarch
-```  
+ ```
 - 3.2、安装Docker最新版本
 
 ```bash
@@ -63,7 +63,7 @@ systemctl start docker
 ### 1.卸载旧版本
 ```
 sudo apt-get remove docker docker-engine docker.io containerd runc
-```  
+```
 ### 2.使用 Docker 仓库进行安装
 ```
 #设置仓库
@@ -95,6 +95,22 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 #要安装特定版本的 Docker Engine-Community，请在仓库中列出可用版本，然后选择一种安装。列出您的仓库中可用的版本：
 apt-cache madison docker-ce
 ```
+
+
+
+## <font color="red" >一键脚本安装</font>
+
+```bash
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+```
+
+或者使用Daocloud的
+
+```bash
+curl -sSL https://get.daocloud.io/docker | sh
+```
+
+
 
 ## Docker 用户组设置
 
