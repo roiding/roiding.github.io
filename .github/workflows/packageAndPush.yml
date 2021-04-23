@@ -26,14 +26,14 @@ jobs:
       
       - name: Packaging
         run: |
-             npm run docs:build,
+             npm run docs:build
              pwd
         
       - name: Commit files And Push
         run: |
-             cd docs/.vuepress/dist,
-             git init,
-             git config --global user.name "${U_NAME}",
-             git config --global user.email "${U_EMAIL}",
-             git add -A,
-             git commit -m 'deploy'.
+             cd docs/.vuepress/dist
+             git init
+             git config --global user.name "${U_NAME}"
+             git config --global user.email "${U_EMAIL}"
+             git add -A
+             git commit -m 'deploy'
