@@ -25,7 +25,10 @@ jobs:
         run: npm ci
       
       - name: Packaging
-        run: npm run docs:build
+        run: |
+             npm run docs:build,
+             pwd
+        
       - name: Commit files And Push
         run: |
              cd docs/.vuepress/dist,
