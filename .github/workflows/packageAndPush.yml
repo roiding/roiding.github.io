@@ -25,15 +25,15 @@ jobs:
         run: npm ci
       
       - name: Packaging
-        run: |
-             npm run docs:build
-             pwd
+        run: npm run docs:build
         
       - name: Commit files And Push
         run: |
              cd docs/.vuepress/dist
              git init
-             git config --global user.name "${U_NAME}"
-             git config --global user.email "${U_EMAIL}"
+             git config --global user.name roiding
+             it config --global user.email dingran@ran-ding.ga
              git add -A
              git commit -m 'deploy'
+             git push --quiet --force "https://${GH_TOKEN}@${GH_REF}" master:master
+        
