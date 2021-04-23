@@ -1,0 +1,36 @@
+name: Package And Publish
+
+
+on:
+
+  push:
+    branches: [ docs ]
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x] # 配置所需node版本
+
+    steps:
+      
+      - uses: actions/checkout@v2
+
+      
+      - name: Install dependencies  # 安装依赖
+        run: npm ci
+      
+      - name: Packaging
+        run: npm run docs:build
+      - name: Commit files And Push
+        run: |
+             cd docs/.vuepress/dist,
+             git init,
+             git config --global user.name "${U_NAME}",
+             git config --global user.email "${U_EMAIL}",
+             git add -A,
+             git commit -m 'deploy'.
