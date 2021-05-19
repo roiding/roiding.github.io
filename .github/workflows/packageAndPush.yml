@@ -1,0 +1,39 @@
+name: Package And Publish
+
+
+on:
+
+  push:
+    branches: [ docs ]
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x] # 配置所需node版本
+
+    steps:
+      
+      - uses: actions/checkout@v2
+
+      
+      - name: Install dependencies  # 安装依赖
+        run: npm ci
+      
+      - name: Packaging
+        run: npm run docs:build
+        
+      - name: Commit files And Push
+        run: |
+             cd docs/.vuepress/dist
+             git init
+             git config --global user.name roiding
+             git config --global user.email dingran@ran-ding.ga
+             git add -A
+             git commit -m 'deploy'
+             git push --quiet --force https://${{secrets.GH_TOKEN}}@github.com/roiding/roiding.github.io.git master:master
+        
