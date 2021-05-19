@@ -35,5 +35,5 @@ jobs:
              git config --global user.email dingran@ran-ding.ga
              git add -A
              git commit -m 'deploy'
-             git push --quiet --force https://${{secrets.GH_TOKEN}}@github.com/roiding/roiding.github.io.git master:master
+             git push --quiet --force https://oauth2:${{secrets.GH_TOKEN}}@github.com/roiding/roiding.github.io.git master:master
         
