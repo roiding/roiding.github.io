@@ -130,8 +130,8 @@ module.exports = {
             'intellij',
             'nginx',
           ],
-		  '/sql':[
-			'SQL',
+		  '/sql/':[
+			'sql',
 		  ],
           '/':[
             'resource',
