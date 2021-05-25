@@ -1,5 +1,5 @@
 ---
-title: SQL
+title: sql语句整理
 ---
 
 # MYSQL
