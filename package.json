@@ -2,9 +2,9 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "moment": "^2.27.0",
-    "@vuepress/theme-default": "^1.5.4",
-    "vuepress": "^1.5.4",
-    "@vuepress/plugin-last-updated": "^1.5.4"
+    "@vuepress/theme-default": "^1.8.2",
+    "vuepress": "^1.8.2",
+    "@vuepress/plugin-last-updated": "^1.8.2"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
