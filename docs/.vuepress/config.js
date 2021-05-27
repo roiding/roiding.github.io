@@ -9,21 +9,21 @@ module.exports = {
       }, */
     plugins: [
       [	
-	    '@vuepress/back-to-top',
         '@vuepress/plugin-last-updated',
         {
           transformer: (timestamp, lang) => {
             // Don't forget to install moment yourself
             const moment = require('moment')
             //暂时没有多语言，设置为中文
-            moment.locale()
-            return moment(timestamp).format('LLL')
+            moment.locale('zh-cn')
+            return moment(timestamp).utcOffset(8).format('LLL')
           },
           dateOptions:{
             hour12: false
           },
         }
-      ]
+      ],
+	  [''@vuepress/back-to-top',']
     ],
     base: '/',
     title: '小丁的博客',
