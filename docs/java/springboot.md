@@ -514,7 +514,7 @@ public class RedisConfig {
 ### 原生支持
 ![](/java/1590374918637.png)
 
-## 执行顺序
+### 执行顺序
 
 ***validation的执行顺序  > spring的Formatter***
 
