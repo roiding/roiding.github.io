@@ -9,7 +9,7 @@ module.exports = {
       }, */
     plugins: [
       [
-        '@vuepress/plugin-last-updated',
+        '@vuepress/plugin-last-updated':
         {
           transformer: (timestamp, lang) => {
             // Don't forget to install moment yourself
@@ -22,7 +22,7 @@ module.exports = {
             hour12: false
           },
         },
-		'@vuepress/back-to-top' : true,
+		'@vuepress/back-to-top',
       ]
     ],
     base: '/',
