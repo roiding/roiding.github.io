@@ -8,8 +8,9 @@ module.exports = {
         }
       }, */
     plugins: [
-      [
-        '@vuepress/plugin-last-updated':
+      [	
+	    '@vuepress/back-to-top',
+        '@vuepress/plugin-last-updated',
         {
           transformer: (timestamp, lang) => {
             // Don't forget to install moment yourself
@@ -21,8 +22,7 @@ module.exports = {
           dateOptions:{
             hour12: false
           },
-        },
-		'@vuepress/back-to-top',
+        }
       ]
     ],
     base: '/',
