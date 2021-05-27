@@ -59,3 +59,35 @@ title: JPA
         },pageable);
 ```
 
+## OneToMany （单方维护关系）
+
+```java
+private List<IdcVatItemPO> idcVatItemPO;
+    
+    @Fetch(FetchMode.SUBSELECT)
+    @OneToMany(cascade = {CascadeType.REMOVE},fetch = FetchType.LAZY)
+    @JoinColumn(name="main_id")
+    @JsonIgnore
+    public List<IdcVatItemPO> getIdcVatItemPO() {
+        return idcVatItemPO;
+    }
+    public void setIdcVatItemPO(List<IdcVatItemPO> idcVatItemPO) {
+        this.idcVatItemPO = idcVatItemPO;
+    }
+
+```
+
+```sql
+Hibernate: update idc_vat_item set main_id=null where main_id=?
+```
+
+* @JoinColum光秃秃一个name时，在由单方级联删除多方时，由于删除单方，会先级联变更多方的外键为null，但如果数据库设置外键不能为null时，就会产生报错。
+
+  ```java
+  org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+  ```
+
+<font color="red">此时可以添加**updatable = false** 参数取消单方对多方的级联更新</font>
+
+* 如果想通过在单方实体的List里面remove元素达到删除多方元素的需求，添加**orphanRemoval=true**
+
