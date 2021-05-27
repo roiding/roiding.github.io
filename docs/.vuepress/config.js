@@ -23,7 +23,7 @@ module.exports = {
           },
         }
       ],
-	  [''@vuepress/back-to-top',']
+	  ['@vuepress/back-to-top']
     ],
     base: '/',
     title: '小丁的博客',
