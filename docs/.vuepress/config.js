@@ -21,8 +21,8 @@ module.exports = {
           dateOptions:{
             hour12: false
           },
-		  plugins: ['@vuepress/back-to-top'],
-        }
+        },
+		'@vuepress/back-to-top' : true,
       ]
     ],
     base: '/',
