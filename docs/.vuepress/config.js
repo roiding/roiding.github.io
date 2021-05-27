@@ -17,7 +17,7 @@ module.exports = {
             const moment = require('moment')
             //暂时没有多语言，设置为中文
             moment.locale('zh-cn')
-            return moment(timestamp).format('LLL')
+            return moment(timestamp).utcOffset(8).format('LLL')
           },
           dateOptions:{
             hour12: false
