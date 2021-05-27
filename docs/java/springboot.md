@@ -78,7 +78,7 @@ MyBatis 会在表示会话的 SqlSession 对象中建立一个简单的缓存，
 mybatis:
   configuration:
     cache-enabled: true
-```  
+```
 
 ### 实体类实现序列化接口并声明序列号
 private static final long serialVersionUID = 8289770415244673535L;
@@ -169,7 +169,7 @@ public class ApplicationContextHolder implements ApplicationContextAware, Dispos
         Validate.validState(applicationContext != null, "applicationContext 属性未注入，请在 spring-context.xml 配置中定义 ApplicationContextHolder");
     }
 }
-```  
+```
 
 >实现 MyBatis Cache 接口，用于自定义缓存为 Redis
 创建一个名为 RedisCache 的工具类，代码如下：
@@ -338,7 +338,7 @@ public interface TbSysUserMapper extends MyMapper<TbSysUser> {
     <version>2.8.0</version>
 </dependency>
 <!-- Swagger2 End -->
-```  
+```
 
 ### 配置 Swagger2
 注意：RequestHandlerSelectors.basePackage("ran.ding.service.admin.controller") 为 Controller 包路径，不然生成的文档扫描不到接口
@@ -377,7 +377,7 @@ public class Swagger2Config {
                 .build();
     }
 }
-```  
+```
 
 ### 启用 Swagger2
 Application 中加上注解 @EnableSwagger2 表示开启 Swagger
@@ -399,7 +399,7 @@ public class ServiceAdminApplication {
         SpringApplication.run(ServiceAdminApplication.class, args);
     }
 }
-```  
+```
 
 ### 使用 Swagger2
 在 Controller 中增加 Swagger2 相关注解，代码如下：
@@ -442,7 +442,7 @@ public BaseResult page(
 
     return BaseResult.ok(list, cursor);
 }
-```  
+```
 
 ### Swagger 注解说明
 Swagger 通过注解表明该接口会生成文档，包括接口名、请求方法、参数、返回信息的等等。
@@ -475,7 +475,7 @@ Swagger 通过注解表明该接口会生成文档，包括接口名、请求方
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-pool2</artifactId>
 </dependency>
-```  
+```
 ### application.properties配置文件
 ```
 # Redis数据库索引（默认为0）
@@ -492,7 +492,7 @@ spring.redis.lettuce.pool.max-active=8
 spring.redis.lettuce.pool.max-wait=-1
 # 连接池中的最大空闲连接 默认 8
 spring.redis.lettuce.pool.max-idle=8
-```  
+```
 ### 新建config包，创建RedisConfig类
 默认情况下RedisTemplate模板只能支持字符串，我们自定义一个RedisTemplate，设置序列化器，这样我们可以很方便的操作实例对象。
 ```java
@@ -508,11 +508,17 @@ public class RedisConfig {
         return redisTemplate;
     }
 }
-``` 
+```
 
 ## Validation使用
 ### 原生支持
 ![](/java/1590374918637.png)
+
+## 执行顺序
+
+***validation的执行顺序  > spring的Formatter***
+
+
 
 ### 全局校验处理 demo
 
