@@ -7,6 +7,9 @@ module.exports = {
           }
         }
       }, */
+	markdown:{
+		lineNumbers: true
+	},
     plugins: [
       [	
         '@vuepress/plugin-last-updated',
@@ -72,6 +75,9 @@ module.exports = {
           ],
 		  '/sql/':[
 			'sql',
+		  ],
+		  '/opencv/':[
+		     'opencv-java',
 		  ],
           '/':[
             'resource',

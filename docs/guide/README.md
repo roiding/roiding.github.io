@@ -29,12 +29,19 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 [JAVA连接常用软件](/java/java-connect.html)
 
+## OPENCV
+
+[opencv-java](/opencv/opencv-java.html)
+
+
+
 ## 开发使用到的工具
 [git](/tools/git.html)
 
 [nginx](/tools/nginx.html)
 
 [intellij](/tools/intellij.html)
+
 ## ATTENTION!
 [常用资源整理](/resource.html)
 
