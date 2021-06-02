@@ -134,7 +134,7 @@ sudo systemctl restart docker
 ```
 
 ## Docker-compose安装
-### 源码安装<sup><font color="red" size="3">*</font></sup>
+### 源码安装
 ```bash
 #自己在https://github.com/docker/compose/releases查看版本替换下面链接的版本号
 curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
@@ -161,5 +161,4 @@ pip install docker-compose
 #验证
 docker-compose version
 ```
-
 
