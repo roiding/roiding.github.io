@@ -54,16 +54,10 @@ module.exports = {
              'docker-app',
              'attention',
           ],
-          '/linux/':[
-            'centos',
-          ],
-          '/guide/':[
+		  '/guide/':[
             '',
           ],
-		  '/vps/':[
-			'euserv',
-		  ],
-          '/java/':[
+		  '/java/':[
             'jvm',
             'spring',
 			'JPA',
@@ -71,16 +65,22 @@ module.exports = {
             'springboot',
             'java-connect',
           ],
+		  '/linux/':[
+            'centos',
+          ],
+		  '/opencv/':[
+		     'opencv-java',
+		  ],
+		  '/sql/':[
+			'sql',
+		  ],
           '/tools/':[
             'git',
             'intellij',
             'nginx',
           ],
-		  '/sql/':[
-			'sql',
-		  ],
-		  '/opencv/':[
-		     'opencv-java',
+		  '/vps/':[
+			'euserv',
 		  ],
           '/':[
             'resource',
