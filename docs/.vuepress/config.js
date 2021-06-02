@@ -27,14 +27,6 @@ module.exports = {
         }
       ],
 	  ['@vuepress/back-to-top'],
-	  /*[
-      '@vuepress/plugin-docsearch',
-      {	
-		appId: 'XEQSFBL9DS',
-        apiKey: '25a25110f2901993e844dff36f6449b8',
-        indexName: 'blog',
-      },
-      ],*/
     ],
     base: '/',
     title: '小丁的博客',
@@ -109,11 +101,6 @@ module.exports = {
             'attention',
           ],
         },
-        //searchMaxSuggestions: 10, //调整默认查找个数 10
-        lastUpdatedText: '上次编辑:',
-        nextLinks: true, // 上/先一篇链接
-        prevLinks: true,
-        displayAllHeaders: false, // 显示所有页面的标题链接 默认值：false 
-        smoothScroll: true //页面滚动效果
+        lastUpdatedText: '上次编辑:'
     }
 }
