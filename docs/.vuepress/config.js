@@ -57,7 +57,7 @@ module.exports = {
 			indexName: 'blog',
 			algoliaOptions: {
 				hitsPerPage: 10,
-				//facetFilters: ""
+				//facetFilters:  ""
 			}
 		},  
         sidebar : {
