@@ -8,7 +8,10 @@ module.exports = {
         }
       }, */
 	markdown:{
-		html:true
+		html: true,
+		xhtmlOut: true,
+		breaks: true,
+		langPrefix:   'language-',
 	},
     plugins: [
       [	
