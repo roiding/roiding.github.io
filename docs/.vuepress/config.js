@@ -30,11 +30,11 @@ module.exports = {
 	  [
       '@vuepress/docsearch',
       {	
-		appId: 'XEQSFBL9DS'
+		appId: 'XEQSFBL9DS',
         apiKey: '25a25110f2901993e844dff36f6449b8',
         indexName: 'blog',
       },
-    ],
+      ],
     ],
     base: '/',
     title: '小丁的博客',
