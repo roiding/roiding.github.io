@@ -1,17 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 home: true
 heroImage: /favicons/favicon.png

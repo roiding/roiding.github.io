@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 module.exports = {
     //定义静态资源路径别名
 /*     configureWebpack: {
