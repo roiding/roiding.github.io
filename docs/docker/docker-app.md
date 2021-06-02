@@ -19,7 +19,7 @@ title: Docker 常规应用
     "192.168.10.133:5000"
   ]
 }
-```  
+```
 
 ### Dockerfile
 在 /usr/local/docker/runner/environment 目录下创建 Dockerfile
@@ -69,7 +69,7 @@ ENV MAVEN_HOME /usr/local/maven/apache-maven-3.5.3
 ENV PATH $PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin
 
 WORKDIR /
-```  
+```
 
 ### docker-compose.yml
 在 /usr/local/docker/runner 目录下创建 docker-compose.yml
@@ -84,7 +84,7 @@ services:
     volumes:
       - ./config:/etc/gitlab-runner
       - /var/run/docker.sock:/var/run/docker.sock
-```  
+```
 
 ### 注册 Runner
 ```docker
@@ -117,7 +117,7 @@ false
 # 选择 runner 执行器，这里我们选择的是 shell
 Please enter the executor: virtualbox, docker+machine, parallels, shell, ssh, docker-ssh+machine, kubernetes, docker, docker-ssh:
 shell
-```  
+```
 
 ### 使用 Runner  
 
@@ -227,7 +227,11 @@ ENTRYPOINT ["dockerize", "-timeout", "5m", "-wait", "tcp://192.168.10.131:3306",
 
 EXPOSE 8501
 ```
+
+
 <font color="red"> DOCKERIZE是一个监听插件，监听依赖服务是否启动</font>
+
+
 
 ## 基于 Docker 安装 Jenkins
 
@@ -253,7 +257,7 @@ services:
 安装过程中会出现 Docker 数据卷 权限问题，用以下命令解决：
 ```
 chown -R 1000 /usr/local/docker/jenkins/data
-```  
+```
 ### 解锁 Jenkins
 Jenkins 第一次启动时需要输入一个初始密码用以解锁安装流程，使用 docker logs jenkins 即可方便的查看到初始密码
 ![](/docker/docker-app/jenkins-unlock.png)
