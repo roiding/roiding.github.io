@@ -1,11 +1,11 @@
 {
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.8.2",
-    "moment": "^2.27.0",
-    "@vuepress/theme-default": "^1.8.2",
-    "vuepress": "^1.8.2",
-    "@vuepress/plugin-last-updated": "^1.8.2",
-	"@vuepress/plugin-docsearch": "^2.0.0-alpha.1"
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.16",
+    "moment": "^2.29.1",
+    "@vuepress/theme-default": "^2.0.0-beta.16",
+    "vuepress": "^2.0.0-beta.16",
+    "@vuepress/plugin-last-updated": "1.8.2",
+    "@vuepress/plugin-docsearch": "^2.0.0-alpha.15"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

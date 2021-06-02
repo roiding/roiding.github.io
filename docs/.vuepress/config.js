@@ -57,9 +57,10 @@ module.exports = {
 			indexName: 'blog',
 			algoliaOptions: {
 				hitsPerPage: 10,
-				//facetFilters:  ""
+				//facetFilters:  "",
+				placeholder: '搜索',
 			},
-			placeholder: '搜索'
+			
 		},  
         sidebar : {
           '/docker/': [
