@@ -1,0 +1,30 @@
+{ 
+"outbounds": [
+    {
+      "tag":"IP6-out",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag":"IP4-out",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIPv4" 
+      }
+    }
+  ],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "outboundTag": "IP4-out",
+        "domain": [""] 
+      },
+      {
+        "type": "field",
+        "outboundTag": "IP6-out",
+        "network": "udp,tcp" 
+      }
+    ]
+  }
+}
