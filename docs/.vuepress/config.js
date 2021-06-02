@@ -54,6 +54,9 @@ module.exports = {
           '/linux/':[
             'centos',
           ],
+		  '/vps/':[
+			'euserv',
+		  ],
           '/guide/':[
             '',
           ],
