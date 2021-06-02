@@ -26,7 +26,15 @@ module.exports = {
           },
         }
       ],
-	  ['@vuepress/back-to-top']
+	  ['@vuepress/back-to-top'],
+	  [
+      '@vuepress/docsearch',
+      {	
+		appId: 'XEQSFBL9DS'
+        apiKey: '25a25110f2901993e844dff36f6449b8',
+        indexName: 'blog',
+      },
+    ],
     ],
     base: '/',
     title: '小丁的博客',
@@ -39,15 +47,6 @@ module.exports = {
     theme: '@vuepress/theme-default', // 主题
     themeConfig: {
         logo: '/favicons/favicon.png' ,
-		algolia: {
-			appId: 'XEQSFBL9DS',
-			apiKey: '25a25110f2901993e844dff36f6449b8',
-			indexName: 'blog',
-			algoliaOptions: {
-				hitsPerPage: 10,
-				facetFilters: ""
-			}
-		},
         nav: [
             { text: '首页', link: '/' },
             { text: 'github', link: 'https://github.com/maodou38'},
