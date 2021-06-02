@@ -1,3 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 目录
 
 
@@ -12,19 +26,9 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 [debian](/linux/debian.html)
 
-
-
 ## SQL
 
 [SQL整理](/sql/sql.html)
-
-
-
-## VPS
-
-[Euserv](/vps/euserv.html)
-
-
 
 ## JAVA
 [JVM](/java/jvm.html)
@@ -39,7 +43,13 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 [JAVA连接常用软件](/java/java-connect.html)
 
+## OPENCV
 
+[opencv-java](/opencv/opencv-java.html)
+
+## VPS
+
+[Euserv](/vps/euserv.html)
 
 ## 开发使用到的工具
 [git](/tools/git.html)
@@ -48,9 +58,14 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 [intellij](/tools/intellij.html)
 
-
-
 ## ATTENTION!
 [常用资源整理](/resource.html)
 
 [开发常见注意点](/attention.html)
+
+
+
+
+
+
+

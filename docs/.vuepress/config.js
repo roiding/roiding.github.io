@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 module.exports = {
     //定义静态资源路径别名
 /*     configureWebpack: {
@@ -7,6 +16,9 @@ module.exports = {
           }
         }
       }, */
+	markdown:{
+		lineNumbers: true
+	},
     plugins: [
       [	
         '@vuepress/plugin-last-updated',
@@ -54,12 +66,12 @@ module.exports = {
           '/linux/':[
             'centos',
           ],
-		  '/vps/':[
-			'euserv',
-		  ],
           '/guide/':[
             '',
           ],
+		  '/vps/':[
+			'euserv',
+		  ],
           '/java/':[
             'jvm',
             'spring',
@@ -75,6 +87,9 @@ module.exports = {
           ],
 		  '/sql/':[
 			'sql',
+		  ],
+		  '/opencv/':[
+		     'opencv-java',
 		  ],
           '/':[
             'resource',
