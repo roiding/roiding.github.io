@@ -8,7 +8,6 @@ module.exports = {
         }
       }, */
 	markdown:{
-		lineNumbers: true,
 		html:true
 	},
     plugins: [
