@@ -28,7 +28,7 @@ module.exports = {
       ],
 	  ['@vuepress/back-to-top'],
 	  [
-      '@vuepress/docsearch',
+      '@vuepress/plugin-docsearch',
       {	
 		appId: 'XEQSFBL9DS',
         apiKey: '25a25110f2901993e844dff36f6449b8',

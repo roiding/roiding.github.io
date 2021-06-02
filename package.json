@@ -4,7 +4,8 @@
     "moment": "^2.27.0",
     "@vuepress/theme-default": "^1.8.2",
     "vuepress": "^1.8.2",
-    "@vuepress/plugin-last-updated": "^1.8.2"
+    "@vuepress/plugin-last-updated": "^1.8.2",
+	"@vuepress/plugin-docsearch": "^2.0.0-alpha.1"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
