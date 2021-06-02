@@ -58,7 +58,8 @@ module.exports = {
 			algoliaOptions: {
 				hitsPerPage: 10,
 				//facetFilters:  ""
-			}
+			},
+			placeholder: '搜索'
 		},  
         sidebar : {
           '/docker/': [
