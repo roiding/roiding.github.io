@@ -46,8 +46,11 @@ module.exports = {
     extraWatchFiles: [],
     theme: '@vuepress/theme-default', // 主题
     themeConfig: {
+		repo: 'roiding/roiding.github.io',
         logo: '/favicons/favicon.png' ,
-        nav: [
+		editLink: false, //禁用编辑
+		backToHome: '回到首页',
+        navbar: [
             { text: '首页', link: '/' },
             { text: 'github', link: 'https://github.com/maodou38'},
           ],
@@ -106,11 +109,10 @@ module.exports = {
             'attention',
           ],
         },
-        searchMaxSuggestions: 10, //调整默认查找个数 10
-        lastUpdated: '上次编辑:',
+        //searchMaxSuggestions: 10, //调整默认查找个数 10
+        lastUpdatedText: '上次编辑:',
         nextLinks: true, // 上/先一篇链接
         prevLinks: true,
-        navbar: true, // 禁用导航栏
         displayAllHeaders: false, // 显示所有页面的标题链接 默认值：false 
         smoothScroll: true //页面滚动效果
     }
