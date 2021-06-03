@@ -3,10 +3,11 @@ home: true
 heroImage: /favicons/favicon.png
 heroText: 小丁的博客
 tagline: 记录技术的过程
-actionText: 开始学习 →
-actionLink: /guide/
+actions: 
+   - text: 开始学习 →
+   - link: /guide/
+   - type: primary
 features:
-
 - title: 个人介绍
   details: 主要涉及技术：Java后端开发、SaaS技术、Linux
 - title: 开发笔记
