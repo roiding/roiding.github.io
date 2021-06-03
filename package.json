@@ -1,6 +1,5 @@
 {
   "devDependencies": {
-    "moment": "^2.29.1",
     "@vuepress/theme-default": "^2.0.0-alpha.25",
     "vuepress": "^2.0.0-alpha.25"
   },
