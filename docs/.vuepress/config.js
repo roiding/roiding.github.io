@@ -7,12 +7,6 @@ module.exports = {
           }
         }
       }, */
-	markdown:{
-		html: true,
-		xhtmlOut: true,
-		breaks: true,
-		langPrefix:   'language-',
-	},
     plugins: [
       [	
         '@vuepress/plugin-last-updated',
