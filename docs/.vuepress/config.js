@@ -9,6 +9,16 @@ module.exports = {
       }, */
     plugins: [
 	  ['@vuepress/back-to-top'],
+	  ['@vuepress/docsearch',{
+		  appId: 'XEQSFBL9DS',
+		  apiKey: '25a25110f2901993e844dff36f6449b8',
+		  indexName: 'blog',
+		  placeholder: '搜索',
+		  searchParameters:{
+			  hitsPerPage: 10,
+			  //facetFilters:  "",
+		  }
+	  }],
     ],
     base: '/',
     title: '小丁的博客',
@@ -26,19 +36,8 @@ module.exports = {
 		backToHome: '回到首页',
         navbar: [
             { text: '首页', link: '/' },
-            { text: 'github', link: 'https://github.com/maodou38'},
+            { text: '荒废的代码仓库', link: 'https://github.com/maodou38'},
           ],
-		algolia: {
-			appId: 'XEQSFBL9DS',
-			apiKey: '25a25110f2901993e844dff36f6449b8',
-			indexName: 'blog',
-			algoliaOptions: {
-				hitsPerPage: 10,
-				//facetFilters:  "",
-				placeholder: '搜索',
-			},
-			
-		},  
         sidebar : {
           '/docker/': [
              'docker-install',
