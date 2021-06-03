@@ -4,7 +4,7 @@ title: JPA
 
 
 
-<font color="red">使用JPA就尽量不要使用原生SQL！！！！！！！</font>
+<span style="color:red">使用JPA就尽量不要使用原生SQL！！！！！！！</span>
 
 
 
@@ -87,7 +87,7 @@ Hibernate: update idc_vat_item set main_id=null where main_id=?
   org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
   ```
 
-<font color="red">此时可以添加**updatable = false** 参数取消单方对多方的级联更新</font>
+<span style="color:red">此时可以添加**updatable = false** 参数取消单方对多方的级联更新</span >
 
 * 如果想通过在单方实体的List里面remove元素达到删除多方元素的需求，添加**orphanRemoval=true**
 

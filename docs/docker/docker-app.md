@@ -232,7 +232,7 @@ EXPOSE 8501
 
 
 
-<font color='red'> DOCKERIZE是一个监听插件，监听依赖服务是否启动</font>
+<span style="color:#F00"> DOCKERIZE是一个监听插件，监听依赖服务是否启动</span>
 
 
 

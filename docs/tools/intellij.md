@@ -24,43 +24,43 @@ sidebarDepth: 2
 | 快捷键 | 中文说明 |
 | :----: | :----: |
 | Ctrl + Space | 补全代码，由于经常与操作系统的输入法的切换冲突，所以实际很少用。一般直接在 idea 中开启输入自动补全机制。 |
-| Ctrl + Shift + Space | 在列出的可选项中只显示出你所输入的关键字最相关的信息。<font color="red">**（常用）**</font>  |
-| Ctrl + Shift + ↑/↓ | 代码向上下移动一行 <font color="red">**（常用）**</font> |
-| Ctrl + Alt + V | 自动返回对象 <font color="red">**（常用）**</font> |
+| Ctrl + Shift + Space | 在列出的可选项中只显示出你所输入的关键字最相关的信息。<span style="color:red">**（常用）**</span> |
+| Ctrl + Shift + ↑/↓ | 代码向上下移动一行 <span style="color:red">**（常用）**</span> |
+| Ctrl + Alt + V | 自动返回对象 <span style="color:red">**（常用）**</span> |
 | Ctrl + Shift + Enter | 代码补全后，自动在代码末尾添加分号结束符 |
 | Ctrl + P | 在某个方法中，调用该按键后，会展示出这个方法的调用参数列表信息。 |
 | Ctrl + Q | 展示某个类或者方法的 API 说明文档 |
-| Ctrl + mouse | 跳进到某个类或者方法源代码中进行查看。<font color="red">**（常用）**</font> |
-| Alt + Insert | 自动生成某个类的 Getters, Setters, Constructors, hashCode/equals, toString 等代码。<font color="red">**（常用）**</font> |
+| Ctrl + mouse | 跳进到某个类或者方法源代码中进行查看。<span style="color:red">**（常用）**</span> |
+| Alt + Insert | 自动生成某个类的 Getters, Setters, Constructors, hashCode/equals, toString 等代码。<span style="color:red">**（常用）**</span> |
 | Ctrl + O | 展示该类中所有覆盖或者实现的方法列表，注意这里是字母小写的 O！ |
-| Ctrl + Alt + T | 自动生成具有环绕性质的代码，比如：if…else,try…catch, for, synchronized 等等，使用前要先选择好需要环绕的代码块。<font color="red">**（常用）**</font> |
-| Ctrl + / | 对单行代码，添加或删除注释。分为两种情况：如果只是光标停留在某行，那么连续使用该快捷键，会不断注释掉下一行的代码；如果选定了某行代码（选定了某行代码一部分也算这种情况），那么连续使用该快捷键，会在添加或删除该行注释之间来回切换。<font color="red">**（常用）**</font> |
-| Ctrl + Shift + / | 对代码块，添加或删除注释。它与 Ctrl + / 的区别是，它只会在代码块的开头与结尾添加注释符号！<font color="red">**（常用）**</font> |
-| Ctrl + W | 选中当前光标所在的代码块，多次触发，代码块会逐级变大。<font color="red">**（常用）**</font> |
+| Ctrl + Alt + T | 自动生成具有环绕性质的代码，比如：if…else,try…catch, for, synchronized 等等，使用前要先选择好需要环绕的代码块。<span style="color:red">**（常用）**</span> |
+| Ctrl + / | 对单行代码，添加或删除注释。分为两种情况：如果只是光标停留在某行，那么连续使用该快捷键，会不断注释掉下一行的代码；如果选定了某行代码（选定了某行代码一部分也算这种情况），那么连续使用该快捷键，会在添加或删除该行注释之间来回切换。<span style="color:red">**（常用）**</span> |
+| Ctrl + Shift + / | 对代码块，添加或删除注释。它与 Ctrl + / 的区别是，它只会在代码块的开头与结尾添加注释符号！<span style="color:red">**（常用）**</span> |
+| Ctrl + W | 选中当前光标所在的代码块，多次触发，代码块会逐级变大。<span style="color:red">**（常用）**</span> |
 | Ctrl + Shift + W | 是 Ctrl + W 的反向操作，多次触发，代码块会逐级变小，最小变为光标。 |
 | Alt + Q | 展示包含当前光标所在代码的父节点信息，比如在 java 方法中调用，就会展示方法签名信息。 |
 | Alt + Enter | 展示当前当前光标所在代码，可以变化的扩展操作 |
-| Ctrl + Alt + L | 格式化代码 <font color="red">**（常用）**</font> |
-| Ctrl + Alt + O | 去除没有实际用到的包，这在 java 类中特别有用。<font color="red">**（常用）**</font> |
+| Ctrl + Alt + L | 格式化代码 <span style="color:red">**（常用）**</span> |
+| Ctrl + Alt + O | 去除没有实际用到的包，这在 java 类中特别有用。<span style="color:red">**（常用）**</span> |
 | Ctrl + Alt + I | 按照缩进的设定，自动缩进所选择的代码段。 |
-| Tab / Shift + Tab | 缩进或者不缩进一次所选择的代码段。<font color="red">**（常用）**</font> |
-| Ctrl + X 或 Shift Delete | 剪切当前代码。 <font color="red">**（常用）**</font> |
-| Ctrl + C 或 Ctrl + Insert | 拷贝当前代码。 <font color="red">**（常用）**</font> |
-| Ctrl + V 或 Shift + Insert | 粘贴之前剪切或拷贝的代码。<font color="red">**（常用）**</font> |
-| Ctrl + Shift + V | 从之前的剪切或拷贝的代码历史记录中，选择现在需要粘贴的内容。<font color="red">**（常用）**</font> |
-| Ctrl + D | 复制当前选中的代码。<font color="red">**（常用）**</font> |
-| Ctrl + Y | 删除当前光标所在的代码行。<font color="red">**（常用）**</font> |
+| Tab / Shift + Tab | 缩进或者不缩进一次所选择的代码段。<span style="color:red">**（常用）**</span> |
+| Ctrl + X 或 Shift Delete | 剪切当前代码。 <span style="color:red">**（常用）**</span> |
+| Ctrl + C 或 Ctrl + Insert | 拷贝当前代码。 <span style="color:red">**（常用）**</span> |
+| Ctrl + V 或 Shift + Insert | 粘贴之前剪切或拷贝的代码。<span style="color:red">**（常用）**</span> |
+| Ctrl + Shift + V | 从之前的剪切或拷贝的代码历史记录中，选择现在需要粘贴的内容。<span style="color:red">**（常用）**</span> |
+| Ctrl + D | 复制当前选中的代码。<span style="color:red">**（常用）**</span> |
+| Ctrl + Y | 删除当前光标所在的代码行。<span style="color:red">**（常用）**</span> |
 | Ctrl + Shift + J | 把下一行的代码接续到当前的代码行。 |
-| Ctrl + Enter | 当前代码行与下一行代码之间插入一个空行，原来所在的光标不变。<font color="red">**（常用）**</font> |
-| Shift + Enter | 当前代码行与下一行代码之间插入一个空行，原来光标现在处于新加的空行上。<font color="red">**（常用）**</font> |
-| Ctrl + Shift + U |  所选择的内容进行大小写转换。。<font color="red">**（常用）**</font> |
+| Ctrl + Enter | 当前代码行与下一行代码之间插入一个空行，原来所在的光标不变。<span style="color:red">**（常用）**</span> |
+| Shift + Enter | 当前代码行与下一行代码之间插入一个空行，原来光标现在处于新加的空行上。<span style="color:red">**（常用）**</span> |
+| Ctrl + Shift + U | 所选择的内容进行大小写转换。。<span style="color:red">**（常用）**</span> |
 | Ctrl + Shift + ]/[ | 从当前光标所在位置开始，一直选择到当前光标所在代码段起始或者结束位置。 |
 | Ctrl + Delete | 删除从当前光标所在位置开始，直到这个单词的结尾的内容。 |
-| Ctrl + NumPad(+/-) | 展开或收缩代码段。 <font color="red">**（常用）**</font> |
+| Ctrl + NumPad(+/-) | 展开或收缩代码段。 <span style="color:red">**（常用）**</span> |
 | Ctrl + Shift + NumPad(+) | 展开所有代码段。 |
 | Ctrl + Shift + NumPad(-) | 收缩所有代码段。 |
 | Ctrl + F4 | 关闭当前标签页。 |
-| Shift + F6 | 修改名字。<font color="red">**（常用）**</font>|   
+| Shift + F6 | 修改名字。<span style="color:red">**（常用）**</span> |
 >  1.1 Ctrl + Shift + Space 示例（智能补全）
 
 使用前，用于补全的列表，默认是以输入的关键字作为前缀的：
@@ -96,12 +96,12 @@ sidebarDepth: 2
 ### 2.查找或替换
 | 快捷键 | 中文说明 |
 | :----: | :----: |
-| Ctrl + F |在当前标签页中进行查找，还支持正则表达式哦。<font color="red">**（常用）**</font>|
+| Ctrl + F |在当前标签页中进行查找，还支持正则表达式哦。<span style="color:red">**（常用）**</span>|
 | F3 | 如果找到了多个查找结果，每调用一次就会跳到下一个结果，很方便哦。 |
 | Shift + F3 | 是 F3 的反向操作，即每调用一次就会跳到上一个结果。 |
-| Ctrl + R | 在当前标签页中进行替换操作。<font color="red">**（常用）**</font> |
-| Ctrl + Shift + F | 通过路径查找。<font color="red">**（常用）**</font> |
-| Ctrl + Shift + R | 通过路径替换。<font color="red">**（常用）**</font> |   
+| Ctrl + R | 在当前标签页中进行替换操作。<span style="color:red">**（常用）**</span> |
+| Ctrl + Shift + F | 通过路径查找。<span style="color:red">**（常用）**</span> |
+| Ctrl + Shift + R | 通过路径替换。<span style="color:red">**（常用）**</span> |
 >  2.1 Ctrl + F （查找）
 
 触发后，会打开一个查找面板：
@@ -136,7 +136,7 @@ sidebarDepth: 2
 | Alt + F7 | 在当前项目中的使用情况，会打开一个使用情况面板。 |
 | Ctrl + F7 | 在当前文件中的使用情况，找的内容会低亮显示。 |
 | Ctrl + Shift + F7 | 在当前文件中的使用情况，找的内容会高亮显示。 |
-| Ctrl + Alt + F7 | 打开使用情况列表。 <font color="red">**（常用）**</font> |   
+| Ctrl + Alt + F7 | 打开使用情况列表。 <span style="color:red">**（常用）**</span> |
 > 3.1 Ctrl + Alt + F7（打开使用情况列表）
 ![](/intellij/1589726830701.jfif)
 
@@ -147,7 +147,7 @@ sidebarDepth: 2
 | Ctrl + Shift + F9 | 编译所中的范围（如果在某个类中，那么只会编译当前类）。 |
 | Alt + Shift + F10 | 会打开一个已经配置的运行列表，让你选择一个后，再运行。
 | Alt + Shift + F9 | 会打开一个已经配置的运行列表，让你选择一个后，再以调试模式运行。 |
-| Shift + F10 | 立即运行当前配置的运行实例，这个在单元测试中特别好用。 <font color="red">**（常用）**</font> |
+| Shift + F10 | 立即运行当前配置的运行实例，这个在单元测试中特别好用。 <span style="color:red">**（常用）**</span> |
 | Shift + F9 | 立即以编译模式运行当前配置的运行实例。 |
 | Ctrl + Shift + F10 | 按照编辑器绑定的文件类型，运行相关的程序。比如一个 html 页面，调用后，会直接打开一个浏览器。 |
 > 4.1 Alt + Shift + F10（打开运行列表，选择一个运行）
@@ -157,13 +157,13 @@ sidebarDepth: 2
 ### 5.调试
 | 快捷键 | 中文说明 |
 | :----: | :----: |
-| F8 | 跳到当前代码下一行。 <font color="red">**（常用）**</font>|
-| F7 | 跳入到调用的方法内部代码。 <font color="red">**（常用）**</font>|
+| F8 | 跳到当前代码下一行。 <span style="color:red">**（常用）**</span> |
+| F7 | 跳入到调用的方法内部代码。 <span style="color:red">**（常用）**</span> |
 | Shift + F7 | 会打开一个面板，让你选择具体要跳入的类方法，这个在复杂的嵌套代码中特别有用。 |
-| Shift + F8 | 跳出当前的类，到上一级。 <font color="red">**（常用）**</font>|
-| Alt + F9 | 让代码运行到当前光标所在处，非常棒的功能。 <font color="red">**（常用）**</font>|
+| Shift + F8 | 跳出当前的类，到上一级。 <span style="color:red">**（常用）**</span> |
+| Alt + F9 | 让代码运行到当前光标所在处，非常棒的功能。 <span style="color:red">**（常用）**</span> |
 | Alt + F8 | 打开一个表达式面板，然后进行进一步的计算。|
-| F9 | 结束当前断点的本轮调试（因为有可能代码会被调用多次，所以调用后只会结束当前的这一次）；如果有下一个断点会跳到下一个断点中。<font color="red">**（常用）**</font> |
+| F9 | 结束当前断点的本轮调试（因为有可能代码会被调用多次，所以调用后只会结束当前的这一次）；如果有下一个断点会跳到下一个断点中。<span style="color:red">**（常用）**</span> |
 | Ctrl + F8 | 在当前光标处，添加或者删除断点。 |
 | Ctrl + Shift + F8 | 打开当前断点的面板，可以进行条件过滤哦。 |
 
@@ -180,37 +180,37 @@ sidebarDepth: 2
 ### 6.导航
 | 快捷键 | 中文说明 |
 | :----: | :----: |
-| Ctrl + N | 打开类查询框。<font color="red">**（常用）**</font> |
-| Ctrl + Shift + N | 打开文件查询框。<font color="red">**（常用）**</font> |
+| Ctrl + N | 打开类查询框。<span style="color:red">**（常用）**</span> |
+| Ctrl + Shift + N | 打开文件查询框。<span style="color:red">**（常用）**</span> |
 | Ctrl + Alt + Shift + N | 打开文本查询框。 |
 | Alt + 右箭头/左箭头 | 跳到下一个/上一个编辑器标签。 |
 | F12 | 如果当前在编辑窗口，触发后，会跳到之前操作过的工具栏上。 |
 | ESC | 从工具栏上，再跳回原来的编辑窗口，一般与 F12 配合使用。 |
 | Shift + ESC | 隐藏最后一个处于活跃状态的工具窗口。 |
 | Ctrl + Shift + F4 | 同时关闭处于活动状态的某些工具栏窗口。 |
-| Ctrl + G | 跳转至某一行代码。。<font color="red">**（常用）**</font> |
+| Ctrl + G | 跳转至某一行代码。。<span style="color:red">**（常用）**</span> |
 | Ctrl + E | 打开曾经操作过的文件历史列表。 |
 | Ctrl + Alt + 右箭头/左箭头 | 在曾经浏览过的代码行中来回跳 |
 | Ctrl + Shift + Backspace | 跳转到最近的编辑位置（如果曾经编辑过代码）。 |
 | Alt + F1 | 打开一个类型列表，选择后会导航到当前文件或者内容的具体与类型相关的面板中。 |
-| Ctrl + B 或 Ctrl + 鼠标左键 | 如果是类，那么会跳转到当前光标所在的类定义或者接口；如果是变量，会打开一个变量被引用的列表。<font color="red">**（常用）**</font> |
-| Ctrl + Alt + B | 跳转到实现类，而不是接口。<font color="red">**（常用）**</font> |
+| Ctrl + B 或 Ctrl + 鼠标左键 | 如果是类，那么会跳转到当前光标所在的类定义或者接口；如果是变量，会打开一个变量被引用的列表。<span style="color:red">**（常用）**</span> |
+| Ctrl + Alt + B | 跳转到实现类，而不是接口。<span style="color:red">**（常用）**</span> |
 | Ctrl + Shift + I | 打开一个面板，里面包含类代码。 |
 | Ctrl + Shift + B | 打开变量的类型所对应的类代码，只对变量有用。 |
 | Ctrl + U | 打开方法的超类方法或者类的超类，只对有超类的方法或者类有效。 |
 | Alt + 上/下箭头 | 在某个类中，跳到上一个/下一个方法的签名上。 |
 | Ctrl + ]/[ | 移动光标到类定义的终止右大括号或者起始左大括号。 |
-| Ctrl + F12 | 打开类的结构列表。<font color="red">**（常用）**</font> |
-| Ctrl + H | 打开类的继承关系列表。<font color="red">**（常用）**</font> |
+| Ctrl + F12 | 打开类的结构列表。<span style="color:red">**（常用）**</span> |
+| Ctrl + H | 打开类的继承关系列表。<span style="color:red">**（常用）**</span> |
 | Ctrl + Shift + H | 打开某个类方法的继承关系列表。 |
-| Ctrl + Alt + H | 打开所有类的方法列表，这些方法都调用了当前光标所处的某个类方法。<font color="red">**（常用）**</font> |
+| Ctrl + Alt + H | 打开所有类的方法列表，这些方法都调用了当前光标所处的某个类方法。<span style="color:red">**（常用）**</span> |
 | F2/Shift + F2 | 在编译错误的代码行中来回跳。 |
 | F4 | 打开当前光标所在处的方法或类源码。 |
 | Alt + Home | 激活包路径的导航栏。 |
-| F11 | 把光标所处的代码行添加为书签或者从书签中删除。<font color="red">**（常用）**</font> |
+| F11 | 把光标所处的代码行添加为书签或者从书签中删除。<span style="color:red">**（常用）**</span> |
 | Ctrl + F11 | 把光标所处的代码行添加为带快捷键的书签或者从快捷键书签中删除。 |
 | Ctrl + [0-9] | 跳转到之前定义的快捷键书签。 |
-| Shift + F11 | 打开书签列表。<font color="red">**（常用）**</font> |
+| Shift + F11 | 打开书签列表。<span style="color:red">**（常用）**</span> |
 > 6.1 Ctrl + N （打开类查询框）
 
 键入类名的关键字，会自动出现相关的类哦，右侧还有一个勾选项，能够把引用的 jar 包中的类也加进来，很强大 O(∩_∩)O~

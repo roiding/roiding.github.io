@@ -46,7 +46,7 @@ public class UsernamePasswordAuthenticationFilter extends
 
 4. 最后一步，就是调用 `authenticate` 方法去做校验了。
 
-<font color="red">请求的具体校验操作</font>
+<span style="color:red">请求的具体校验操作</span>
 
 在前面的 `attemptAuthentication` 方法中，该方法的最后一步开始做校验，校验操作首先要获取到一个 `AuthenticationManager`，这里拿到的是 `ProviderManager` ，所以接下来我们就进入到 `ProviderManager` 的 `authenticate` 方法中，当然这个方法也比较长，我这里仅仅摘列出来几个重要的地方：
 
@@ -325,7 +325,7 @@ http.authorizeRequests()
 | ** | 匹配多层路径 |
 | *  | 匹配一层路径 |
 | ? | 匹配任意单个字符 |
-> 注意代码中配置的三条规则的顺序非常重要，和 `Shiro` 类似，`Spring Security` 在匹配的时候也是按照从上往下的顺序来匹配，一旦匹配到了就不继续匹配了，<font color="blue">「所以拦截规则的顺序不能写错」</font>。
+> 注意代码中配置的三条规则的顺序非常重要，和 `Shiro` 类似，`Spring Security` 在匹配的时候也是按照从上往下的顺序来匹配，一旦匹配到了就不继续匹配了，<span style="color:blue">「所以拦截规则的顺序不能写错」</span>。
 ### 角色继承
 上级可能具备下级的所有权限，如果使用角色继承，这个功能就很好实现，我们只需要在 `SecurityConfig` 中添加如下代码来配置角色继承关系即可：
 ```java

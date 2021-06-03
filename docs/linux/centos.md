@@ -20,7 +20,7 @@ title: Centos 常规操作
  firewall-cmd --zone=public --query-port=XXX/tcp
  ```
  <br/>  
- 
+
  ### 3 SELinux放行
 ```
 #检查semanage是否安装
@@ -70,13 +70,13 @@ cd /etc/sysconfig/network-scripts/
 
 ## 修改主机名
 在CentOS7中，有三种定义的主机名:
- 
+
 静态的（Static hostname）
 “静态”主机名也称为内核主机名，是系统在启动时从/etc/hostname自动初始化的主机名。
- 
+
 瞬态的（Tansient hostname）
 “瞬态”主机名是在系统运行时临时分配的主机名，例如，通过DHCP或mDNS服务器分配。
- 
+
 灵活的（Pretty hostname）
 “灵活”主机名也有人叫做“别名”主机名。
 “灵活”主机名则允许使用自由形式（包括特殊/空白字符）的主机名，以展示给终端用户（如xh01@f5）。
@@ -84,8 +84,8 @@ cd /etc/sysconfig/network-scripts/
 
 在CentOS 7中，有个叫hostnamectl的命令行工具，它允许你查看或修改与主机名相关的配置。
 
-<font color="red">一旦修改了静态主机名，/etc/hostname 将被自动更新。然而，/etc/hosts 不会更新以保存所做的修改，所以你每次在修改主机名后一定要手动更新/etc/hosts，之后再重启CentOS 7。否则系统再启动时会很慢。</font>
-  
+<span style="color:red">一旦修改了静态主机名，/etc/hostname 将被自动更新。然而，/etc/hosts 不会更新以保存所做的修改，所以你每次在修改主机名后一定要手动更新/etc/hosts，之后再重启CentOS 7。否则系统再启动时会很慢。</span>
+
 ```
 //永久性的修改主机名称，重启后能保持修改后的。
 hostnamectl set-hostname xxx    
@@ -94,13 +94,13 @@ hostnamectl set-hostname xxx
 hostnamectl set-hostname ""
 hostnamectl set-hostname "" --static
 hostnamectl set-hostname "" --pretty
-  ```
+```
 ## 更改yum源与更新系统
 
   备份
 ```
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
- ```
+```
  下载yum源配置文件，放入/etc/yum.repos.d/
  ```
  wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
