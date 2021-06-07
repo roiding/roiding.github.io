@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
     //定义静态资源路径别名
 /*     configureWebpack: {
         resolve: {
@@ -40,46 +40,46 @@ module.exports = {
           ],
         sidebar : {
           '/docker/': [
-             'docker-install',
-             'docker-buildx',
-             'docker-remote',
-             'docker-command',
-             'dockerfile-command',
-             'docker-compose-command',
-             'docker-app',
+             'docker-install.md',
+             'docker-buildx.md',
+             'docker-remote.md',
+             'docker-command.md',
+             'dockerfile-command.md',
+             'docker-compose-command.md',
+             'docker-app.md',
              'attention',
           ],
 		  '/guide/':[
             '',
           ],
 		  '/java/':[
-            'jvm',
-            'spring',
+            'jvm.md',
+            'spring.md',
 			'JPA',
-            'spring-security',
-            'springboot',
-            'java-connect',
+            'spring-security.md',
+            'springboot.md',
+            'java-connect.md',
           ],
 		  '/linux/':[
-            'centos',
+            'centos.md',
           ],
 		  '/opencv/':[
-		     'opencv-java',
+		     'opencv-java.md',
 		  ],
 		  '/sql/':[
-			'sql',
+			'sql.md',
 		  ],
           '/tools/':[
-            'git',
-            'intellij',
-            'nginx',
+            'git.md',
+            'intellij.md',
+            'nginx.md',
           ],
 		  '/vps/':[
-			'euserv',
+			'euserv.md',
 		  ],
           '/':[
-            'resource',
-            'attention',
+            'resource.md',
+            'attention.md',
           ],
         },
         lastUpdatedText: '上次编辑:'
