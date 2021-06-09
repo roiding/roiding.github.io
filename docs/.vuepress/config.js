@@ -78,8 +78,8 @@
 			'euserv.md',
 		  ],
           '/':[
-            'resource.md',
-            'attention.md',
+            'resource',
+            'attention',
           ],
         },
         lastUpdatedText: '上次编辑:'
