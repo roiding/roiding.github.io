@@ -47,7 +47,7 @@
              'dockerfile-command.md',
              'docker-compose-command.md',
              'docker-app.md',
-             'attention',
+             'attention.md',
           ],
 		  '/guide/':[
             '',
@@ -78,8 +78,8 @@
 			'euserv.md',
 		  ],
           '/':[
-            'resource',
-            'attention',
+            'resource.md',
+            'attention.md',
           ],
         },
         lastUpdatedText: '上次编辑:'
