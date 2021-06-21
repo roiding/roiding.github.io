@@ -77,6 +77,9 @@
 		  '/vps/':[
 			'euserv.md',
 		  ],
+      '/github/':[
+        'github/github.md',
+      ],
           '/':[
             'resource.md',
             'attention.md',
