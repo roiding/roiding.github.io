@@ -78,7 +78,7 @@
 			'euserv.md',
 		  ],
       '/github/':[
-        'github/github.md',
+        'github.md',
       ],
           '/':[
             'resource.md',
