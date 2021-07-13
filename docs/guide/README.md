@@ -12,6 +12,8 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 [debian](/linux/debian.html)
 
+[linux基本命令操作](/linux/linux.html)
+
 ## Github
 
 [github操作](/github/github.html)

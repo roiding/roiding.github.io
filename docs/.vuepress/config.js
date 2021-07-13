@@ -62,6 +62,8 @@
           ],
 		  '/linux/':[
             'centos.md',
+            'debian.md',
+            'linux.md',
           ],
 		  '/opencv/':[
 		     'opencv-java.md',
