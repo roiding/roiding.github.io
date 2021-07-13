@@ -43,6 +43,6 @@
     docsBranch: 'docs',
     docsDir: 'docs',
     editLinkText:'编辑此页',
-    editLinkPattern: ':repo/-/edit/:branch/:path',
+    editLinkPattern: ':repo/edit/:branch/:path',
   }
 }
