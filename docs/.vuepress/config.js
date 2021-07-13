@@ -38,7 +38,7 @@
             { text: '首页', link: '/' },
             { text: '荒废的代码仓库', link: 'https://github.com/maodou38'},
           ],
-        sidebar : auto,
+        sidebar : 'auto',
         lastUpdatedText: '上次编辑:'
     }
 }
