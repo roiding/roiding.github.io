@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link rel="icon" href="/favicons/favicon.png" type="image/png" sizes="16x16"><title>JAVA连接常用软件 | 小丁的博客</title><meta name="description" content="小丁的博客"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="VuePress 2.0.0-beta.22">
+    <link rel="preload" href="/assets/js/runtime~app.fe96c5cb.js" as="script"><link rel="preload" href="/assets/css/styles.afefa6a3.css" as="style"><link rel="preload" href="/assets/js/846.3c0cb225.js" as="script"><link rel="preload" href="/assets/js/app.5be36ca8.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.afefa6a3.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><header class="navbar"><div class="toggle-sidebar-button"><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><span><a href="/" class=""><img class="logo" src="/favicons/favicon.png" alt="小丁的博客"><span class="site-name can-hide">小丁的博客</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="首页"><!--[--><!--]--> 首页 <!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/maodou38" rel="noopener noreferrer" target="_blank" aria-label="荒废的代码仓库"><!--[--><!--]--> 荒废的代码仓库 <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/roiding/roiding.github.io" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><div id="docsearch-container"></div></div></header><div class="sidebar-mask"></div><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="首页"><!--[--><!--]--> 首页 <!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/maodou38" rel="noopener noreferrer" target="_blank" aria-label="荒废的代码仓库"><!--[--><!--]--> 荒废的代码仓库 <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><div class="navbar-links-item"><a class="nav-link external" href="https://github.com/roiding/roiding.github.io" rel="noopener noreferrer" target="_blank" aria-label="GitHub"><!--[--><!--]--> GitHub <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--[--><p class="sidebar-heading sidebar-item">JAVA连接常用软件</p><ul class=""><li><!--[--><a aria-current="page" href="/java/java-connect.html#fastdfs" class="router-link-active router-link-exact-active nav-link sidebar-item" aria-label="FastDFS"><!--[--><!--]--> FastDFS <!--[--><!--]--></a><ul class="sidebar-sub-items"><li><!--[--><a aria-current="page" href="/java/java-connect.html#安装-fastdfs-java-客户端" class="router-link-active router-link-exact-active nav-link sidebar-item" aria-label="安装 FastDFS Java 客户端"><!--[--><!--]--> 安装 FastDFS Java 客户端 <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a aria-current="page" href="/java/java-connect.html#在项目中添加依赖" class="router-link-active router-link-exact-active nav-link sidebar-item" aria-label="在项目中添加依赖"><!--[--><!--]--> 在项目中添加依赖 <!--[--><!--]--></a><!----><!--]--></li><li><!--[--><a aria-current="page" href="/java/java-connect.html#创建-fastdfs-工具类" class="router-link-active router-link-exact-active nav-link sidebar-item" aria-label="创建 FastDFS 工具类"><!--[--><!--]--> 创建 FastDFS 工具类 <!--[--><!--]--></a><!----><!--]--></li></ul><!--]--></li></ul><!--]--><!--]--></ul><!--[--><!--]--></aside><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h2 id="fastdfs" tabindex="-1"><a class="header-anchor" href="#fastdfs" aria-hidden="true">#</a> FastDFS</h2><h3 id="安装-fastdfs-java-客户端" tabindex="-1"><a class="header-anchor" href="#安装-fastdfs-java-客户端" aria-hidden="true">#</a> 安装 FastDFS Java 客户端</h3><blockquote><p>从 GitHub 克隆源码</p></blockquote><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">git</span> clone https://github.com/happyfish100/fastdfs-client-java.git
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><blockquote><p>从源码安装并部署到 Nexus 部署前别忘记在 pom.xml 中增加 Nexus 相关配置，配置代码如下：</p></blockquote><div class="language-xml ext-xml line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-releases<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Nexus Release Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://192.168.75.128:8081/repository/maven-releases/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshotRepository</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-snapshots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Nexus Snapshot Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://192.168.75.128:8081/repository/maven-snapshots/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshotRepository</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>mvn clean <span class="token function">install</span> deploy
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><h3 id="在项目中添加依赖" tabindex="-1"><a class="header-anchor" href="#在项目中添加依赖" aria-hidden="true">#</a> 在项目中添加依赖</h3><div class="language-xml ext-xml line-numbers-mode"><pre class="language-xml"><code><span class="token comment">&lt;!-- FastDFS Begin --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.csource<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>fastdfs-client-java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.27-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- FastDFS End --&gt;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="创建-fastdfs-工具类" tabindex="-1"><a class="header-anchor" href="#创建-fastdfs-工具类" aria-hidden="true">#</a> 创建 FastDFS 工具类</h3><blockquote><p>定义文件存储服务接口</p></blockquote><div class="language-java ext-java line-numbers-mode"><pre class="language-java"><code><span class="token doc-comment comment">/**
+ * 文件存储服务接口
+ * <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Title: StorageService<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ * <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Description: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ *
+ * <span class="token keyword">@author</span> Lusifer
+ * <span class="token keyword">@version</span> 1.0.0
+ * <span class="token keyword">@date</span> 2018/8/14 5:22
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">StorageService</span> <span class="token punctuation">{</span>
+    <span class="token doc-comment comment">/**
+     * 上传文件
+     *
+     * <span class="token keyword">@param</span> <span class="token parameter">data</span>    文件的二进制内容
+     * <span class="token keyword">@param</span> <span class="token parameter">extName</span> 扩展名
+     * <span class="token keyword">@return</span> 上传成功后返回生成的文件id；失败，返回null
+     */</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">upload</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> data<span class="token punctuation">,</span> <span class="token class-name">String</span> extName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token doc-comment comment">/**
+     * 删除文件
+     *
+     * <span class="token keyword">@param</span> <span class="token parameter">fileId</span> 被删除的文件id
+     * <span class="token keyword">@return</span> 删除成功后返回0，失败后返回错误代码
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">delete</span><span class="token punctuation">(</span><span class="token class-name">String</span> fileId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><blockquote><p>实现文件存储服务接口</p></blockquote><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>import org.csource.common.NameValuePair;
+import org.csource.fastdfs.ClientGlobal;
+import org.csource.fastdfs.StorageClient1;
+import org.csource.fastdfs.StorageServer;
+import org.csource.fastdfs.TrackerClient;
+import org.csource.fastdfs.TrackerGroup;
+import org.csource.fastdfs.TrackerServer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+/**
+ * 文件存储服务实现
+ * &lt;p&gt;Title: FastDFSStorageService&lt;/p&gt;
+ * &lt;p&gt;Description: &lt;/p&gt;
+ *
+ * @author Lusifer
+ * @version 1.0.0
+ * @date 2018/8/14 5:27
+ */
+public class FastDFSStorageService implements StorageService, InitializingBean {
+    private static final Logger logger = LoggerFactory.getLogger(FastDFSStorageService.class);
+
+    private TrackerClient trackerClient;
+
+    @Value(&quot;${storage.fastdfs.tracker_server}&quot;)
+    private String trackerServer;
+
+    @Override
+    public String upload(byte[] data, String extName) {
+        TrackerServer trackerServer = null;
+        StorageServer storageServer = null;
+        StorageClient1 storageClient1 = null;
+        try {
+            NameValuePair[] meta_list = null; // new NameValuePair[0];
+
+            trackerServer = trackerClient.getConnection();
+            if (trackerServer == null) {
+                logger.error(&quot;getConnection return null&quot;);
+            }
+            storageServer = trackerClient.getStoreStorage(trackerServer);
+            storageClient1 = new StorageClient1(trackerServer, storageServer);
+            String fileid = storageClient1.upload_file1(data, extName, meta_list);
+            logger.debug(&quot;uploaded file &lt;{}&gt;&quot;, fileid);
+            return fileid;
+        } catch (Exception ex) {
+            logger.error(&quot;Upload fail&quot;, ex);
+            return null;
+        } finally {
+            if (storageServer != null) {
+                try {
+                    storageServer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (trackerServer != null) {
+                try {
+                    trackerServer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            storageClient1 = null;
+        }
+    }
+
+    @Override
+    public int delete(String fileId) {
+//        System.out.println(&quot;deleting ....&quot;);
+        TrackerServer trackerServer = null;
+        StorageServer storageServer = null;
+        StorageClient1 storageClient1 = null;
+        int index = fileId.indexOf(&#39;/&#39;);
+        String groupName = fileId.substring(0, index);
+        try {
+            trackerServer = trackerClient.getConnection();
+            if (trackerServer == null) {
+                logger.error(&quot;getConnection return null&quot;);
+            }
+            storageServer = trackerClient.getStoreStorage(trackerServer, groupName);
+            storageClient1 = new StorageClient1(trackerServer, storageServer);
+            int result = storageClient1.delete_file1(fileId);
+            return result;
+        } catch (Exception ex) {
+            logger.error(&quot;Delete fail&quot;, ex);
+            return 1;
+        } finally {
+            if (storageServer != null) {
+                try {
+                    storageServer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (trackerServer != null) {
+                try {
+                    trackerServer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            storageClient1 = null;
+        }
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        File confFile = File.createTempFile(&quot;fastdfs&quot;, &quot;.conf&quot;);
+        PrintWriter confWriter = new PrintWriter(new FileWriter(confFile));
+        confWriter.println(&quot;tracker_server=&quot; + trackerServer);
+        confWriter.close();
+        ClientGlobal.init(confFile.getAbsolutePath());
+        confFile.delete();
+        TrackerGroup trackerGroup = ClientGlobal.g_tracker_group;
+        trackerClient = new TrackerClient(trackerGroup);
+
+        logger.info(&quot;Init FastDFS with tracker_server : {}&quot;, trackerServer);
+    }
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br></div></div><blockquote><p>文件存储服务工厂类</p></blockquote><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * 文件存储服务工厂类
+ * &lt;p&gt;Title: StorageFactory&lt;/p&gt;
+ * &lt;p&gt;Description: &lt;/p&gt;
+ *
+ * @author Lusifer
+ * @version 1.0.0
+ * @date 2018/8/14 5:28
+ */
+public class StorageFactory implements FactoryBean&lt;StorageService&gt; {
+
+    @Autowired
+    private AutowireCapableBeanFactory acbf;
+
+    /**
+     * 存储服务的类型，目前仅支持fastdfs
+     */
+    @Value(&quot;${storage.type}&quot;)
+    private String type;
+
+    private Map&lt;String, Class&lt;? extends StorageService&gt;&gt; classMap;
+
+    public StorageFactory() {
+        classMap = new HashMap&lt;&gt;();
+        classMap.put(&quot;fastdfs&quot;, FastDFSStorageService.class);
+    }
+
+    @Override
+    public StorageService getObject() throws Exception {
+        Class&lt;? extends StorageService&gt; clazz = classMap.get(type);
+        if (clazz == null) {
+            throw new RuntimeException(&quot;Unsupported storage type [&quot; + type + &quot;], valid are &quot; + classMap.keySet());
+        }
+
+        StorageService bean = clazz.newInstance();
+        acbf.autowireBean(bean);
+        acbf.initializeBean(bean, bean.getClass().getSimpleName());
+        return bean;
+    }
+
+    @Override
+    public Class&lt;?&gt; getObjectType() {
+        return StorageService.class;
+    }
+
+    @Override
+    public boolean isSingleton() {
+        return true;
+    }
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br></div></div><blockquote><p>配置文件存储服务工厂类</p></blockquote><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * Java 配置方式定义 StorageFactory 的 Bean 使其可以被依赖注入
+ * &lt;p&gt;Title: FastDFSConfiguration&lt;/p&gt;
+ * &lt;p&gt;Description: &lt;/p&gt;
+ *
+ * @author Lusifer
+ * @version 1.0.0
+ * @date 2018/8/14 5:28
+ */
+@Configuration
+public class FastDFSConfiguration {
+    @Bean
+    public StorageFactory storageFactory() {
+        return new StorageFactory();
+    }
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><blockquote><p>创建 FastDFS 控制器</p></blockquote><ol><li>增加云配置</li></ol><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>fastdfs.base.url: http://192.168.75.128:8888/
+storage:
+  type: fastdfs
+  fastdfs:
+    tracker_server: 192.168.75.128:22122
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="2"><li>控制器代码</li></ol><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>import com.funtl.itoken.service.upload.fastdfs.StorageService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@CrossOrigin(origins = &quot;*&quot;, maxAge = 3600)
+@RestController
+public class UploadController {
+    @Value(&quot;${fastdfs.base.url}&quot;)
+    private String FASTDFS_BASE_URL;
+
+    @Autowired
+    private StorageService storageService;
+
+    /**
+     * 文件上传
+     *
+     * @param dropFile    Dropzone
+     * @param editorFiles wangEditor
+     * @return
+     */
+    @RequestMapping(value = &quot;upload&quot;, method = RequestMethod.POST)
+    public Map&lt;String, Object&gt; upload(MultipartFile dropFile, MultipartFile[] editorFiles) {
+        Map&lt;String, Object&gt; result = new HashMap&lt;&gt;();
+
+        // Dropzone 上传
+        if (dropFile != null) {
+            result.put(&quot;fileName&quot;, writeFile(dropFile));
+        }
+
+        // wangEditor 上传
+        if (editorFiles != null &amp;&amp; editorFiles.length &gt; 0) {
+            List&lt;String&gt; fileNames = new ArrayList&lt;&gt;();
+
+            for (MultipartFile editorFile : editorFiles) {
+                fileNames.add(writeFile(editorFile));
+            }
+
+            result.put(&quot;errno&quot;, 0);
+            result.put(&quot;data&quot;, fileNames);
+        }
+
+        return result;
+    }
+
+    /**
+     * 将图片写入指定目录
+     *
+     * @param multipartFile
+     * @return 返回文件完整路径
+     */
+    private String writeFile(MultipartFile multipartFile) {
+        // 获取文件后缀
+        String oName = multipartFile.getOriginalFilename();
+        String extName = oName.substring(oName.lastIndexOf(&quot;.&quot;) + 1);
+
+        // 文件存放路径
+        String url = null;
+        try {
+            String uploadUrl = storageService.upload(multipartFile.getBytes(), extName);
+            url = FASTDFS_BASE_URL + uploadUrl;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // 返回文件完整路径
+        return url;
+    }
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br></div></div><!--]--></div><footer class="page-meta"><div class="meta-item edit-link"><a class="nav-link external meta-item-label" href="https://github.com/roiding/roiding.github.io/edit/docs/docs/java/java-connect.md" rel="noopener noreferrer" target="_blank" aria-label="编辑此页"><!--[--><!--]--> 编辑此页 <span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span><!--[--><!--]--></a></div><div class="meta-item last-updated"><span class="meta-item-label">上次编辑:: </span><span class="meta-item-info">7/13/2021, 5:37:47 AM</span></div><!----></footer><!----><!--[--><!--]--></main></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.fe96c5cb.js" defer></script><script src="/assets/js/846.3c0cb225.js" defer></script><script src="/assets/js/app.5be36ca8.js" defer></script>
+  </body>
+</html>
