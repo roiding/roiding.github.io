@@ -1,6 +1,5 @@
 ---
 title: JVM
-sidebarDepth: 2
 ---
 ## JVM->JRE->JDK 关系
 ![关系图](/java/jvm/java.png)

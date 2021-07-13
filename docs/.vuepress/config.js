@@ -37,55 +37,7 @@
       { text: '首页', link: '/' },
       { text: '荒废的代码仓库', link: 'https://github.com/maodou38' },
     ],
-    sidebar: {
-      '/docker/': [
-        'docker-install.md',
-        'docker-buildx.md',
-        'docker-remote.md',
-        'docker-command.md',
-        'dockerfile-command.md',
-        'docker-compose-command.md',
-        'docker-app.md',
-        'attention.md',
-      ],
-      '/guide/': [
-        '',
-      ],
-      '/java/': [
-        'jvm.md',
-        'spring.md',
-        'JPA',
-        'spring-security.md',
-        'springboot.md',
-        'java-connect.md',
-      ],
-      '/linux/': [
-        'centos.md',
-        'debian.md',
-        'linux.md',
-      ],
-      '/opencv/': [
-        'opencv-java.md',
-      ],
-      '/sql/': [
-        'sql.md',
-      ],
-      '/tools/': [
-        'git.md',
-        'intellij.md',
-        'nginx.md',
-      ],
-      '/vps/': [
-        'euserv.md',
-      ],
-      '/github/': [
-        'github.md',
-      ],
-      '/': [
-        'resource.md',
-        'attention.md',
-      ],
-    },
+    sidebar: 'auto',
     lastUpdatedText: '上次编辑:',
     repo: 'https://github.com/roiding/roiding.github.io',
     docsRepo: 'https://github.com/roiding/roiding.github.io',

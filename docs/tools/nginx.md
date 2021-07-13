@@ -1,6 +1,5 @@
 ---
 title: Nginx
-sidebarDepth: 2
 ---
 ## Nginx作为缓存使用
 ### proxy_cache_path

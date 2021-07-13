@@ -1,6 +1,5 @@
 ---
 title: intellij使用
-sidebarDepth: 2
 ---
 ## 配置lombok  
  * Settings-->Plugins-->安装lombok插件

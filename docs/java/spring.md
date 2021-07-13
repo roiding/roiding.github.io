@@ -1,6 +1,5 @@
 ---
 title: Spring
-sidebarDepth: 2
 ---
 ## Spring 注解详解 (遇到更新)
 ### ControllerAdvice

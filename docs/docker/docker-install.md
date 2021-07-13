@@ -1,6 +1,5 @@
 ---
 title: 安装Docker
-sidebarDepth: 1
 ---
 ## Docker安装（centos）
 ### 1.删除已安装的Docker

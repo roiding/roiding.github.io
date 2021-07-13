@@ -1,6 +1,5 @@
 ---
 title: GIT
-sidebarDepth: 2
 ---
 
 ## git常用命令
