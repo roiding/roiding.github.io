@@ -31,7 +31,6 @@
   theme: '@vuepress/theme-default', // 主题
   themeConfig: {
     logo: '/favicons/favicon.png',
-    editLink: false, //禁用编辑
     backToHome: '回到首页',
     navbar: [
       { text: '首页', link: '/' },
