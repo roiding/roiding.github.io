@@ -22,7 +22,7 @@ jobs:
 
       
       - name: Install dependencies  # 安装依赖
-        run: npm ci
+        run: npm install
       
       - name: Packaging
         run: npm run docs:build
