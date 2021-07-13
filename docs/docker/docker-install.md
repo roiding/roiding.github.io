@@ -136,8 +136,10 @@ sudo systemctl restart docker
 ## Docker-compose安装
 ### 源码安装 <sup><span style="color:#F00;font-size:4">*</span></sup>
 ```bash
-#自己在https://github.com/docker/compose/releases查看版本替换下面链接的版本号
-curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+#临时写tag为系统变量 （实测centos8不支持$()，仅支持``）
+export tag=`wget -qO- -t1 -T2 "https://api.github.com/repos/docker/compose/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'`
+
+curl -L https://github.com/docker/compose/releases/download/${tag}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 
 chmod +x /usr/local/bin/docker-compose
 
