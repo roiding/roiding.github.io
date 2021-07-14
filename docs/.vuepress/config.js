@@ -47,7 +47,9 @@
             '/docker/docker-app.md',
             '/docker/attention.md',
       ],
-      '/guide/',
+      '/guide/':[
+            '/guide/README.md',
+      ],
       '/java/':[
             '/java/jvm.md',
             '/java/spring.md',
