@@ -8,7 +8,6 @@
           }
         }, */
   plugins: [
-    ['@vuepress/back-to-top'],
     ['@vuepress/docsearch', {
       appId: 'XEQSFBL9DS',
       apiKey: '25a25110f2901993e844dff36f6449b8',
@@ -22,6 +21,7 @@
   ],
   base: '/',
   title: '小丁的博客',
+  lang:'zh-CN',
   description: '小丁的博客',
   head: [
     ['link', { rel: 'icon', href: '/favicons/favicon.png', type: 'image/png', sizes: '16x16' }]
@@ -85,7 +85,7 @@
             '/attention.md',
       ],
     },
-    lastUpdatedText: '上次编辑:',
+    lastUpdatedText: '上次更新',
     repo: 'https://github.com/roiding/roiding.github.io',
     docsRepo: 'https://github.com/roiding/roiding.github.io',
     docsBranch: 'docs',
