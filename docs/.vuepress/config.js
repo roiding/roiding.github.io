@@ -28,7 +28,7 @@
   ],
   port: 9090,
   extraWatchFiles: [],
-  theme: 'vuepress-theme-local', // 主题
+  theme: require.resolve('../theme'), // 主题
   themeConfig: {
     logo: '/favicons/favicon.png',
     backToHome: '回到首页',
