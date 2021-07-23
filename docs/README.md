@@ -14,6 +14,6 @@ features:
      details: Java笔记、Linux笔记、SaaS应用技术笔记
    - title: 技术博客
      details: 将深入探讨相关技术，包括行业动态，架构设计，设计模式，框架使用等。
-footer: Copyright 2020-2021 Roiding - All Rights Reserved <div><img src="/favicons/yp_logo.png" width="25%"/></div>
+footer: Copyright 2020-2021 Roiding - All Rights Reserved <div>本网站由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="/favicons/yp_logo.png"/></a>提供CDN加速/云存储服务</div>
 footerHtml: true
 ---

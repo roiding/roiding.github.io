@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #page-bottom>
-      <div class="my-footer"><img src="/favicons/yp_logo.png" class="logo_img"/></div>
+      <div class="my-footer">本网站由<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="/favicons/yp_logo.png"/></a>提供CDN加速/云存储服务</div>
     </template>
   </Layout>
 </template>
@@ -19,8 +19,5 @@ export default {
 <style lang="css">
 .my-footer {
   text-align: center;
-}
-.logo_img{
-  width: 15%;
 }
 </style>
