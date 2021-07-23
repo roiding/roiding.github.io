@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #page-bottom>
-      <div class="my-footer">This is my custom page footer</div>
+      <div class="my-footer"><img src="/favicons/yp_logo.png" class="logo_img"/></div>
     </template>
   </Layout>
 </template>
@@ -19,5 +19,8 @@ export default {
 <style lang="css">
 .my-footer {
   text-align: center;
+}
+.logo_img{
+  width: 15%;
 }
 </style>
