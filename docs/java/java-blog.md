@@ -1,0 +1,6 @@
+---
+title: JAVA博客资源整理
+---
+
+## 权限类
+[这可能是史上功能最全的 Java 权限认证框架——Sa-Token](http://sa-token.dev33.cn/doc/index.html#/)

@@ -57,6 +57,7 @@
             '/java/spring-security.md',
             '/java/springboot.md',
             '/java/java-connect.md',
+            '/java/java-blog.md',
       ],
       '/linux/':[
             '/linux/centos.md',
