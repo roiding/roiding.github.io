@@ -23,6 +23,7 @@
   title: '小丁的博客',
   lang:'zh-CN',
   description: '小丁的博客',
+  "markdown.extractHeaders.level": [2,3,4],
   head: [
     ['link', { rel: 'icon', href: '/favicons/favicon.png', type: 'image/png', sizes: '16x16' }]
   ],
