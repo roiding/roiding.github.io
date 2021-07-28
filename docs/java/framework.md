@@ -433,4 +433,15 @@ Flink SQL> USE CATALOG pulsarcatalog;
 Flink SQL> USE `public/default`;
 Flink SQL> SELECT * FROM topic0;
 ```
+### 参考资料
+[Pulsar](http://pulsar.apache.org/)
+[Pulsar社区](http://pulsar.apache.org/en/powered-by/)
+[Apache Pulsar 分层存储帮你省钱](https://segmentfault.com/a/1190000023087253)
+[Flink 和 Pulsar 的批流融合 文章](https://developer.aliyun.com/article/784282?spm=a2c6h.13148508.0.0.6dce4f0eQtZ5Kx)
+[Flink 和 Pulsar 的批流融合 视频](https://www.bilibili.com/video/BV11X4y1P7PD?from=search&seid=4562849170423649332)
+[Apache Pulsar 在腾讯大数据场景下的落地实践 视频](https://www.bilibili.com/video/BV12U4y1b7Tr?from=search&seid=4562849170423649332)
+[Pulsar Summit Asia 2020 主题演讲：大融合：消息、流、存储三位一体（郭斯杰）](https://www.bilibili.com/video/BV1da4y1p7pv?from=search&seid=4562849170423649332)
+[Apache Pulsar 消息、流和存储的融合 视频](https://www.bilibili.com/video/BV1HK4y1S7aF?from=search&seid=4562849170423649332)
+[RocketMQ 淘汰倒计时！这个新一代消息中间件，腾讯、华为都用疯了？](https://mp.weixin.qq.com/s/N7JJYLv8p-dzgZfpkA1CEg)
+[为了处理日均TB级数据量，金山云选择用 Pulsar 实现日志服务](https://mp.weixin.qq.com/s/84HsT9SFlBF7EZhiQBj-Rw)
 
