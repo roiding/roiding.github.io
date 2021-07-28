@@ -65,6 +65,9 @@
             '/java/java-blog.md',
             '/java/framework.md'
       ],
+      '/python/':[
+             '/python/framework.md',
+      ],
       '/linux/':[
             '/linux/centos.md',
             '/linux/debian.md',
