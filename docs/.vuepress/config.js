@@ -66,6 +66,7 @@
             '/java/framework.md'
       ],
       '/python/':[
+             '/python/jupyter.md',
              '/python/framework.md',
       ],
       '/linux/':[
