@@ -2,9 +2,9 @@
 title: Matplotlib
 ---
 
-# 三层结构
+## 三层结构
 
-## 容器层
+### 容器层
 
 容器层主要由Canvas、Figure、Axes组成。
 Canvas是位于最底层的系统层， 在绘图的过程中充当画板的角色， 即放置画布(Figure) 的工具。
@@ -22,14 +22,14 @@ Axes是应用层的第二层， 在绘图的过程中相当于画布上的绘图
 
 ![](/python/matplotlib/1.png)
 
-## 辅助显示层
+### 辅助显示层
 
 辅助显示层为Axes(绘图区) 内的除了根据数据绘制出的图像以外的内容， 主要包括Axes外观(face color) 、边框线(spines) 、坐标轴(axis) 、坐标轴名称(axis label、坐标轴刻度(tick) 、坐标轴刻度标签(ticklabel) 、网格线(grid) 、图例(legend) 、标题(title) 等内容。
 该层的设置可使图像显示更加直观更加容易被用户理解，但又不会对图像产生实质的影响。
 
 ![](/python/matplotlib/2.png)
 
-## 图像层
+### 图像层
 
 图像层指Axes内通过plot、scatter、bar、histogram、pie等函数根据数据绘制出的图像。
 
@@ -37,18 +37,18 @@ Axes是应用层的第二层， 在绘图的过程中相当于画布上的绘图
 
 每一个绘图区都可以有不同的图表（散点图、折线图、柱状图等）。
 
-## 总结
+### 总结
 
 - Canvas (画板) 位于最底层， 用户一般接触不到
 - Figure (画布) 建立在Canvas之上
 - Axes (绘图区) 建立在Figure之上
 - 坐标轴(axis) 、图例(legend) 等辅助显示层以及图像层都是建立在Axes之上
 
-# 折线图(plot)与基础绘图功能
+## 折线图(plot)与基础绘图功能
 
-## 折线图绘制与保存
+### 折线图绘制与保存
 
-#### matplotlib.pyplot模块
+##### matplotlib.pyplot模块
 
 matplotlib.pyplot包含了一系列类似于matlab的画图函数。它的函数**作用于当前图形(figure) 的当前坐标系(axes) 。**
 
@@ -56,7 +56,7 @@ matplotlib.pyplot包含了一系列类似于matlab的画图函数。它的函数
 import matplotlib.pyplot as plt
 ```
 
-#### 折线图绘制与显示
+##### 折线图绘制与显示
 
 **展现上海一周的天气，比如从星期一到星期日的天气温度如下**
 步骤如下：
@@ -78,7 +78,7 @@ plt.show()
 
 可以看到这样的显示效果并不好，我们可以加入更多的功能：
 
-#### 设置画布属性与图片保存
+##### 设置画布属性与图片保存
 
 ```python
 plt.figure(figsize=(), dpi=)
@@ -106,9 +106,9 @@ plt.savefig("test.png")
 
 - 注意：plt.show()会释放figure资源，如果在显示图像之后保存图片将只能保存空图片。
 
-## 完善原始折线图（辅助显示层）
+### 完善原始折线图（辅助显示层）
 
-### 准备数据并画出初始折线图
+#### 准备数据并画出初始折线图
 
 **案例：显示温度变化状况**
 需求：画出某城市11点到12点1小时内每分钟的温度变化折线图，温度范围在15度~18度。
@@ -133,7 +133,7 @@ plt.show()
 
 此时可以发现，因为坐标的原因，将温度变化差值显示的非常大，我们需要改变坐标去调整一下。
 
-### 添加自定义x，y刻度
+#### 添加自定义x，y刻度
 
 - plt.xticks(x, **kwargs)
   x：要显示的刻度值
@@ -170,7 +170,7 @@ plt.xticks(x[::5], x_lable[::5])
 
 ![image.png](/python/matplotlib/24cfa274038c472f94bfc8536209f8e0.png)
 
-## 解决中文问题
+### 解决中文问题
 
 下载中文字体(黑体，看准系统版本)
 
@@ -212,7 +212,7 @@ cd ~/.cache/matplotlib
 rm -r *
 ```
 
-### 3)修改配置文件matplotlibrc
+#### 3)修改配置文件matplotlibrc
 
 **Mac系统的解决方案：**
 
@@ -286,12 +286,12 @@ plt.title("某城市11点到12点每分钟的温度变化状况")
 
 ![](/python/matplotlib/6bbbe7832d754aeeadcaa964c719e860.png)
 
-## 完善原始折线图（图像层）
+### 完善原始折线图（图像层）
 
 **需求：再添加一个城市的温度变化**
 收集到北京当天温度变化情况，温度在1度到3度。
 
-### 多次plot
+#### 多次plot
 
 怎么去添加另一个在同一坐标系当中的不同图形， **其实很简单只需要再次plot即可**， 但是需要区分线条， 如下：
 
@@ -332,7 +332,7 @@ plt.plot(x, y_shanghai, color = "r", linestyle = "--")
 
 还有一些其它的风格，我们可以来看一下。
 
-### 设置图形风格
+#### 设置图形风格
 
 | 颜色字符 | 风格字符       |
 | :------- | :------------- |
@@ -347,7 +347,7 @@ plt.plot(x, y_shanghai, color = "r", linestyle = "--")
 
 我们还需要给图加上图例来完善。
 
-### 显示图例
+#### 显示图例
 
 修改代码：
 
@@ -439,7 +439,7 @@ plt.title("上海、北京11点到12点每分钟的温度变化状况")
 plt.show()
 ```
 
-## 多个坐标系显示-plt.subplots(面向对象的画图方法)
+### 多个坐标系显示-plt.subplots(面向对象的画图方法)
 
 如果我们想要将上海和北京的天气图显示在同一个图的不同坐标系当中，效果如下：
 
@@ -547,7 +547,7 @@ axes[1].set_yticks(range(0, 40, 5))
 
 ![image.png](/python/matplotlib/83911cdce4fc4584a95ba09b67159fa7.png)
 
-## 折线图的应用场景
+### 折线图的应用场景
 
 * 呈现公司产品（不同区域）每天活跃用户数
 
@@ -586,3 +586,258 @@ plt.show()
 ![](/python/matplotlib/20190307213856586.png)
 
 ![](/python/matplotlib/20190307213906802.png)
+
+## 散点图(scatter)
+
+### 常见图形种类及意义
+
+Matplotlib能够绘制**折线图、散点图、柱状图、直方图、饼图。**
+
+我们需要知道不同的统计图的意义，以此来决定选择哪种统计图来呈现我们的数据。
+
+
+
+- **折线图**：以折线的上升或下降来表示统计数量的增减变化的统计图
+
+  **特点：能够显示数据的变化趋势，反映事物的变化情况。(变化)<span style="color:#86ca5e;">【变化情况】</span>**
+
+  api：plt.plot(x, y)
+
+![](/python/matplotlib/20210217232259760.png)
+
+- **散点图：**用两组数据构成多个坐标点，考察坐标点的分布,判断两变量之间是否存在某种关联或总结坐标点的分布模式。
+
+  **特点：判断变量之间是否存在数量关联趋势,展示离群点(分布规律) <span style="color:#86ca5e;">【分布规律】</span>**
+
+  api：plt.scatter(x, y)
+
+![](/python/matplotlib/20210217232318412.png)
+
+- **柱状图：**排列在工作表的列或行中的数据可以绘制到柱状图中。
+
+  **特点：绘制连离散的数据,能够一眼看出各个数据的大小,比较数据之间的差别。(统计/对比) <span style="color:#86ca5e;">【统计/对比】</span>**
+
+  api：plt.bar(x, width, align='center', **kwargs) <span style="color:#86ca5e;">【x代表维度的值】</span>
+
+```
+Parameters:    
+x : 需要传递的数据
+ 
+width : 柱状图的宽度
+ 
+align : 每个柱状图的位置对齐方式
+    {‘center’, ‘edge’}, optional, default: ‘center’
+ 
+**kwargs :
+color:选择柱状图的颜色
+```
+
+![](/python/matplotlib/20210217234044458.png)
+
+![](/python/matplotlib/20210217232354341.png)
+
+直方图：由一系列高度不等的纵向条纹或线段表示数据分布的情况。 一般用横轴表示数据范围，纵轴表示分布情况。
+
+**特点：绘制连续性的数据展示一组或者多组数据的分布状况(统计) <span style="color:#86ca5e;">【正态分布】</span>**
+
+api：matplotlib.pyplot.hist(x, bins=None)
+
+```
+Parameters:    
+x : 需要传递的数据
+bins : 组距
+```
+
+![](/python/matplotlib/20210217232422106.png)
+
+**饼图：**用于表示不同分类的占比情况，通过弧度大小来对比各种分类。
+
+**特点：分类数据的占比情况(占比) <span style="color:#86ca5e;">【占比】</span>**
+
+api：plt.pie(x, labels=,autopct=,colors)
+
+```
+Parameters:  
+x:数量，自动算百分比
+labels:每部分名称
+autopct:占比显示指定%1.2f%%
+colors:每部分颜色
+```
+
+![](/python/matplotlib/20210217232444896.png)
+
+### 散点图绘制
+
+需求：探究房屋面积和房屋价格的关系
+
+房屋面积数据：
+
+```
+x = [225.98, 247.07, 253.14, 457.85, 241.58, 301.01,  20.67, 288.64,
+       163.56, 120.06, 207.83, 342.75, 147.9 ,  53.06, 224.72,  29.51,
+        21.61, 483.21, 245.25, 399.25, 343.35]
+```
+
+房屋价格数据：
+
+```
+y = [196.63, 203.88, 210.75, 372.74, 202.41, 247.61,  24.9 , 239.34,
+       140.32, 104.15, 176.84, 288.23, 128.79,  49.64, 191.74,  33.1 ,
+        30.74, 400.02, 205.35, 330.64, 283.45]
+```
+
+代码：
+
+```python
+# 1.准备数据
+x = [225.98, 247.07, 253.14, 457.85, 241.58, 301.01,  20.67, 288.64,
+       163.56, 120.06, 207.83, 342.75, 147.9 ,  53.06, 224.72,  29.51,
+        21.61, 483.21, 245.25, 399.25, 343.35]
+y = [196.63, 203.88, 210.75, 372.74, 202.41, 247.61,  24.9 , 239.34,
+       140.32, 104.15, 176.84, 288.23, 128.79,  49.64, 191.74,  33.1 ,
+        30.74, 400.02, 205.35, 330.64, 283.45]
+ 
+# 2.创建画布
+plt.figure(figsize=(20, 8), dpi=100)
+ 
+# 3.绘制散点图
+plt.scatter(x, y)
+ 
+# 4.显示图像
+plt.show()
+```
+
+![](/python/matplotlib/20210217233727385.png)
+
+### 应用场景
+
+* 探究不同变量之间的内在关系
+
+## 柱状图（bar）
+
+### **对比每部电影的票房收入**
+
+电影数据如下图所示：
+
+![](/python/matplotlib/20210217232608585.png)
+
+* 准备数据
+
+  ```
+  ['雷神3：诸神黄昏','正义联盟','东方快车谋杀案','寻梦环游记','全球风暴', '降魔传','追捕','七十七天','密战','狂兽','其它']
+  [73853,57767,22354,15969,14839,8725,8716,8318,7916,6764,52222]
+  ```
+
+* 绘制
+
+  * matplotlib.pyplot.bar(x, width, align='center', **kwargs)
+
+    ```
+    Parameters：
+    x: sequence of scalars，柱状图横轴中心点
+    y: 纵坐标
+    
+    width: scalar or array-like, optional（柱状图的宽度）
+    
+    align：{'center‘，'edge’}，optional, default：'center'
+    Alignment of the bars to the x coordinates
+    'center'：Center the base on the x positions
+    'edge'：Align the left edges of the bars with the x positions（每个柱状图的位置对齐方式）
+    
+    **kwargs：
+    color：选择柱状图的颜色
+    
+    Returns：
+    '.BarContainer'
+    Container with all the bars and optionally errorbars
+    ```
+
+  绘制柱状图
+
+  ```python
+  # 1.准备数据
+  # 电影名字
+  movie_name = ['雷神3：诸神黄昏','正义联盟','东方快车谋杀案','寻梦环游记','全球风暴','降魔传','追捕','七十七天','密战','狂兽','其它']
+  # 横坐标
+  x = range(len(movie_name))
+  # 票房数据
+  y = [73853,57767,22354,15969,14839,8725,8716,8318,7916,6764,52222]
+   
+  # 2.创建画布
+  plt.figure(figsize=(20, 8), dpi=100)
+   
+  # 3.绘制柱状图
+  plt.bar(x, y, width=0.5, color=['b','r','g','y','c','m','y','k','c','g','b'])
+   
+  # 3.1b修改x轴的刻度显示
+  plt.xticks(x, movie_name)
+   
+  # 3.2 添加网格显示
+  plt.grid(linestyle="--", alpha=0.5)
+   
+  # 3.3 添加标题
+  plt.title("电影票房收入对比")
+   
+  # 4.显示图像
+  plt.show()
+  ```
+
+  ![](/python/matplotlib/20210217233936882.png)
+
+**需求-如何对比电影票房收入才更加有说服力？**
+
+### **比较相同天数的票房**
+
+有时候为了公平起见，我们需要对比不同电影首日和首周的票房
+
+效果如下：
+
+![](/python/matplotlib/20200407222943871.png)
+
+* 准备数据
+
+  ```python
+  movie_name = ['雷神3：诸神黄昏','正义联盟','寻梦环游记']
+   
+  first_day = [10587.6,10062.5,1275.7]
+  first_weekend=[36224.9,34479.6,11830]
+   
+  数据来源: https://piaofang.maoyan.com/?ver=normal
+  ```
+
+* 绘制
+
+  * 添加首日首周两部分的柱状图
+  * x轴中文坐标位置调整
+
+  ```python
+  # 1、准备数据
+  movie_name = ['雷神3：诸神黄昏','正义联盟','寻梦环游记']
+  
+  first_day = [10587.6,10062.5,1275.7]
+  first_weekend=[36224.9,34479.6,11830]
+  x = range(len(movie_name))
+  
+  # 2、创建画布
+  plt.figure(figsize=(20, 8), dpi=80)
+  
+  # 3、绘制柱状图
+  plt.bar(x, first_day, width=0.2, label="首日票房")
+  # plt.bar([0.2, 1.2, 2.2], first_weekend, width=0.2, label="首周票房")
+  plt.bar([i+0.2 for i in x], first_weekend, width=0.2, label="首周票房")
+  
+  # 显示图例
+  plt.legend()
+  
+  # 修改刻度
+  plt.xticks([0.1, 1.1, 2.1], movie_name)
+  
+  # 4、显示图像
+  plt.show()
+  ```
+
+### 应用场景
+
+* 数量统计
+* 用户数量对比分析
+
