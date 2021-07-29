@@ -67,6 +67,7 @@
       ],
       '/python/':[
              '/python/jupyter.md',
+             '/python/matplotlib.md',
              '/python/framework.md',
       ],
       '/linux/':[
