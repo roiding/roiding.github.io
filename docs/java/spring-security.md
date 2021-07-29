@@ -5,7 +5,7 @@ title: SpringSecurity
 ### 无处不在的 Authentication
 在 Spring Security 中有一个非常重要的对象叫做 Authentication，我们可以在任何地方注入 Authentication 进而获取到当前登录用户信息，Authentication 本身是一个接口，它有很多实现类：
 
-![](/java/springsecurity/spring-security_Authentication.webp)
+![](../.vuepress/public/java/springsecurity/spring-security_Authentication.jpg)
 
 > 最常用的是`UsernamePasswordAuthenticationToken`
 ### 登录流程
@@ -190,7 +190,7 @@ onAuthenticationSuccess 方法有三个参数，分别是：
 第三个 `Authentication` 参数则保存了我们刚刚登录成功的用户信息。
 
 配置完成后，我们再去登录，就可以看到登录成功的用户信息通过 `JSON` 返回到前端了，如下：
-![](/java/springsecurity/640.webp)
+![](../.vuepress/public/java/springsecurity/640.jpg)
 #### 登录失败
 ```java
 .failureHandler((req, resp, e) -> {

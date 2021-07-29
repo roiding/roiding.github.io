@@ -86,7 +86,7 @@ private static final long serialVersionUID = 8289770415244673535L;
 _IDEA 提示生成序列号
 默认情况下 Intellij IDEA 不会提示继承了 Serializable 接口的类生成 serialVersionUID 的警告。如果需要生成 serialVersionUID，需要手动配置。
 File -> Settings -> Inspections -> Serialization issues -> Serialization class without 'serialVersionUID'_
-![](/intellij/intellij-serialVersionUID.png)
+![](../.vuepress/public/intellij/intellij-serialVersionUID.png)
 
 
 ### 创建相关工具类
@@ -460,7 +460,7 @@ Swagger 通过注解表明该接口会生成文档，包括接口名、请求方
 
 ### 访问 Swagger2
 访问地址：http://ip:port/swagger-ui.html
-![](/java/swagger.png)
+![](../.vuepress/public/java/swagger.png)
 
 ## 整合redis
 ### 依赖
@@ -512,7 +512,7 @@ public class RedisConfig {
 
 ## Validation使用
 ### 原生支持
-![](/java/1590374918637.png)
+![](../.vuepress/public/java/1590374918637.png)
 
 ### 执行顺序
 

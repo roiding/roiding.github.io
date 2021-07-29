@@ -173,7 +173,7 @@ ENTRYPOINT ["top", "-b"]
 CMD ["-c"]
 ```
 如果我们在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD是一个完整的指令，那么它们两个会互相覆盖，谁在最后谁生效
-![](/docker/dockerfile-command/1584786006340.jpg)
+![](../.vuepress/public/docker/dockerfile-command/1584786006340.jpg)
 
 
 ## VOLUME

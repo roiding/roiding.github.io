@@ -138,13 +138,13 @@ proxy_no_cache $http_pragma $http_authorization;
 ```
 
 * 部分页面不缓存
-  ![](/tools/nginx/1590930556225.webp)
+  ![](../.vuepress/public/tools/nginx/1590930556225.jpg)
 ### 缓存命中分析
   * 通过设置response的头信息Nginx-Cache
   add_header Nging-Cache "$upstream_cache_status";
-  ![](/tools/nginx/1590930608819.webp)
+  ![](../.vuepress/public/tools/nginx/1590930608819.jpg)
 * 通过设置log_format,打印日志分析
-  ![](/tools/nginx/1590930635874.webp)
+  ![](../.vuepress/public/tools/nginx/1590930635874.jpg)
 ### 示例
 
 ```nginx

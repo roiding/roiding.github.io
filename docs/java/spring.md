@@ -90,4 +90,4 @@ public void a(WebDataBinder binder) {
 
     3. 发送请求
     请求发送时,通过给不同对象的参数添加不同的前缀,可以实现参数的区分.
-![](/java/spring/3478917317390130.png)
+![](../.vuepress/public/java/spring/3478917317390130.png)

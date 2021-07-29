@@ -123,7 +123,7 @@ shell
 
 - GitLab CI 地址与令牌参数
 项目 –> 设置 –> CI/CD –> Runner 设置
-![](/docker/docker-app/gitlab-runner.png)
+![](../.vuepress/public/docker/docker-app/gitlab-runner.png)
 
 - .gitlab-ci.yml  
 在项目工程下编写 .gitlab-ci.yml 配置文件：
@@ -265,8 +265,8 @@ chown -R 1000 /usr/local/docker/jenkins/data
 ```
 ### 解锁 Jenkins
 Jenkins 第一次启动时需要输入一个初始密码用以解锁安装流程，使用 docker logs jenkins 即可方便的查看到初始密码
-![](/docker/docker-app/jenkins-unlock.png)
-![](/docker/docker-app/jenkins-pass.png)
+![](../.vuepress/public/docker/docker-app/jenkins-unlock.png)
+![](../.vuepress/public/docker/docker-app/jenkins-pass.png)
 注意： 安装时可能会因为网速等原因导致安装时间比较长，请大家耐心等待。如果长时间停留在安装页没反应，请尝试使用 F5 刷新一下。
 
 ### 使用自定义插件的方式安装
@@ -290,7 +290,7 @@ __很多插件装不上怎么办？不要慌，记住这些插件的名字，咱
 
 ### 安装成功效果图
 创建管理员
-![](/docker/docker-app/jenkins-install-success.png)
+![](../.vuepress/public/docker/docker-app/jenkins-install-success.png)
 
 安装完成，进入首页
 
@@ -319,7 +319,7 @@ Manage Jenkins -> Manage Plugins -> Avaliable
 
 
 选择上传即可
-![](/docker/docker-app/jenkins-upload.png)
+![](../.vuepress/public/docker/docker-app/jenkins-upload.png)
 
 ### 重启 Jenkins
 ```
@@ -327,4 +327,4 @@ docker-compose down
 docker-compose up -d
 ```
 注意： 请留意需要下载插件的警告信息，如果不满足安装条件，Jenkins 是会拒绝安装的。如下图：
-![](/docker/docker-app/jenkins-refuse.png)
+![](../.vuepress/public/docker/docker-app/jenkins-refuse.png)

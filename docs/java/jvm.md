@@ -2,7 +2,7 @@
 title: JVM
 ---
 ## JVM->JRE->JDK 关系
-![关系图](/java/jvm/java.png)
+![关系图](../.vuepress/public/java/jvm/java.png)
 - `JDK`(Java Development Kit) 是 `Java` 语言的软件开发工具包（`SDK`）。`JDK` 物理存在，是 `programming tools`、`JRE` 和 `JVM` 的一个集合。
 
 - `JRE`（Java Runtime Environment）`Java` 运行时环境，`JRE` 是物理存在的，主要由`Java API` 和 `JVM` 组成，提供了用于执行 `java` 应用程序最低要求的环境。
@@ -22,7 +22,7 @@ title: JVM
 * **网络字节顺序** ：Java class文件用网络字节码顺序来进行存储，保证了小端的Intel x86架构和大端的RISC系列的架构之间的无关性。
 
 ## 类加载器
-![](/java/jvm/classloader.png)
+![](../.vuepress/public/java/jvm/classloader.png)
 ### 关系
 1. `Bootstrap Classloader` 是在Java虚拟机启动后初始化的。
 
@@ -301,16 +301,16 @@ private static final String CHILDREN_SOURCE_CODE_NAME = SOURCE_CODE_LOCATION + "
 ##### 场景一
 1. **保留**`static`代码块，把目标类`Children.java`和`Parent.java`**拷贝**到类加载的目录，然后进行手动**编译**。
 2. 保留测试项目目录中的目标类`Children.java`和`Parent.java`。
-![](/java/jvm/test1.png)
+![](../.vuepress/public/java/jvm/test1.png)
 
 结果：
-![](/java/jvm/test2.png)
+![](../.vuepress/public/java/jvm/test2.png)
 
 分析：
 > 我们成功创建了`Children`对象，并通过反射调用了它的`say()`方法。 然而查看控制台日志，可以发现类加载使用的仍然是`AppClassLoader`，`CustomClassLoader`并没有生效。
 
 查看`CustomClassLoader`的类加载目录：
-![](/java/jvm/test3.png)
+![](../.vuepress/public/java/jvm/test3.png)
 
 > 类目录下有我们拷贝并编译的Parent和Chidren文件。
 
@@ -320,7 +320,7 @@ private static final String CHILDREN_SOURCE_CODE_NAME = SOURCE_CODE_LOCATION + "
 ##### 场景二
 1. **注释掉**`static`代码块（类目录下有已编译的目标类`.class`文件）。
 2. **移除**测试项目目录中的目标类`Children.java`和`Parent.java`。
-![](/java/jvm/test4.png)
+![](../.vuepress/public/java/jvm/test4.png)
 
 测试结果分析：
 我们成功通过**自定义类加载器**加载了目标类。创建了`Children`对象，并通过反射调用了它的`say()`方法。
@@ -329,7 +329,7 @@ private static final String CHILDREN_SOURCE_CODE_NAME = SOURCE_CODE_LOCATION + "
 JVM内存结构主要有三大块：**堆内存**、**方法区**和**栈**。堆内存是JVM中最大的一块由年轻代和老年代组成，而年轻代内存又被分成三部分，**Eden空间**、**From Survivor空间**、**To Survivor空间**,默认情况下年轻代按照**8:1:1**的比例来分配；
 
 方法区存储类信息、常量、静态变量等数据，是线程共享的区域，为与Java堆区分，方法区还有一个别名Non-Heap(非堆)；栈又分为java虚拟机栈和本地方法栈主要用于方法的执行。
-![](/java/jvm/jvm.png)
+![](../.vuepress/public/java/jvm/jvm.png)
 
 args参数:
 * -Xms设置堆的最小空间大小。
@@ -382,9 +382,9 @@ public class HelloWorld {
 ```
 内存图
 
-![](/java/jvm/memory1.png)
+![](../.vuepress/public/java/jvm/memory1.png)
 通过JConsole工具可以查看运行中的Java程序（比如Eclipse）的一些信息：堆内存的分配，线程的数量以及加载的类的个数；
-![](/java/jvm/jconsole.png)
+![](../.vuepress/public/java/jvm/jconsole.png)
 
 ### 程序计数器（Program Counter Register）
 
@@ -558,12 +558,12 @@ Employee emp5 = (Employee) in.readObject();
 
 1. 句柄
 `Java`堆中划分出一块内存来作为**句柄池**，引用中存储对象的**句柄地址**，而句柄中包含了对象**实例数据**与**对象类型数据**各自的**具体地址**信息，具体构造如下图所示：
-![](/java/jvm/jubin.png)
+![](../.vuepress/public/java/jvm/jubin.png)
 **优势**：引用中存储的是**稳定**的句柄地址，在对象被移动（垃圾收集时移动对象是非常普遍的行为）时只会改变**句柄**中的**实例数据指针**，而**引用**本身不需要修改。
 
 2. 直接指针
 如果使用**直接指针**访问，**引用**中存储的直接就是**对象地址**，那么`Java`堆对象内部的布局中就必须考虑如何放置访问**类型数据**的相关信息。
-![](/java/jvm/zhijiezhizheng.png)
+![](../.vuepress/public/java/jvm/zhijiezhizheng.png)
 **优势**：速度更**快**，节省了**一次指针定位**的时间开销。由于对象的访问在`Java`中非常频繁，因此这类开销积少成多后也是非常可观的执行成本。
 ### 对象的初始化
 **对象的初始化顺序**
@@ -579,17 +579,17 @@ Employee emp5 = (Employee) in.readObject();
 
 Parent.java
 
-![](/java/jvm/demo1.png)
+![](../.vuepress/public/java/jvm/demo1.png)
 Children.java
 
-![](/java/jvm/demo2.png)
+![](../.vuepress/public/java/jvm/demo2.png)
 Tester.java
 
-![](/java/jvm/demo3.png)
+![](../.vuepress/public/java/jvm/demo3.png)
 
 测试结果：
 
-![](/java/jvm/result1.png)
+![](../.vuepress/public/java/jvm/result1.png)
 
 ## JVM垃圾回收算法
 ### 对象生死判定
@@ -604,7 +604,7 @@ Tester.java
 2. **可达性分析算法**
 **可达性分析算法**也叫**根搜索算法**，通过一系列的称为 GC Roots 的对象作为起点，然后向下搜索。搜索所走过的路径称为引用链 （Reference Chain）， 当一个**对象**到 GC Roots 没有任何**引用链**相连时, 即该对象**不可达**，也就说明此对象是 **不可用**的。
 如下图所示: `Object5`、`Object6`、`Object7 `虽然互有关联, 但它们到`GC Roots`是不可达的, 因此也会被判定为可回收的对象。
-![](/java/jvm/164a85bd8307d805.png)
+![](../.vuepress/public/java/jvm/164a85bd8307d805.png)
 
 **GC根对象**
 在`Java`中, 可作为`GC Roots`的对象包括以下四种：
@@ -618,7 +618,7 @@ Tester.java
 * **方法区** 中**常量**引用的变量
 
     JVM中用到的所有现代GC算法在回收前都会先找出所有仍存活的对象。可达性分析算法是从离散数学中的图论引入的，程序把所有的引用关系看作一张图。下图展示的JVM中的内存布局可以用来很好地阐释这一概念：
-![](/java/jvm/164a85bd831e2005.png)
+![](../.vuepress/public/java/jvm/164a85bd831e2005.png)
 
 ### 对象引用分类
 1. **强引用(Strong Reference)**
@@ -670,7 +670,7 @@ Tester.java
 
 4. **分代收集算法**
 当前商业虚拟机都采用**分代收集**的垃圾收集算法。分代收集算法，顾名思义是根据对象的**存活周期**将内存划分为几块。一般包括**年轻代**、**老年代** 和 **永久代**，如图所示：
-![](/java/jvm/jvm1.png)
+![](../.vuepress/public/java/jvm/jvm1.png)
 
 **新生代（Young generation）**
 
@@ -705,13 +705,13 @@ Tester.java
 ## 垃圾回收器
 
 1.  垃圾回收器分类标准
-![](/java/jvm/16502c7b8a61ea51.png)
+![](../.vuepress/public/java/jvm/16502c7b8a61ea51.png)
 
 2. 七种垃圾回收器概述
 在 `JVM` 中，具体实现有 `Serial`、`ParNew`、`Parallel Scavenge`、`CMS`、`Serial Old（MSC）`、`Parallel Old`、`G1` 等。在下图中，你可以看到 **不同垃圾回收器** 适合于 **不同的内存区域**，如果两个垃圾回收器之间 **存在连线**，那么表示两者可以 **配合使用**。
 
 如果当 **垃圾回收器** 进行垃圾清理时，必须 **暂停** 其他所有的 **工作线程**，直到它完全收集结束。我们称这种需要暂停工作线程才能进行清理的策略为 `Stop-the-World`。以上回收器中，   `Serial、ParNew`、`Parallel Scavenge`、`Serial Old`、`Parallel Old` 均采用的是 `Stop-the-World` 的策略。
-![](/java/jvm/16502c7bd1ebf8c4.png)
+![](../.vuepress/public/java/jvm/16502c7bd1ebf8c4.png)
 
 图中有 `7 `种不同的 **垃圾回收器**，它们分别用于不同分代的垃圾回收。
 * **新生代回收器**：Serial、ParNew、Parallel Scavenge
@@ -746,7 +746,7 @@ Tester.java
 **4.1. ParNew（-XX:+UseParNewGC）**
 
 `ParNew` 回收器是在 `Serial` 回收器的基础上演化而来的，属于 `Serial` 回收器的 **多线程版本**，同样运行在 **新生代区域**。在实现上，两者共用很多代码。在不同运行环境下，根据 `CPU` 核数，开启 **不同的线程数**，从而达到 **最优** 的垃圾回收效果。对于那些 `Server` 模式的应用程序，如果考虑采用 CMS 作为 **老生代回收器** 时，`ParNew` 回收器是一个不错的选择。
-![](/java/jvm/16502c7b88cda952.png)
+![](../.vuepress/public/java/jvm/16502c7b88cda952.png)
 > `ParNew` **新生代回收器** 采用的是 **复制算法**。
 
 **4.2. Parallel Scavenge（-XX:+UseParallelGC）**
@@ -757,14 +757,14 @@ Tester.java
 **4.3. Parallel Old（-XX:+UseParallelOldGC）**
 
 `Parallel Old` 回收器是 `Parallel Scavenge` 回收器的 **老生代版本**，属于 **多线程回收器**。`Parallel Old` 回收器和 `Parallel Scavenge` 回收器同样考虑了 **吞吐量优先** 这一指标，非常适合那些 **注重吞吐量** 和 `CPU` **资源敏感** 的场合。
-![](/java/jvm/16502c7b8a60fa35.png)
+![](../.vuepress/public/java/jvm/16502c7b8a60fa35.png)
 > `Parallel Old` **老年代回收器** 采用的是 **标记 - 整理算法**。
 
 5. **其他的回收器（停顿时间优先）**
 
 **5.1. CMS（-XX:+UseConcMarkSweepGC）**
 `CMS（Concurrent Mark Sweep）` 回收器是在 **最短回收停顿时间** 为前提的回收器，属于 **多线程回收器，**采用 **标记-清除算法**。
-![](/java/jvm/16502c7bb00da43d.png)
+![](../.vuepress/public/java/jvm/16502c7bb00da43d.png)
 相比之前的回收器，`CMS` 回收器的运作过程比较复杂，分为四步：
 1. **初始标记（CMS initial mark）**
 
@@ -784,7 +784,7 @@ Tester.java
 > **初始标记**（`CMS initial mark`）和 **重新标记**（`CMS remark`）会导致 **用户线程** 卡顿，`Stop the World` 现象发生。
 
 在整个过程中，`CMS` 回收器的 **内存回收** 基本上和 **用户线程** 并发执行,如下图所示：
-![](/java/jvm/1691ed081995f262.png)
+![](../.vuepress/public/java/jvm/1691ed081995f262.png)
 由于 `CMS` 回收器 **并发收集**、**停顿低**，因此有些地方成为** 并发低停顿回收器**（`Concurrent Low Pause Sweep Collector`）。
 
 `CMS` 回收器的缺点：
@@ -807,7 +807,7 @@ Tester.java
 `G1` 是 `JDK 1.7` 中正式投入使用的用于取代 `CMS` 的 **压缩回收器**。它虽然没有在物理上隔断 **新生代** 与 **老生代**，但是仍然属于 **分代垃圾回收器**。`G1` 仍然会区分 **年轻代** 与 **老年代**，年轻代依然分有 `Eden` 区与 `Survivor` 区。
 
 `G1` 首先将 **堆** 分为 **大小相等** 的  `Region`，避免 **全区域** 的垃圾回收。然后追踪每个 `Region` 垃圾 **堆积的价值大小**，在后台维护一个 **优先列表**，根据允许的回收时间优先回收价值最大的 `Region`。同时 `G1`采用 `Remembered Set` 来存放 `Region` 之间的 **对象引用** ，其他回收器中的 **新生代** 与 **老年代** 之间的对象引用，从而避免 **全堆扫描**。G1 的分区示例如下图所示：
-![](/java/jvm/16502c7bb5454a60.png)
+![](../.vuepress/public/java/jvm/16502c7bb5454a60.png)
 
 这种使用 `Region` 划分 **内存空间** 以及有 **优先级** 的区域回收方式，保证 `G1` 回收器在有限的时间内可以获得尽可能 **高的回收效率**。
 

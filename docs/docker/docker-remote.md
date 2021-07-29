@@ -34,7 +34,7 @@ tcp6       0      0 :::2375                 :::*                    LISTEN
 ```
 ## 防火墙开启对应端口
 - 官网
-![](/docker/docker-remote/docker-remote-1.png)
+![](../.vuepress/public/docker/docker-remote/docker-remote-1.png)
 - centos自定义Service
 创建/etc/firewalld/services/docker.xml
 ```

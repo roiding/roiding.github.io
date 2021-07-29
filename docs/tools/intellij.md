@@ -63,34 +63,34 @@ title: intellij使用
 >  1.1 Ctrl + Shift + Space 示例（智能补全）
 
 使用前，用于补全的列表，默认是以输入的关键字作为前缀的：
-![](/intellij/1589726253134.jfif)
+![](../.vuepress/public/intellij/1589726253134.jpg)
 使用后，用于补全的列表，会把与输入的关键字最相关的信息排到最前面，比如这里的 Resource 的实现类会直接过滤出来，很方便吧 O(∩_∩)O~：
-![](/intellij/1589726265866.jfif)
+![](../.vuepress/public/intellij/1589726265866.jpg)
 
 >  1.2 Ctrl + P 示例（方法参数列表）
 
-![](/intellij/1589726288856.jfif)
+![](../.vuepress/public/intellij/1589726288856.jpg)
 >  1.3 Ctrl + Q 示例（API 说明文档）
 
-![](/intellij/1589726310129.jfif)
+![](../.vuepress/public/intellij/1589726310129.jpg)
 不大好用，字体太小了，还不如直接 [ctrl + 点击] 看源代码来的方便！
 >  1.4 Alt + Insert 示例（自动生成与类相关的代码）
 
 如果绑定了 Spring 框架，还能自动生成与 Spring 相关的依赖参数哦：
-![](/intellij/1589726375820.jfif)
+![](../.vuepress/public/intellij/1589726375820.jpg)
 >  1.5 Ctrl + O 示例（该类中所有覆盖或者实现的方法列表）
 
-![](/intellij/1589726401798.jfif)
+![](../.vuepress/public/intellij/1589726401798.jpg)
 >  1.6 Ctrl + Alt + T 示例（生成具有环绕性质的代码）
 
-![](/intellij/1589726426423.jfif)
+![](../.vuepress/public/intellij/1589726426423.jpg)
 在右边的 Surround with 列表，就是目前支持的自动代码环绕功能，可以直接通过列表最左边的快捷键选择，是不是很方便呀 O(∩_∩)O~
 
 它还支持自定义的代码模板（Live templates）呢，很强大吧。
 >  1.7 Ctrl + Shift + V 示例（剪切或拷贝的代码历史记录中，选择粘贴的内容）
 
 这是一个很酷的功能 O(∩_∩)O~，它会把之前剪切或拷贝的代码历史记录（最近 5 条）展示出来，让你来选择哦。可惜的是，列表选项如果是中文会乱码，还好内容可以正常显示：
-![](/intellij/1589726532155.jfif)
+![](../.vuepress/public/intellij/1589726532155.jpg)
 
 ### 2.查找或替换
 | 快捷键 | 中文说明 |
@@ -104,7 +104,7 @@ title: intellij使用
 >  2.1 Ctrl + F （查找）
 
 触发后，会打开一个查找面板：
-![](/intellij/1589726587651.jfif)
+![](../.vuepress/public/intellij/1589726587651.jpg)
 触发后，会打开一个查找面板：
 | 图示 | 说明 |
 | :----: | :----: |
@@ -120,14 +120,14 @@ title: intellij使用
 | Words | 匹配单词。 |
 | x matches | x 表示的是找到的记录数。 |
 勾选符号选中效果：
-![](/intellij/1589726755686.jfif)
+![](../.vuepress/public/intellij/1589726755686.jpg)
 点击文本内的向上箭头，打开后的查询结果列表面板：
-![](/intellij/1589726765627.jfif)
+![](../.vuepress/public/intellij/1589726765627.jpg)
 两个框加一个向下箭头，会变成一个大文本输入框，而且还多出一个查看搜索历史的按钮：
-![](/intellij/1589726785858.jfif)
+![](../.vuepress/public/intellij/1589726785858.jpg)
 > 2.2 Ctrl + Shift + F （通过路径查找）
 
-![](/intellij/1589726804498.jfif)
+![](../.vuepress/public/intellij/1589726804498.jpg)
 
 ### 3.查看使用情况  
 | 快捷键 | 中文说明 |
@@ -137,7 +137,7 @@ title: intellij使用
 | Ctrl + Shift + F7 | 在当前文件中的使用情况，找的内容会高亮显示。 |
 | Ctrl + Alt + F7 | 打开使用情况列表。 <span style="color:red">**（常用）**</span> |
 > 3.1 Ctrl + Alt + F7（打开使用情况列表）
-![](/intellij/1589726830701.jfif)
+![](../.vuepress/public/intellij/1589726830701.jpg)
 
 ### 4.编译与运行
 | 快捷键 | 中文说明 |
@@ -151,7 +151,7 @@ title: intellij使用
 | Ctrl + Shift + F10 | 按照编辑器绑定的文件类型，运行相关的程序。比如一个 html 页面，调用后，会直接打开一个浏览器。 |
 > 4.1 Alt + Shift + F10（打开运行列表，选择一个运行）
 
-![](/intellij/1589726858431.jfif)
+![](../.vuepress/public/intellij/1589726858431.jpg)
 
 ### 5.调试
 | 快捷键 | 中文说明 |
@@ -168,14 +168,14 @@ title: intellij使用
 
 > 5.1 Shift + F7（选择具体要跳入的类方法）
 
-![](/intellij/1589726893980.jfif)
+![](../.vuepress/public/intellij/1589726893980.jpg)
 > 5.2 Alt + F8 （计算表达式）
 
 注意：要在当前断点之前的代码中，选择某一个变量运行才有效，因为只有代码运行过了，才会有值的呀 O(∩_∩)O~
-![](/intellij/1589726919299.jfif)
+![](../.vuepress/public/intellij/1589726919299.jpg)
 > 5.3 Ctrl + Shift + F8 （当前断点的面板）
 
-![](/intellij/1589726942178.jfif)
+![](../.vuepress/public/intellij/1589726942178.jpg)
 ### 6.导航
 | 快捷键 | 中文说明 |
 | :----: | :----: |
@@ -213,31 +213,31 @@ title: intellij使用
 > 6.1 Ctrl + N （打开类查询框）
 
 键入类名的关键字，会自动出现相关的类哦，右侧还有一个勾选项，能够把引用的 jar 包中的类也加进来，很强大 O(∩_∩)O~
-![](/intellij/1589727046696.jfif)
+![](../.vuepress/public/intellij/1589727046696.jpg)
 > 6.2 Ctrl + Alt + 右箭头/左箭头（在曾经浏览过的代码行中来回跳）
 
 如果操作系统装的是 NVIDIA 显卡驱动程序，那么触发这个热键，会把旋转显示内容，而不是触发 idea 的功能，因为 idea 热键被 NVIDIA 显卡驱动给劫持咯。
 解决方法是禁用 NVIDIA 显卡驱动所有快捷键，：
 * 1、控制面板-》显示-》屏幕分辨率：*
-![](/intellij/1589727066531.jfif)
+![](../.vuepress/public/intellij/1589727066531.jpg)
 * 2、点击【高级设置】-》核芯显卡控制面板：*
-![](/intellij/1589727077129.jfif)
+![](../.vuepress/public/intellij/1589727077129.jpg)
 * 3、图形属性-》选项与支持-》禁用所有快捷键（这些快捷键几乎没有什么用处！）*
-![](/intellij/1589727098644.jfif)
+![](../.vuepress/public/intellij/1589727098644.jpg)
 
 > 6.3 Alt + F1（打开一个类型列表）
 
-![](/intellij/1589727122757.jfif)
+![](../.vuepress/public/intellij/1589727122757.jpg)
 > 6.4 F11（添加为书签或者从书签中删除）
 
 书签不是默认视图，所以我们要把它添加到当前视图中：View -> Tool Windows -> Favorites，打开 Favorites 面板：
-![](/intellij/1589727139730.jfif)
+![](../.vuepress/public/intellij/1589727139730.jpg)
 Favorites 面板中的 Bookmarks 就是我们添加的书签哦：
-![](/intellij/1589727150856.jfif)
+![](../.vuepress/public/intellij/1589727150856.jpg)
 或者直接使用 Shift + F11，打开书签列表也可以的哦 O(∩_∩)O~。
 > 6.5 Ctrl + F11 （添加或删除带快捷键的书签）
 
 会打开一个设置快捷键的面板，比如这里点击了 1，那么它的快捷键就是 Ctrl + 1。
 
 注意不要选择面板提供的 26 个大写字母，因为这会与 idea 的其他快捷键冲突，不知道 idea 为什么要把它们放在这里？好奇怪 O(∩_∩)O~
-![](/intellij/1589727177989.jfif)
+![](../.vuepress/public/intellij/1589727177989.jpg)

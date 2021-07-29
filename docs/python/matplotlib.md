@@ -20,20 +20,20 @@ Axes是应用层的第二层， 在绘图的过程中相当于画布上的绘图
 - 一个figure(画布) 可以包含多个axes(坐标系/绘图区) ， 但是一个axes只能属于一个figure。
 - 一个axes(坐标系/绘图区) 可以包含多个axis(坐标轴) ， 包含两个即为2d坐标系， 3个即为3d坐标系
 
-![](/python/matplotlib/1.png)
+![](../.vuepress/public/python/matplotlib/1.png)
 
 ### 辅助显示层
 
 辅助显示层为Axes(绘图区) 内的除了根据数据绘制出的图像以外的内容， 主要包括Axes外观(face color) 、边框线(spines) 、坐标轴(axis) 、坐标轴名称(axis label、坐标轴刻度(tick) 、坐标轴刻度标签(ticklabel) 、网格线(grid) 、图例(legend) 、标题(title) 等内容。
 该层的设置可使图像显示更加直观更加容易被用户理解，但又不会对图像产生实质的影响。
 
-![](/python/matplotlib/2.png)
+![](../.vuepress/public/python/matplotlib/2.png)
 
 ### 图像层
 
 图像层指Axes内通过plot、scatter、bar、histogram、pie等函数根据数据绘制出的图像。
 
-![](/python/matplotlib/3.png)
+![](../.vuepress/public/python/matplotlib/3.png)
 
 每一个绘图区都可以有不同的图表（散点图、折线图、柱状图等）。
 
@@ -74,7 +74,7 @@ plt.show()
 
 执行结果：
 
-![image.png](/python/matplotlib/1611f1ea81634d4292cf0420b0394a62.png)
+![image.png](../.vuepress/public/python/matplotlib/1611f1ea81634d4292cf0420b0394a62.png)
 
 可以看到这样的显示效果并不好，我们可以加入更多的功能：
 
@@ -100,7 +100,7 @@ plt.savefig("test.png")
 
 折线图绘制与显示执行结果：
 
-![](/python/matplotlib/64a1fb7befc646da8e0057a6968090c8.png)
+![](../.vuepress/public/python/matplotlib/64a1fb7befc646da8e0057a6968090c8.png)
 
 但是如果把保存图片放在show()下面，图片会保存，但是会显示是空白。
 
@@ -129,7 +129,7 @@ plt.show()
 
 执行结果：
 
-![](/python/matplotlib/931af514470b4afd86b5dbd56df68100.png)
+![](../.vuepress/public/python/matplotlib/931af514470b4afd86b5dbd56df68100.png)
 
 此时可以发现，因为坐标的原因，将温度变化差值显示的非常大，我们需要改变坐标去调整一下。
 
@@ -151,7 +151,7 @@ plt.yticks(range(0, 40, 5))
 
 执行结果：
 
-![](/python/matplotlib/3946656fe0d44584b4d8dd8bd770066c.png)
+![](../.vuepress/public/python/matplotlib/3946656fe0d44584b4d8dd8bd770066c.png)
 
 但是我们想要显示的结果是x时x分，再次修改代码：
 我们需要x刻度是每五分钟显示一次：
@@ -164,11 +164,11 @@ plt.xticks(x[::5], x_lable[::5])
 
 执行结果：
 
-![](/python/matplotlib/8b1fc7720cf94378821fd3df654d596b.png)
+![](../.vuepress/public/python/matplotlib/8b1fc7720cf94378821fd3df654d596b.png)
 
 必须是一一对应的关系，否则横坐标会按照顺序来，与预期结果不一致。
 
-![image.png](/python/matplotlib/24cfa274038c472f94bfc8536209f8e0.png)
+![image.png](../.vuepress/public/python/matplotlib/24cfa274038c472f94bfc8536209f8e0.png)
 
 ### 解决中文问题
 
@@ -192,7 +192,7 @@ sudo cp ~/SimHei.ttf /usr/share/fonts/SimHei.ttf
 
 #### 2) 删除matplotlib缓存文件
 
-![](/python/matplotlib/f0534a5ec12c4673b4cd59468b640b23.png)
+![](../.vuepress/public/python/matplotlib/f0534a5ec12c4673b4cd59468b640b23.png)
 
 **Mac系统的解决方案：**
 
@@ -270,7 +270,7 @@ plt.grid(True, linestyle = "--", alpha = 0.5)
 
 执行结果：
 
-![](/python/matplotlib/efe13357ab60414b9b5d3d7d0049fbb0.png)
+![](../.vuepress/public/python/matplotlib/efe13357ab60414b9b5d3d7d0049fbb0.png)
 
 ### 添加描述信息
 
@@ -284,7 +284,7 @@ plt.title("某城市11点到12点每分钟的温度变化状况")
 
 执行结果：
 
-![](/python/matplotlib/6bbbe7832d754aeeadcaa964c719e860.png)
+![](../.vuepress/public/python/matplotlib/6bbbe7832d754aeeadcaa964c719e860.png)
 
 ### 完善原始折线图（图像层）
 
@@ -307,7 +307,7 @@ plt.title("上海、北京11点到12点每分钟的温度变化状况")
 
 执行结果：
 
-![](/python/matplotlib/e197abfc90e7411b8a65212100c6ba32.png)
+![](../.vuepress/public/python/matplotlib/e197abfc90e7411b8a65212100c6ba32.png)
 
 如果此时不想是默认的颜色，我们也可以进行改变。
 
@@ -318,7 +318,7 @@ plt.plot(x, y_beijing, color = "b")
 
 执行结果：
 
-![](/python/matplotlib/b97f6e8503174b879a542139253b734b.png)
+![](../.vuepress/public/python/matplotlib/b97f6e8503174b879a542139253b734b.png)
 
 此时改变线条风格：
 
@@ -328,7 +328,7 @@ plt.plot(x, y_shanghai, color = "r", linestyle = "--")
 
 执行结果：
 
-![](/python/matplotlib/699ef08b403145b9b4a430b32721794d.png)
+![](../.vuepress/public/python/matplotlib/699ef08b403145b9b4a430b32721794d.png)
 
 还有一些其它的风格，我们可以来看一下。
 
@@ -360,7 +360,7 @@ plt.legend()
 
 执行结果：
 
-![](/python/matplotlib/1734a1f4d140401e9029f447f209c78c.png)
+![](../.vuepress/public/python/matplotlib/1734a1f4d140401e9029f447f209c78c.png)
 
 此时我们用的是默认的方式。
 
@@ -374,7 +374,7 @@ plt.legend(loc = "lower left")
 
 执行结果：
 
-![](/python/matplotlib/701a71d7bc4946318ced19e174f5cd15.png)
+![](../.vuepress/public/python/matplotlib/701a71d7bc4946318ced19e174f5cd15.png)
 
 或者
 
@@ -384,7 +384,7 @@ plt.legend(loc = 4)
 
 执行结果：
 
-![](/python/matplotlib/748826230fba4bdb86bbbfe06e941978.png)
+![](../.vuepress/public/python/matplotlib/748826230fba4bdb86bbbfe06e941978.png)
 
 图例位置代码：
 
@@ -443,7 +443,7 @@ plt.show()
 
 如果我们想要将上海和北京的天气图显示在同一个图的不同坐标系当中，效果如下：
 
-![image.png](/python/matplotlib/83911cdce4fc4584a95ba09b67159fa7.png)
+![image.png](../.vuepress/public/python/matplotlib/83911cdce4fc4584a95ba09b67159fa7.png)
 
 可以通过subplots函数实现（旧的版本中有subplot， 使用起来不方便）， 推荐subplots函数。
 
@@ -521,13 +521,13 @@ plt.show()
 
 执行结果：
 
-![image.png](/python/matplotlib/015ba8606f1b43e9b2c9424f45715d92.png)
+![image.png](../.vuepress/public/python/matplotlib/015ba8606f1b43e9b2c9424f45715d92.png)
 
 此时可以发现横坐标跟我们原本设置的不一致，此时是因为面向对象方法调用的问题，我们可以查询上面的API文档。
 通过文档查询可以发现，`set_xticks`的第二个参数是bool值，所以我们需要修改，改为`axes.set_xticklabels `，可以添加字符串。
 
-![image.png](https://ucc.alicdn.com/pic/developer-ecology/7f057d6f8a7546428ce3811e18c7141f.png)
-![image.png](/python/matplotlib/13252db061c74e59b8f626b3f4e4ec4c.png)
+![image.png](../.vuepress/public/python/matplotlib/7f057d6f8a7546428ce3811e18c7141f.png)
+![image.png](../.vuepress/public/python/matplotlib/13252db061c74e59b8f626b3f4e4ec4c.png)
 
 修改代码：
 
@@ -545,7 +545,7 @@ axes[1].set_yticks(range(0, 40, 5))
 
 执行结果：
 
-![image.png](/python/matplotlib/83911cdce4fc4584a95ba09b67159fa7.png)
+![image.png](../.vuepress/public/python/matplotlib/83911cdce4fc4584a95ba09b67159fa7.png)
 
 ### 折线图的应用场景
 
@@ -559,7 +559,7 @@ axes[1].set_yticks(range(0, 40, 5))
 
   * *plt.plot()除了可以画折线图，也可以用于画各种数学函数图像*
 
-  ![](/python/matplotlib/20190307213739998.png)
+  ![](../.vuepress/public/python/matplotlib/20190307213739998.png)
 
 - 代码：
 
@@ -583,9 +583,9 @@ plt.show()
 返回num均匀分布的样本，在[start, stop]。
 这个区间的端点可以任意的被排除在外。
 
-![](/python/matplotlib/20190307213856586.png)
+![](../.vuepress/public/python/matplotlib/20190307213856586.png)
 
-![](/python/matplotlib/20190307213906802.png)
+![](../.vuepress/public/python/matplotlib/20190307213906802.png)
 
 ## 散点图(scatter)
 
@@ -603,7 +603,7 @@ Matplotlib能够绘制**折线图、散点图、柱状图、直方图、饼图�
 
   api：plt.plot(x, y)
 
-![](/python/matplotlib/20210217232259760.png)
+![](../.vuepress/public/python/matplotlib/20210217232259760.png)
 
 - **散点图：**用两组数据构成多个坐标点，考察坐标点的分布,判断两变量之间是否存在某种关联或总结坐标点的分布模式。
 
@@ -611,7 +611,7 @@ Matplotlib能够绘制**折线图、散点图、柱状图、直方图、饼图�
 
   api：plt.scatter(x, y)
 
-![](/python/matplotlib/20210217232318412.png)
+![](../.vuepress/public/python/matplotlib/20210217232318412.png)
 
 - **柱状图：**排列在工作表的列或行中的数据可以绘制到柱状图中。
 
@@ -632,9 +632,9 @@ align : 每个柱状图的位置对齐方式
 color:选择柱状图的颜色
 ```
 
-![](/python/matplotlib/20210217234044458.png)
+![](../.vuepress/public/python/matplotlib/20210217234044458.png)
 
-![](/python/matplotlib/20210217232354341.png)
+![](../.vuepress/public/python/matplotlib/20210217232354341.png)
 
 直方图：由一系列高度不等的纵向条纹或线段表示数据分布的情况。 一般用横轴表示数据范围，纵轴表示分布情况。
 
@@ -648,7 +648,7 @@ x : 需要传递的数据
 bins : 组距
 ```
 
-![](/python/matplotlib/20210217232422106.png)
+![](../.vuepress/public/python/matplotlib/20210217232422106.png)
 
 **饼图：**用于表示不同分类的占比情况，通过弧度大小来对比各种分类。
 
@@ -664,7 +664,7 @@ autopct:占比显示指定%1.2f%%
 colors:每部分颜色
 ```
 
-![](/python/matplotlib/20210217232444896.png)
+![](../.vuepress/public/python/matplotlib/20210217232444896.png)
 
 ### 散点图绘制
 
@@ -707,7 +707,7 @@ plt.scatter(x, y)
 plt.show()
 ```
 
-![](/python/matplotlib/20210217233727385.png)
+![](../.vuepress/public/python/matplotlib/20210217233727385.png)
 
 ### 应用场景
 
@@ -719,7 +719,7 @@ plt.show()
 
 电影数据如下图所示：
 
-![](/python/matplotlib/20210217232608585.png)
+![](../.vuepress/public/python/matplotlib/20210217232608585.png)
 
 * 准备数据
 
@@ -782,7 +782,7 @@ plt.show()
   plt.show()
   ```
 
-  ![](/python/matplotlib/20210217233936882.png)
+  ![](../.vuepress/public/python/matplotlib/20210217233936882.png)
 
 **需求-如何对比电影票房收入才更加有说服力？**
 
@@ -792,7 +792,7 @@ plt.show()
 
 效果如下：
 
-![](/python/matplotlib/20200407222943871.png)
+![](../.vuepress/public/python/matplotlib/20200407222943871.png)
 
 * 准备数据
 
