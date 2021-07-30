@@ -18,6 +18,9 @@
         //facetFilters:  "",
       }
     }],
+    ['@vuepress/plugin-google-analytics',{
+        id: 'G-DJ563FK52Q',
+    }],
   ],
   base: '/',
   title: '小丁的博客',
