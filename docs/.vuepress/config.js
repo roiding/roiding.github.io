@@ -95,6 +95,9 @@
       '/github/':[
             '/github/github.md',
       ],
+      '/cloud/':[
+        '/cloud/dns.md',
+      ],
       '/':[
             '/resource.md',
             '/attention.md',

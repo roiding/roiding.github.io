@@ -58,6 +58,9 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 ### [intellij](../tools/intellij.md)
 
+## Cloud
+### [DNS](../cloud/dns.md)
+
 ## ATTENTION!
 ### [常用资源整理](../resource.md)
 
