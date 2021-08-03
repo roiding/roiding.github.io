@@ -57,6 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 # person
-package-lock.json
 docs/.vuepress/.temp/
 docs/.vuepress/.cache/

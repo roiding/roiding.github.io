@@ -21,6 +21,9 @@
     ['@vuepress/plugin-google-analytics',{
         id: 'G-DJ563FK52Q',
     }],
+    ['@roiding/vuepress-plugin-baidu-analytics',{
+        id: '53648d3636c154d6532ae47fd64401a0',
+    }],
   ],
   base: '/',
   title: '小丁的博客',
