@@ -260,7 +260,7 @@ a2 = np.asarray(a)
 
 #### 关于array和asarray的不同
 
-![image-20190618211642426](http://47.95.212.59:1313/Numpy/images/array%E5%92%8Casarray%E7%9A%84%E5%8C%BA%E5%88%AB.png)
+![](../.vuepress/public/python/numpy/array和asarray的区别.png)
 
 ### 生成固定范围的数组
 
