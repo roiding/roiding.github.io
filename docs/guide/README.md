@@ -41,6 +41,8 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 ### [Matplotlib](../python/matplotlib.md)
 
+### [Numpy](../python/numpy.md)
+
 ### [常用框架](../python/framework.md)
 
 ## OPENCV
