@@ -74,8 +74,8 @@
       '/python/':[
              '/python/jupyter.md',
              '/python/matplotlib.md',
-             "/python/numpy.md",
-             '/python/framework.md',
+             '/python/numpy.md',
+             '/python/pandas.md',
       ],
       '/linux/':[
             '/linux/centos.md',
