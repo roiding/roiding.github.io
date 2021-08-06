@@ -24,6 +24,10 @@
     ['@roiding/vuepress-plugin-baidu-analytics',{
         id: '53648d3636c154d6532ae47fd64401a0',
     }],
+    ['vuepress-plugin-sitemap2',{
+      hostname: 'blog.ran-ding.ga',
+      outFile: 'sitemap.xml',
+    }],
   ],
   base: '/',
   title: '小丁的博客',
@@ -43,6 +47,8 @@
   themeConfig: {
     logo: '/favicons/favicon.png',
     backToHome: '回到首页',
+    notFound: '小伙子，别犯罪，我还没写呢，你就访问！',
+    toggleDarkMode: '模式切换',
     navbar: [
       { text: '首页', link: '/' },
       { text: '荒废的代码仓库', link: 'https://github.com/maodou38' },
