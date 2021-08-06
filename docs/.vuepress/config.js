@@ -25,7 +25,7 @@
         id: '53648d3636c154d6532ae47fd64401a0',
     }],
     ['vuepress-plugin-sitemap2',{
-      hostname: 'blog.ran-ding.ga',
+      hostname: 'https://blog.ran-ding.ga',
       outFile: 'sitemap.xml',
     }],
   ],
@@ -47,7 +47,7 @@
   themeConfig: {
     logo: '/favicons/favicon.png',
     backToHome: '回到首页',
-    notFound: '小伙子，别犯罪，我还没写呢，你就访问！',
+    notFound: ['小伙子，别犯罪，我还没写呢，你就访问！','再请求没有的页面，我要报警了啊！','好汉，报上名来，什么意思，老请求没有的页面'],
     toggleDarkMode: '模式切换',
     navbar: [
       { text: '首页', link: '/' },
