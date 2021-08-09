@@ -27,12 +27,13 @@
     ['vuepress-plugin-sitemap2',{
       hostname: 'https://blog.ran-ding.ga',
       outFile: 'sitemap.xml',
+      exclude: ["/404.html"]
     }],
   ],
   base: '/',
   title: '小丁的博客',
   lang:'zh-CN',
-  description: '小丁的博客',
+  description: '一个专注于整理日常学习的新技术框架知识和使用过程中遇到的问题及解决方案的小站',
   markdown: {
     extractHeaders:{
         level: [2,3,4],
@@ -48,6 +49,7 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "7vp68ppzv2");
     `],
+    ['meta', { name: 'keywords', content: 'Java,Python,SpringBoot,SpringCloud,SpringAlibaba,VuePress'}],
   ],
   port: 9090,
   extraWatchFiles: [],
