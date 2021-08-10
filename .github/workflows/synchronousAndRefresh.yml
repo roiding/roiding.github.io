@@ -3,7 +3,7 @@ name: Synchronous Update Gitee And Refresh Pages
 
 on:
   schedule:
-    - cron:  '30 5 * * *'
+    - cron:  '35 9 * * *'
 
 
 jobs:
