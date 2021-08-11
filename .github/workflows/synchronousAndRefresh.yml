@@ -2,9 +2,10 @@ name: Synchronous Update Gitee And Refresh Pages
 
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron:  '50 0 * * *'
-
+    - cron:  '00 16 * * *'
+  
 
 jobs:
   build:
