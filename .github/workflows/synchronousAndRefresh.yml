@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: master
-        
+          fetch-depth: 0
       - name: Synchronous
         run: |
              git push --quiet --force https://roiding:${{secrets.GITEE_TOKEN}}@gitee.com/roiding/roiding.git master:blog
