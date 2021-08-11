@@ -3,7 +3,7 @@ name: Synchronous Update Gitee And Refresh Pages
 
 on:
   schedule:
-    - cron:  '35 9 * * *'
+    - cron:  '50 0 * * *'
 
 
 jobs:
@@ -11,9 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: master
+        
       - name: Synchronous
         run: |
-             git push --quiet --force https://roiding:${{secrets.GITEE_TOKEN}}@gitee.com/roiding/roiding.git master:blog
+             git push --quiet --force https://roiding:${{secrets.GITEE_TOKEN}}@gitee.com/roiding/roiding.git docs:blog
 
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
