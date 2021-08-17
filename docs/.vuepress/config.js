@@ -96,6 +96,7 @@
       '/linux/':[
             '/linux/centos.md',
             '/linux/debian.md',
+            '/linux/LVM.md',
             '/linux/linux.md',
       ],
       '/opencv/':[
