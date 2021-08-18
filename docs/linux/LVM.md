@@ -42,36 +42,36 @@ linux的LVM有两个可用的版本：
 <span style="color:magenta;font-size:20px">pvcreate：创建物理卷</span>
 <span style="color:magenta;font-size:20px">pvscan：扫描物理卷信息</span>（包含哪些物理硬盘和大小还有总览）
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702140518199.png)
+![](../.vuepress/public/linux/LVM/20200702140518199.png)
 
 <span style="color:magenta;font-size:20px">pvdisplay：显示物理卷详情</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702141054857.png)
+![](../.vuepress/public/linux/LVM/20200702141054857.png)
 
 #### 删除物理卷
 
 <span style="color:magenta;font-size:20px">pvremove：删除物理卷</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\2020070214062930.png)
+![](../.vuepress/public/linux/LVM/2020070214062930.png)
 
 ### 卷组
 #### 创建卷组
 
 <span style="color:magenta;font-size:20px">vgcreate：创建卷组（后跟卷组名称）</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702140858146.png)
+![](../.vuepress/public/linux/LVM/20200702140858146.png)
 
 <span style="color:magenta;font-size:20px">vgdisplay：显示卷组详情</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702140954804.png)
+![](../.vuepress/public/linux/LVM/20200702140954804.png)
 
 #### 扩展卷组
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702142823706.png)
+![](../.vuepress/public/linux/LVM/20200702142823706.png)
 
 <span style="color:magenta;font-size:20px">vgextend：扩展卷组</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702143601153.png)
+![](../.vuepress/public/linux/LVM/20200702143601153.png)
 
 #### 删除卷组
 
@@ -79,35 +79,35 @@ linux的LVM有两个可用的版本：
 
 删除卷组是删除整个卷组，跟把物理卷从卷组中移除的概念是不一样的
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702150027152.png)
+![](../.vuepress/public/linux/LVM/20200702150027152.png)
 
 #### 减小卷组
 
 减小卷组之前如果卷组划分了逻辑卷并且已经储存了数据，必须先迁移数据才能做减小的操作，现在给虚拟机新添加两块1G大小的硬盘sde和sdf，给sde划分逻辑卷，大小500M，格式化挂载到系统使用，并且在里面写入一些数据
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702183305236.png)
+![](../.vuepress/public/linux/LVM/20200702183305236.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702183400211.png)
+![](../.vuepress/public/linux/LVM/20200702183400211.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702183457884.png)
+![](../.vuepress/public/linux/LVM/20200702183457884.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702183745420.png)
+![](../.vuepress/public/linux/LVM/20200702183745420.png)
 
 将sdf这块硬盘也加入sde所在的卷组vg02，这样，我们可以把sde的数据迁移到sdf上
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702184638732.png)
+![](../.vuepress/public/linux/LVM/20200702184638732.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702183838569.png)
+![](../.vuepress/public/linux/LVM/20200702183838569.png)
 
 <span style="color:magenta;font-size:20px">pvmove：迁移卷组数据</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702183931387.png)
+![](../.vuepress/public/linux/LVM/20200702183931387.png)
 
 <span style="color:magenta;font-size:20px">vgreduce：减小卷组</span>
 
 sde没有数据了之后就可以把它从卷组vg02中移除了，卷组就减小了，实际上现在的数据已经被转移到/dev/sdf上了，不影响逻辑卷的使用，这也是它灵活的地方
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702184039727.png)
+![](../.vuepress/public/linux/LVM/20200702184039727.png)
 
 ### 逻辑卷
 
@@ -120,19 +120,19 @@ sde没有数据了之后就可以把它从卷组vg02中移除了，卷组就减�
 
 <span style="color:magenta;font-size:20px">lvdisplay：显示逻辑卷详情</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702141318606.png)
+![](../.vuepress/public/linux/LVM/20200702141318606.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702230653820.png)
+![](../.vuepress/public/linux/LVM/20200702230653820.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702230901734.png)
+![](../.vuepress/public/linux/LVM/20200702230901734.png)
 
 #### 删除逻辑卷
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702200147473.png)
+![](../.vuepress/public/linux/LVM/20200702200147473.png)
 
 <span style="color:magenta;font-size:20px">lvremove：删除逻辑卷</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702145714815.png)
+![](../.vuepress/public/linux/LVM/20200702145714815.png)
 
 #### 扩展逻辑卷
 
@@ -141,7 +141,7 @@ sde没有数据了之后就可以把它从卷组vg02中移除了，卷组就减�
 - -L +50G 指定大小增加50G
 - -L 50G 指定大小为50G
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702142050703.png)
+![](../.vuepress/public/linux/LVM/20200702142050703.png)
 
 <span style="color:red;font-size:20px">逻辑卷没有减小操作，不建议减小，会出问题</span>
 
@@ -149,52 +149,52 @@ sde没有数据了之后就可以把它从卷组vg02中移除了，卷组就减�
 
 跟物理磁盘一样，划分好逻辑卷之后也是需要先格式化文件系统然后挂载到系统中才可以像一块物理硬盘一样使用的。这里分别用xfs和ext4两种文件系统来格式化不同的逻辑卷，发现他们的不同了吗？
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702144141838.png)
+![](../.vuepress/public/linux/LVM/20200702144141838.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702144634970.png)
+![](../.vuepress/public/linux/LVM/20200702144634970.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702144859587.png)
+![](../.vuepress/public/linux/LVM/20200702144859587.png)
 
 #### 扩容文件系统
 
 在实际的应用中，光扩展逻辑卷是没有任何意义的，因为只扩展了逻辑卷之后，扩展后的那部分也是不能够被系统使用的，所以还需要扩展文件系统，其实就是使扩容生效，否则df -Th是看不到的
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702194336239.png)
+![](../.vuepress/public/linux/LVM/20200702194336239.png)
 
 扩展逻辑卷之前需要确定所属卷组剩余空间大小，扩展的大小应该要小于剩余卷组空间的大小
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702193420948.png)
+![](../.vuepress/public/linux/LVM/20200702193420948.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702193459370.png)
+![](../.vuepress/public/linux/LVM/20200702193459370.png)
 
 <span style="color:red;font-size:20px">xfs_growfs：xfs文件系统使用该命令使扩容生效</span>
 <span style="color:red;font-size:20px">resize2fs：ext文件系统使用该命令使扩容生效</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702193745945.png)
+![](../.vuepress/public/linux/LVM/20200702193745945.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\2020070219381958.png)
+![](../.vuepress/public/linux/LVM/2020070219381958.png)
 
 #### 逻辑卷快照
 
 LVM2的逻辑卷具有快照功能，就是将逻辑卷的某一时刻的状态保存下来也做成一种特殊的逻辑卷叫做快照卷，挂载到系统中，但是逻辑卷之后做的操作快照卷不会同步，常用于数据库备份还原的场景
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702235943335.png)
+![](../.vuepress/public/linux/LVM/20200702235943335.png)
 
 <span style="color:red;font-size:20px">快照卷跟创建普通的逻辑卷方式几乎一样，只是最后需要指定是哪一个逻辑卷的快照卷，用-s参数</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702232155660.png)
+![](../.vuepress/public/linux/LVM/20200702232155660.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\2020070223240888.png)
+![](../.vuepress/public/linux/LVM/2020070223240888.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200702232631459.png)
+![](../.vuepress/public/linux/LVM/20200702232631459.png)
 
 <span style="color:red;font-size:20px">注意：如果是xfs的逻辑卷做快照卷挂载时，需要mount -o nouuid，因为xfs的快照不支持uuid</span>
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200703000045247.png)
+![](../.vuepress/public/linux/LVM/20200703000045247.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200703000149907.png)
+![](../.vuepress/public/linux/LVM/20200703000149907.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200703000239811.png)
+![](../.vuepress/public/linux/LVM/20200703000239811.png)
 
 ## 命令关键字总结
 
@@ -208,9 +208,9 @@ LVM2的逻辑卷具有快照功能，就是将逻辑卷的某一时刻的状态�
 
 ## 两种方式的扫描命令
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200703004856161.png)
+![](../.vuepress/public/linux/LVM/20200703004856161.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200703004924562.png)
+![](../.vuepress/public/linux/LVM/20200703004924562.png)
 
-![](D:\丁然\自己的\roiding.github.io\docs\.vuepress\public\linux\LVM\20200703004951231.png)
+![](../.vuepress/public/linux/LVM/20200703004951231.png)
 
