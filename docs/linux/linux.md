@@ -191,3 +191,7 @@ wget -qO- -t1 -T2` ，在这里我们使用了 4 个参数，分别是 `q` , `O-
 grep -B 50 "Connection reset by peer" catalina.out |head -n 101
 ```
 
+#### ps 日期格式化
+```bash
+date -d "`ps -eo lstart,pid,cmd |grep 27921|grep -v grep|awk '{print $1,$2,$3,$4,$5}'`" "+%Y-%m-%d:%H:%M:%S"
+```
