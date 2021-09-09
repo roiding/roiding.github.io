@@ -119,6 +119,9 @@
       '/cloud/':[
         '/cloud/dns.md',
       ],
+      '/openwrt':[
+        'attention.md',
+      ],
       '/':[
             '/resource.md',
             '/attention.md',
