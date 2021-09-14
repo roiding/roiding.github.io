@@ -99,8 +99,8 @@
             '/linux/LVM.md',
             '/linux/linux.md',
       ],
-      '/css/':[
-        '/css/css.md',
+      '/fronted/':[
+        '/fronted/css.md',
       ],
       '/opencv/':[
             '/opencv/opencv-java.md',
