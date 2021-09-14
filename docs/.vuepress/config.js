@@ -101,6 +101,7 @@
       ],
       '/fronted/':[
         '/fronted/css.md',
+        '/fronted/vue.md',
       ],
       '/opencv/':[
             '/opencv/opencv-java.md',
