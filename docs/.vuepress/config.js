@@ -123,8 +123,11 @@
       '/cloud/':[
         '/cloud/dns.md',
       ],
-      '/openwrt':[
-        'attention.md',
+      '/openwrt/':[
+        '/attention.md',
+      ],
+      '/blockchain/':[
+        '/ethernum.md',
       ],
       '/':[
             '/resource.md',

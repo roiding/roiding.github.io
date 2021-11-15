@@ -51,7 +51,8 @@ build:
     - alpine:latest
     - corp/web_app:3.14
 ```  
-  
+## init
+很关键，用于转发信号量
 
 ## cap_add, cap_drop
 指定容器的内核能力（capacity）分配。
