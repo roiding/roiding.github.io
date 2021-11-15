@@ -32,7 +32,7 @@ jobs:
       - name: Commit files And Push
         run: |
              cd docs/.vuepress/dist
-             echo 'netlify.blog.ran-ding.ga'> CNAME
+             echo 'github.blog.ran-ding.ga'> CNAME
              git init
              git config --global user.name roiding
              git config --global user.email dingran@ran-ding.ga
