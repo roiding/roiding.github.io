@@ -1,6 +1,8 @@
 ---
 title: Nginx
 ---
+## Nginx作为CDN使用
+proxy_store
 ## Nginx作为缓存使用
 ### proxy_cache_path
 > `语法：proxy_cache_path path [levels=levels] [use_temp_path=on|off] keys_zone=name:size [inactive=time] [max_size=size] [manager_files=number] [manager_sleep=time] [manager_threshold=time] [loader_files=number] [loader_sleep=time] [loader_threshold=time] [purger=on|off] [purger_files=number] [purger_sleep=time] [purger_threshold=time]。`
