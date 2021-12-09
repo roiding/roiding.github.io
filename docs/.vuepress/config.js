@@ -87,6 +87,9 @@
             '/java/java-blog.md',
             '/java/framework.md'
       ],
+      '/database':[
+        '/database/mysql.md'
+      ],
       '/python/':[
              '/python/jupyter.md',
              '/python/matplotlib.md',
