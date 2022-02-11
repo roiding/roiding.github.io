@@ -14,6 +14,8 @@ features:
      details: Java笔记、Linux笔记、SaaS应用技术笔记
    - title: 技术博客
      details: 将深入探讨相关技术，包括行业动态，架构设计，设计模式，框架使用等。
-footer: Copyright 2020-2021 Roiding - All Rights Reserved<br/>「<a href="https://webify.cloudbase.net/">CloudBase Webify</a> 提供网站托管服务」
+footer: Copyright 2020-2022 Roiding - All Rights Reserved<br/>「<a href="https://webify.cloudbase.net/">CloudBase Webify</a> 提供网站托管服务」
 footerHtml: true
 ---
+
+<a href="http://olympic.ran-ding.ga"><img src="/banner.gif" alt="Olympic"></a>
