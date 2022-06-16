@@ -22,12 +22,14 @@ jobs:
         with:
           ref: docs
 
-      
+      - name: Install yarn
+        run: npm install -g yarn
+
       - name: Install dependencies  # 安装依赖
-        run: npm ci
+        run: yarn install
       
       - name: Packaging
-        run: npm run docs:build
+        run: yarn run docs:build
         
       - name: Commit files And Push
         run: |
