@@ -1,5 +1,9 @@
 ---
 title: 安装Docker
+head:
+  - - meta
+    - name: keywords
+      content: 安装Docker
 ---
 ## Docker安装（centos）
 ### 1.删除已安装的Docker

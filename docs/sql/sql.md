@@ -1,5 +1,9 @@
 ---
 title: sql语句整理
+head:
+  - - meta
+    - name: keywords
+      content: 常用SQL语句
 ---
 
 # MYSQL

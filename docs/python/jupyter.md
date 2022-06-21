@@ -1,5 +1,9 @@
 ---
 title: Jupyter   
+head:
+  - - meta
+    - name: keywords
+      content: Jupyter
 ---
 ## 安装
 ```bash

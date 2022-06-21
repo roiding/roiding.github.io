@@ -1,5 +1,9 @@
 ---
 title: Docker 常规应用
+head:
+  - - meta
+    - name: keywords
+      content: Docker 常规应用
 ---
 ## 基于 Docker 安装 GitLab Runner  
 ### 环境准备

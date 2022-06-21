@@ -1,5 +1,9 @@
 ---
 title: docker 远程连接配置
+head:
+  - - meta
+    - name: keywords
+      content: docker 远程连接配置
 ---
 ## 配置
 > 修改/etc/docker/daemon.json (不推荐)

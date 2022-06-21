@@ -1,5 +1,9 @@
 ---
 title: 常用资源整理
+head:
+  - - meta
+    - name: keywords
+      content: 常用资源整理
 ---
 
 [pandas中文文档](https://www.pypandas.cn/)

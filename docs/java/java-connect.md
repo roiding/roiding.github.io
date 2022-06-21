@@ -1,5 +1,9 @@
 ---
 title: JAVA连接常用软件
+head:
+  - - meta
+    - name: keywords
+      content: Java连接常用软件
 ---
 ## FastDFS
 ### 安装 FastDFS Java 客户端  

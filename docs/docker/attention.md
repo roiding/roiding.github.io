@@ -1,5 +1,9 @@
 ---
 title: 注意事项
+head:
+  - - meta
+    - name: keywords
+      content: docker使用注意事项
 ---
 1. 遇到任何网络问题，先把宿主机防火墙关了再试！！！
    

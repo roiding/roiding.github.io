@@ -1,5 +1,9 @@
 ---
 title: JAVA博客资源整理
+head:
+  - - meta
+    - name: keywords
+      content: 博客整理
 ---
 
 ## 权限类

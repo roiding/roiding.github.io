@@ -1,6 +1,10 @@
 ---
 title: Pandas
 sidebarDepth: 4
+head:
+  - - meta
+    - name: keywords
+      content: Pandas
 ---
 ## Pandas介绍
 

@@ -1,5 +1,9 @@
 ---
 title: 编译opencv 并使用java驱动
+head:
+  - - meta
+    - name: keywords
+      content: OpenCV-java
 ---
 
 ## 编译脚本

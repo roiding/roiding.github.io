@@ -1,5 +1,9 @@
 ---
 title: 血与泪的焦灼
+head:
+  - - meta
+    - name: keywords
+      content: openwrt
 ---
 ### docker没有网络
 添加防火墙配置

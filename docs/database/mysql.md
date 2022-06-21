@@ -1,5 +1,9 @@
 ---
 title: Mysql
+head:
+  - - meta
+    - name: keywords
+      content: mysql
 ---
 ## 锁
 ### 全局锁

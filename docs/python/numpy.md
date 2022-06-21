@@ -1,5 +1,9 @@
 ---
 title: Numpy 数值计算库
+head:
+  - - meta
+    - name: keywords
+      content: Numpy
 ---
 ## Numpy的优势
 

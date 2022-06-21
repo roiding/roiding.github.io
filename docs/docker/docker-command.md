@@ -1,5 +1,9 @@
 ---
 title: docker常用命令
+head:
+  - - meta
+    - name: keywords
+      content: docker常用命令
 ---
 ### 查看 Docker 版本
 ```docker version```  

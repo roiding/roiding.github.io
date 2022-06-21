@@ -1,5 +1,9 @@
 ---
 title: intellij使用
+head:
+  - - meta
+    - name: keywords
+      content: Intelij使用
 ---
 ## 配置lombok  
  * Settings-->Plugins-->安装lombok插件

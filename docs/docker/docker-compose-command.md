@@ -1,5 +1,9 @@
 ---
 title: docker-compose指令
+head:
+  - - meta
+    - name: keywords
+      content: docker-compose指令
 ---
 模板文件是使用 Compose 的核心，涉及到的指令关键字也比较多。但大家不用担心，这里面大部分指令跟 docker run 相关参数的含义都是类似的。
 

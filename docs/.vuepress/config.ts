@@ -5,9 +5,9 @@ import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { baiduAnalyticsPlugin } from "vuepress-plugin-baidu-analytics";
 import { clarityAnalyticsPlugin } from "vuepress-plugin-clarity-analytics";
+import {seoPlugin} from "vuepress-plugin-seo2";
 export default defineUserConfig({
   plugins: [
-    [
       docsearchPlugin({
         appId: "XEQSFBL9DS",
         apiKey: "25a25110f2901993e844dff36f6449b8",
@@ -18,29 +18,27 @@ export default defineUserConfig({
           //facetFilters:  "",
         },
       }),
-    ],
-    [
       googleAnalyticsPlugin({
         id: "G-DJ563FK52Q",
       }),
-    ],
-    [
       baiduAnalyticsPlugin({
         id: "53648d3636c154d6532ae47fd64401a0",
       }),
-    ],
-    [
       clarityAnalyticsPlugin({
         id: "7vp68ppzv2",
       }),
-    ],
-    [
       sitemapPlugin({
         hostname: "https://blog.ran-ding.ga",
         sitemapFilename: "sitemap.xml",
         excludeUrls: ["/404.html"],
       }),
-    ],
+      seoPlugin({
+        hostname: "https://blog.ran-ding.ga",
+        author: "roiding",
+        canonical:"https://blog.ran-ding.ga",
+        restrictions:"[12]+",
+        twitterID: "roiding1"
+      }),
   ],
   base: "/",
   title: "小丁的博客",
@@ -62,13 +60,13 @@ export default defineUserConfig({
         sizes: "16x16",
       },
     ],
-    [
-      "meta",
-      {
-        name: "keywords",
-        content: "Java,Python,SpringBoot,SpringCloud,SpringAlibaba,VuePress",
-      },
-    ],
+    // [
+    //   "meta",
+    //   {
+    //     name: "keywords",
+    //     content: "Java,Python,SpringBoot,SpringCloud,SpringAlibaba,VuePress",
+    //   },
+    // ],
   ],
   port: 9090,
   theme: localTheme({

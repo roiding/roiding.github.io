@@ -1,5 +1,9 @@
 ---
 title: Centos 常规操作
+head:
+  - - meta
+    - name: keywords
+      content: Centos常规操作
 ---
 ## 修改SSH默认端口
 ### 1 修改端口

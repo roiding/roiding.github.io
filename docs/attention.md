@@ -1,5 +1,9 @@
 ---
 title: 开发注意点
+head:
+  - - meta
+    - name: keywords
+      content: 开发注意点
 ---
 
 ## 浏览器侧允许https访问http

@@ -1,5 +1,9 @@
 ---
 title: CSS
+head:
+  - - meta
+    - name: keywords
+      content: CSS
 ---
 ## FLEX布局
 ### 使用FLEX布局

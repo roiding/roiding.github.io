@@ -1,5 +1,9 @@
 ---
 title: dockerfile指令
+head:
+  - - meta
+    - name: keywords
+      content: dockerfile指令
 ---
 ## FROM 
 功能为指定基础镜像，并且必须是第一条指令。

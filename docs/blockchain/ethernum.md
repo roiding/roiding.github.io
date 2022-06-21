@@ -1,5 +1,9 @@
 ---
 title: 以太坊
+head:
+  - - meta
+    - name: keywords
+      content: blockchain ETH
 ---
 
 ## 以太坊私链客户端|Go-Ethereum

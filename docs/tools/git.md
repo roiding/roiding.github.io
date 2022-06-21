@@ -1,5 +1,9 @@
 ---
 title: GIT
+head:
+  - - meta
+    - name: keywords
+      content: GIT常用记录
 ---
 
 ## git常用命令

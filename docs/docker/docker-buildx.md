@@ -1,5 +1,9 @@
 ---
 title: docker多架构构建镜像
+head:
+  - - meta
+    - name: keywords
+      content: docker多架构构建镜像
 ---
 ## 开启docker buildx
 在/root/.docker目录下有一个config.json文件，加上

@@ -1,5 +1,9 @@
 ---
 title: EUSERV
+head:
+  - - meta
+    - name: keywords
+      content: 羊毛-Euserv
 ---
 
 ## IPV6 WARP突破euserv限制

@@ -1,5 +1,9 @@
 ---
 title: GitHub操作
+head:
+  - - meta
+    - name: keywords
+      content: Github操作
 ---
 
 ## actions集成docker buildx及推送示例

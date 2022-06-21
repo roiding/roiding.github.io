@@ -1,5 +1,9 @@
 ---
 title: Android设计模式对比
+head:
+  - - meta
+    - name: keywords
+      content: andorid design compare
 ---
 
 ## MVC 对比MVP

@@ -1,5 +1,9 @@
 ---
 title: debian常规操作
+head:
+  - - meta
+    - name: keywords
+      content: Debian常规操作
 ---
 ## BBR
 ```

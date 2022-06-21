@@ -1,5 +1,9 @@
 ---
 title: 免费DNS服务
+head:
+  - - meta
+    - name: keywords
+      content: cloud free dns 免费DNS服务商
 ---
 
 ## 阿里云DNS

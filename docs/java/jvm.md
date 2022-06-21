@@ -1,5 +1,9 @@
 ---
 title: JVM
+head:
+  - - meta
+    - name: keywords
+      content: JVM
 ---
 ## JVM->JRE->JDK 关系
 ![关系图](../.vuepress/public/java/jvm/java.png)

@@ -1,5 +1,9 @@
 ---
 title: linux基本命令操作
+head:
+  - - meta
+    - name: keywords
+      content: linux基本命令操作
 ---
 
 ## 命令替换

@@ -1,5 +1,9 @@
 ---
 title: Nginx
+head:
+  - - meta
+    - name: keywords
+      content: nginx使用
 ---
 ## Nginx作为CDN使用
 proxy_store
