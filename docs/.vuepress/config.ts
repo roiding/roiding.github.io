@@ -45,6 +45,7 @@ export default defineUserConfig({
   lang: "zh-CN",
   description:
     "一个专注于整理日常学习的新技术框架知识和使用过程中遇到的问题及解决方案的小站",
+  dest: "dist",
   markdown: {
     extractHeaders: {
       level: [2, 3, 4],
