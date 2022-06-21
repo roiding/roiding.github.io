@@ -31,14 +31,21 @@ jobs:
       - name: Packaging
         run: yarn run docs:build
         
-      - name: Commit files And Push
-        run: |
-             cd docs/.vuepress/dist
-             echo 'github.blog.ran-ding.ga'> CNAME
-             git init
-             git config --global user.name roiding
-             git config --global user.email dingran@ran-ding.ga
-             git add -A
-             git commit -m 'deploy'
-             git push --quiet --force https://oauth2:${{secrets.GH_TOKEN}}@github.com/roiding/roiding.github.io.git master:master
-        
+      # - name: Commit files And Push
+      #   run: |
+      #        cd docs/.vuepress/dist
+      #        echo 'github.blog.ran-ding.ga'> CNAME
+      #        git init
+      #        git config --global user.name roiding
+      #        git config --global user.email dingran@ran-ding.ga
+      #        git add -A
+      #        git commit -m 'deploy'
+      #        git push --quiet --force https://oauth2:${{secrets.GH_TOKEN}}@github.com/roiding/roiding.github.io.git master:master
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: roiding/roiding.github.io
+          branch: master
+          folder: dist
+          token: ${{ secrets.GH_TOKEN }}
+          single-commit: true 
