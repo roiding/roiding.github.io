@@ -106,6 +106,7 @@ export default defineUserConfig({
         "/java/java-connect.md",
         "/java/java-blog.md",
         "/java/framework.md",
+        "/java/multithreading.md",
       ],
       "/database": ["/database/mysql.md"],
       "/python/": [
