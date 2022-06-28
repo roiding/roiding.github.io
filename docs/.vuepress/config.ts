@@ -48,7 +48,7 @@ export default defineUserConfig({
   dest: "dist",
   markdown: {
     extractHeaders: {
-      level: [2, 3, 4],
+      level: [2, 3, 4, 5],
     },
   },
   head: [
