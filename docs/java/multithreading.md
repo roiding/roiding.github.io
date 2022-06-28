@@ -1,5 +1,6 @@
 ---
 title: 多线程
+sidebarDepth: 5
 head:
   - - meta
     - name: keywords
@@ -181,8 +182,8 @@ private static void runAfterBoth() {
     }
 }
 ```
-### 任一结果消费
-#### applyToEither
+#### 任一结果消费
+##### applyToEither
 其中任一任务完成后，执行Consumer，消费结果，入参为已完成的任务结果。不返回新结果，要求两个任务结果为同一类型
 ```java
 private static void applyToEither() throws ExecutionException, InterruptedException {
@@ -207,11 +208,11 @@ private static void applyToEither() throws ExecutionException, InterruptedExcept
     System.out.println(futureC.get());
 }
 ```
-#### acceptEither
+##### acceptEither
 其中任一任务完成后，执行Runnable，消费结果，无入参。不返回新结果，不要求两个任务结果为同一类型
-#### runAfterEither
-### 级联任务
-#### thenCompose
+##### runAfterEither
+#### 级联任务
+##### thenCompose
 当原任务完成后，以其结果为参数，返回一个新的任务（而不是新结果，类似flatMap）
 ```java
 private static void thenCompose() {
@@ -223,8 +224,8 @@ private static void thenCompose() {
     System.out.println(cf.join());
 }
 ```
-### 单任务结果或异常消费
-#### handle
+#### 单任务结果或异常消费
+##### handle
 任务完成后执行BiFunction，结果转换，入参为结果或者异常，返回新结果
 ```java
 private static void handle() {
@@ -249,7 +250,7 @@ private static void handle() {
     System.out.println(future.join());
 }
 ```
-#### whenComplete
+##### whenComplete
 任务完成后执行BiConsumer，结果消费，入参为结果或者异常，不返回新结果
 ```java
 private static void whenComplete() throws ExecutionException, InterruptedException {
@@ -292,10 +293,10 @@ private static void whenComplete() throws ExecutionException, InterruptedExcepti
     System.out.println("main thread exit,time->"+System.currentTimeMillis());
 }
 ```
-#### exceptionally
+##### exceptionally
 任务异常，则执行Function，异常转换，入参为原任务的异常信息，若原任务无异常，则返回原任务结果，即不执行转换
-### 合并多个任务
-#### allOf
+#### 合并多个任务
+##### allOf
 合并多个complete为一个，等待全部完成
 ```java
  // 创建异步执行任务:
@@ -354,7 +355,7 @@ public <T> CompletableFuture<List<T>> allOf(List<CompletableFuture<T>> futuresLi
     );
 }
 ```
-#### anyOf
+##### anyOf
 合并多个complete为一个，等待其中之一完成
 ```java
 private static void anyOf() throws ExecutionException, InterruptedException {
