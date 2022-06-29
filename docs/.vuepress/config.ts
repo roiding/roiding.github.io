@@ -5,40 +5,40 @@ import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { baiduAnalyticsPlugin } from "vuepress-plugin-baidu-analytics";
 import { clarityAnalyticsPlugin } from "vuepress-plugin-clarity-analytics";
-import {seoPlugin} from "vuepress-plugin-seo2";
+import { seoPlugin } from "vuepress-plugin-seo2";
 export default defineUserConfig({
   plugins: [
-      docsearchPlugin({
-        appId: "XEQSFBL9DS",
-        apiKey: "25a25110f2901993e844dff36f6449b8",
-        indexName: "blog",
-        placeholder: "搜索",
-        searchParameters: {
-          hitsPerPage: 10,
-          //facetFilters:  "",
-        },
-      }),
-      googleAnalyticsPlugin({
-        id: "G-DJ563FK52Q",
-      }),
-      baiduAnalyticsPlugin({
-        id: "53648d3636c154d6532ae47fd64401a0",
-      }),
-      clarityAnalyticsPlugin({
-        id: "7vp68ppzv2",
-      }),
-      sitemapPlugin({
-        hostname: "https://blog.ran-ding.ga",
-        sitemapFilename: "sitemap.xml",
-        excludeUrls: ["/404.html"],
-      }),
-      seoPlugin({
-        hostname: "https://blog.ran-ding.ga",
-        author: "roiding",
-        canonical:"https://blog.ran-ding.ga",
-        restrictions:"[12]+",
-        twitterID: "roiding1"
-      }),
+    docsearchPlugin({
+      appId: "XEQSFBL9DS",
+      apiKey: "25a25110f2901993e844dff36f6449b8",
+      indexName: "blog",
+      placeholder: "搜索",
+      searchParameters: {
+        hitsPerPage: 10,
+        //facetFilters:  "",
+      },
+    }),
+    googleAnalyticsPlugin({
+      id: "G-DJ563FK52Q",
+    }),
+    baiduAnalyticsPlugin({
+      id: "53648d3636c154d6532ae47fd64401a0",
+    }),
+    clarityAnalyticsPlugin({
+      id: "7vp68ppzv2",
+    }),
+    sitemapPlugin({
+      hostname: "https://blog.ran-ding.ga",
+      sitemapFilename: "sitemap.xml",
+      excludeUrls: ["/404.html"],
+    }),
+    seoPlugin({
+      hostname: "https://blog.ran-ding.ga",
+      author: "roiding",
+      canonical: "https://blog.ran-ding.ga",
+      restrictions: "[12]+",
+      twitterID: "roiding1"
+    }),
   ],
   base: "/",
   title: "小丁的博客",
@@ -69,7 +69,7 @@ export default defineUserConfig({
     //   },
     // ],
   ],
-  port: 9090,
+  port: 8080,
   theme: localTheme({
     logo: "/favicons/favicon.png",
     backToHome: "回到首页",
@@ -81,7 +81,73 @@ export default defineUserConfig({
     toggleColorMode: "颜色切换",
     toggleSidebar: "侧边栏切换",
     navbar: [
-      { text: "首页", link: "/" },
+      {
+        text: "Docker",
+        children: [
+          "/docker/docker-install.md",
+          "/docker/docker-buildx.md",
+          "/docker/docker-remote.md",
+          "/docker/docker-command.md",
+          "/docker/dockerfile-command.md",
+          "/docker/docker-compose-command.md",
+          "/docker/docker-app.md",
+          "/docker/attention.md",
+        ]
+      },
+      {
+        text: "JAVA",
+        children: [
+          "/java/jvm.md",
+          "/java/spring.md",
+          "/java/JPA.md",
+          "/java/spring-security.md",
+          "/java/springboot.md",
+          "/java/java-connect.md",
+          "/java/java-blog.md",
+          "/java/framework.md",
+          "/java/multithreading.md",
+        ]
+      },
+      {
+        text: "Python",
+        children: [
+          "/python/jupyter.md",
+          "/python/matplotlib.md",
+          "/python/numpy.md",
+          "/python/pandas.md",
+        ]
+      },
+      {
+        text: "Linux",
+        children: ["/linux/centos.md",
+          "/linux/debian.md",
+          "/linux/LVM.md",
+          "/linux/linux.md",
+        ]
+      },
+      {
+        text: "杂项1",
+        children:[
+          {text:"数据库",children:['/database/mysql.md','/sql/sql.md']},
+          {text:"Android",children:['/android/design-mode.md']},
+          {text:"前端",children:['/fronted/css.md', '/fronted/vue.md']},
+          {text:"OpenCV",children:['/opencv/opencv-java.md']},
+          {text:"工具",children:["/tools/git.md", "/tools/intellij.md", "/tools/nginx.md"]},
+          {text:"VPS",children:["/vps/euserv.md"]},
+        ]
+      },
+      {
+        text:"杂项2",
+        children:[
+          {text:"GitHub",children:["/github/github.md"]},
+          {text:"云服务",children:["/cloud/dns.md"]},
+          {text:"OpenWrt",children:['/openwrt/attention.md']},
+          {text:"区块链",children:['/blockchain/ethernum.md']}
+        ]
+      },{
+        text:"资源与注意事项",
+        children:["/resource.md", "/attention.md"]
+      },
       { text: "荒废的代码仓库", link: "https://github.com/maodou38" },
     ],
     sidebarDepth: 3,
@@ -96,7 +162,6 @@ export default defineUserConfig({
         "/docker/docker-app.md",
         "/docker/attention.md",
       ],
-      "/guide/": ["/guide/README.md"],
       "/java/": [
         "/java/jvm.md",
         "/java/spring.md",

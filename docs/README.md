@@ -5,7 +5,7 @@ heroText: 小丁的博客
 tagline: 记录技术的过程
 actions: 
    - text: 开始学习 →
-     link: /guide/
+     link: /docker/docker-install
      type: primary
 features:
    - title: 个人介绍
@@ -18,4 +18,4 @@ footer: Copyright 2020-2022 Roiding - All Rights Reserved<br/>「<a href="https:
 footerHtml: true
 ---
 
-<a href="http://olympic.ran-ding.ga"><img src="/banner.gif" alt="Olympic"></a>
+<!-- <a href="http://olympic.ran-ding.ga"><img src="/banner.gif" alt="Olympic"></a> -->
