@@ -127,28 +127,29 @@ export default defineUserConfig({
       },
       {
         text: "杂项1",
-        children:[
-          {text:"数据库",children:['/database/mysql.md','/sql/sql.md']},
-          {text:"Android",children:['/android/design-mode.md']},
-          {text:"前端",children:['/fronted/css.md', '/fronted/vue.md']},
-          {text:"OpenCV",children:['/opencv/opencv-java.md']},
-          {text:"工具",children:["/tools/git.md", "/tools/intellij.md", "/tools/nginx.md"]},
-          {text:"VPS",children:["/vps/euserv.md"]},
+        children: [
+          { text: "数据库", children: ['/database/mysql.md', '/sql/sql.md'] },
+          { text: "Android", children: ['/android/design-mode.md'] },
+          { text: "前端", children: ['/fronted/css.md', '/fronted/vue.md'] },
+          { text: "OpenCV", children: ['/opencv/opencv-java.md'] },
+          { text: "工具", children: ["/tools/git.md", "/tools/intellij.md", "/tools/nginx.md"] },
+          { text: "VPS", children: ["/vps/euserv.md"] },
         ]
       },
       {
-        text:"杂项2",
-        children:[
-          {text:"GitHub",children:["/github/github.md"]},
-          {text:"云服务",children:["/cloud/dns.md"]},
-          {text:"OpenWrt",children:['/openwrt/attention.md']},
-          {text:"区块链",children:['/blockchain/ethernum.md']}
+        text: "杂项2",
+        children: [
+          { text: "GitHub", children: ["/github/github.md"] },
+          { text: "云服务", children: ["/cloud/dns.md"] },
+          { text: "OpenWrt", children: ['/openwrt/attention.md'] },
+          { text: "区块链", children: ['/blockchain/ethernum.md'] }
         ]
-      },{
-        text:"资源与注意事项",
-        children:["/resource.md", "/attention.md"]
+      }, {
+        text: "资源与注意事项",
+        children: ["/resource.md", "/attention.md"]
       },
       { text: "荒废的代码仓库", link: "https://github.com/maodou38" },
+      { text: "每日热搜NFT", link: "https://nft.dingran.ga" }
     ],
     sidebarDepth: 3,
     sidebar: {
