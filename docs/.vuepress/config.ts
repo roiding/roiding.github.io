@@ -1,11 +1,11 @@
-﻿import { defineUserConfig } from "vuepress";
-import { localTheme } from "./theme";
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+﻿import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
-import { sitemapPlugin } from "vuepress-plugin-sitemap2";
+import { defineUserConfig } from "vuepress";
 import { baiduAnalyticsPlugin } from "vuepress-plugin-baidu-analytics";
 import { clarityAnalyticsPlugin } from "vuepress-plugin-clarity-analytics";
 import { seoPlugin } from "vuepress-plugin-seo2";
+import { sitemapPlugin } from "vuepress-plugin-sitemap2";
+import { localTheme } from "./theme";
 export default defineUserConfig({
   plugins: [
     docsearchPlugin({
@@ -173,6 +173,7 @@ export default defineUserConfig({
         "/java/java-blog.md",
         "/java/framework.md",
         "/java/multithreading.md",
+        "/java/java-deploy.md",
       ],
       "/database": ["/database/mysql.md"],
       "/python/": [
